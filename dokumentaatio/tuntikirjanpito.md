@@ -5,3 +5,4 @@ Pvm | t/*h* | Kuvaus
 17.01.2017 | 0.5 | Kurssin aloitusluento
 17.01.2017 | 1.0 | Aiheen päättäminen, repositorion perustaminen
 17.01.2017 | 1.0 | Aihemäärittelyn kirjoittaminen
+18.01.2017 | 0.5 | Aiheen vaihto
