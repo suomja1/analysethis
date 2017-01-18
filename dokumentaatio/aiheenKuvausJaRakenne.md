@@ -16,7 +16,7 @@
  - guaniinin ja  sytosiinin suhteellinen osuus ([GC-pitoisuus](https://en.wikipedia.org/wiki/GC-content))
  - tuntemattomat emäkset
  - toistuvat jaksot ([toistojaksot](https://en.wikipedia.org/wiki/Repeated_sequence_(DNA)))
- - aloitus- ja lopetuskodonit?
+ - kodonit ja kääntö aminohapoiksi?
  - ...
 - kahden sekvenssin vertailu 
  - esim. [Damerau–Levenšteinin etäisyys](https://en.wikipedia.org/wiki/Damerau%E2%80%93Levenshtein_distance)
