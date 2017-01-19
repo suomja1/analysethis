@@ -1,5 +1,5 @@
 ### Tuntikirjanpito
-Pvm | t/*h* | Kuvaus
+Pvm | *t*/h | Kuvaus
 --------------- | ----- | ------
 16.01.2017 | 0.5 | Kurssimateriaaliin tutustuminen
 17.01.2017 | 0.5 | Kurssin aloitusluento
