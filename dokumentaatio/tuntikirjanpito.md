@@ -7,3 +7,4 @@ Pvm | *t*/h | Kuvaus
 17.01.2017 | 1.0 | Aihemäärittelyn kirjoittaminen
 18.01.2017 | 0.5 | Aiheen vaihto
 18.01.2017 | 1.5 | Aihemäärittelyn kirjoittaminen
+19.01.2017 | 0.5 | Aihemäärittelyn viimeistely
