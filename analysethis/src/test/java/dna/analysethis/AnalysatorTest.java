@@ -41,4 +41,15 @@ public class AnalysatorTest {
         assertEquals(.0, a.relativeFrequency('G'), .001);
         assertEquals(.33333333333, a.relativeFrequency('A'), .001);
     }
+    
+    @Test
+    public void testGCcontent() {
+        assertEquals(.16666666, a.GCcontent(), .001);
+        s = new Sequence("AAAATTTTCCGGGGGG");
+        a = new Analysator(s);
+        assertEquals(.5, a.GCcontent(), .001);
+        s = new Sequence("AAAATTTT");
+        a = new Analysator(s);
+        assertEquals(0, a.GCcontent(), .001);
+    }
 }

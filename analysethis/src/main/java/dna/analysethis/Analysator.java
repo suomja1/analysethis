@@ -19,6 +19,7 @@ public class Analysator {
     }
     
     public int numberOfUnknownBases() {
+        // Hidas ratkaisu
         return (int) this.sequence.getSequence().stream()
                 .filter(c -> (c != 'A' && c != 'C' && c != 'G' && c != 'T'))
                 .count();
@@ -26,5 +27,9 @@ public class Analysator {
     
     public double relativeFrequency(char c) {
         return (double) this.frequency(c) / this.numberOfBases();
+    }
+    
+    public double GCcontent() {
+        return this.relativeFrequency('G') + this.relativeFrequency('C');
     }
 }
