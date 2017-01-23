@@ -30,6 +30,9 @@ public class AnalysatorTest {
     @Test
     public void testNumberOfUnknownBases() {
         assertEquals(2, a.numberOfUnknownBases());
+        s = new Sequence("AAAATTTTCC");
+        a = new Analysator(s);
+        assertEquals(0, a.numberOfUnknownBases());
     }
     
     @Test
