@@ -9,3 +9,4 @@ Pvm | *t*/h | Kuvaus
 18.01.2017 | 1.5 | Aihemäärittelyn kirjoittaminen
 19.01.2017 | 0.5 | Aihemäärittelyn viimeistely
 19.01.2017 | 0.5 | DL2:n aloitus
+23.01.2017 | 0.5 | DL1:n korjaukset
