@@ -10,3 +10,4 @@ Pvm | *t*/h | Kuvaus
 19.01.2017 | 0.5 | Aihemäärittelyn viimeistely
 19.01.2017 | 0.5 | DL2:n aloitus
 23.01.2017 | 0.5 | DL1:n korjaukset
+23.01.2017 | 3.0 | Ohjelmoinnin aloitus
