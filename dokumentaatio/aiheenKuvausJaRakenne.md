@@ -21,3 +21,7 @@
 - analyysin tuloksen
  - lukeminen
  - tulostaminen tiedostoon
+
+*Alustava luokkakaavio*:
+
+![luokkakaavio](luokkakaavio.png)
