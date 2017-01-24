@@ -2,7 +2,6 @@ package dna.analysethis.dao;
 
 import dna.analysethis.domain.Base;
 import dna.analysethis.domain.Sequence;
-import dna.analysethis.utilities.StringToList;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import org.junit.Before;
@@ -13,7 +12,7 @@ public class AnalysatorTest {
     
     @Before
     public void setUp() {
-        s = new Sequence(StringToList.convert("AAAATTTTCCXY"));
+        s = Manipulator.stringToSequence("AAAATTTTCCXY");
         a = new Analysator(s);
     }
     
@@ -33,7 +32,7 @@ public class AnalysatorTest {
     public void testNumberOfUnknownBases() {
         assertEquals(2, a.numberOfUnknownBases());
         
-        s.setSequence(StringToList.convert("AAAATTTTCC"));
+        s.setSequence(Manipulator.stringToList("AAAATTTTCC"));
         assertEquals(0, a.numberOfUnknownBases());
     }
     
@@ -48,10 +47,10 @@ public class AnalysatorTest {
     public void testGCcontent() {
         assertEquals(.16666666, a.GCcontent(), .001);
         
-        s.setSequence(StringToList.convert("AAAATTTTCCGGGGGG"));
+        s.setSequence(Manipulator.stringToList("AAAATTTTCCGGGGGG"));
         assertEquals(.5, a.GCcontent(), .001);
         
-        s.setSequence(StringToList.convert("AAAATTTT"));
+        s.setSequence(Manipulator.stringToList("AAAATTTT"));
         assertEquals(0, a.GCcontent(), .001);
     }
 }

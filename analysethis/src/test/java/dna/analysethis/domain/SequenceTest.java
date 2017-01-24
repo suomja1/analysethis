@@ -1,6 +1,6 @@
 package dna.analysethis.domain;
 
-import dna.analysethis.utilities.StringToList;
+import dna.analysethis.dao.Manipulator;
 import java.util.LinkedList;
 import java.util.List;
 import org.junit.Test;
@@ -9,7 +9,7 @@ import static org.junit.Assert.*;
 public class SequenceTest {
     @Test
     public void testConstructor() {
-        Sequence s = new Sequence(StringToList.convert("AACCTTGG"));
+        Sequence s = Manipulator.stringToSequence("AACCTTGG");
         assertFalse(s.getSequence().isEmpty());
     }
     
