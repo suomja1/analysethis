@@ -27,7 +27,7 @@ public class Analysator {
         return (double) this.frequency(b) / this.numberOfBases();
     }
     
-    public double GCcontent() {
+    public double gcContent() {
         return this.relativeFrequency(Base.G) + this.relativeFrequency(Base.C);
     }
 }

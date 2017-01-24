@@ -44,13 +44,13 @@ public class AnalysatorTest {
     }
     
     @Test
-    public void testGCcontent() {
-        assertEquals(.16666666, a.GCcontent(), .001);
+    public void testGcContent() {
+        assertEquals(.16666666, a.gcContent(), .001);
         
         s.setSequence(Manipulator.stringToList("AAAATTTTCCGGGGGG"));
-        assertEquals(.5, a.GCcontent(), .001);
+        assertEquals(.5, a.gcContent(), .001);
         
         s.setSequence(Manipulator.stringToList("AAAATTTT"));
-        assertEquals(0, a.GCcontent(), .001);
+        assertEquals(0, a.gcContent(), .001);
     }
 }
