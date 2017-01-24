@@ -12,3 +12,4 @@ Pvm | *t*/h | Kuvaus
 23.01.2017 | 0.5 | DL1:n korjaukset
 23.01.2017 | 2.5 | Ohjelmoinnin aloitus
 23.01.2017 | 0.5 | Luokkakaavion raapustusta
+24.01.2017 | 1.0 | Voimakas refaktorointi
