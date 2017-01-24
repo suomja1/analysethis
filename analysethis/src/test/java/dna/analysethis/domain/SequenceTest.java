@@ -24,4 +24,10 @@ public class SequenceTest {
         List<Base> bases = null;
         Sequence s = new Sequence(bases);
     }
+    
+    @Test
+    public void testToString() {
+        Sequence s = Manipulator.stringToSequence("   A AC8sP OCTT GG");
+        assertEquals(Manipulator.sequenceToString(s), s.toString());
+    }
 }

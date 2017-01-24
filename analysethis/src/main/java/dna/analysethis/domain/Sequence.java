@@ -1,5 +1,6 @@
 package dna.analysethis.domain;
 
+import dna.analysethis.dao.Manipulator;
 import java.util.List;
 
 public class Sequence {
@@ -18,5 +19,10 @@ public class Sequence {
 
     public void setSequence(List<Base> sequence) {
         this.sequence = sequence;
+    }
+
+    @Override
+    public String toString() {
+        return Manipulator.sequenceToString(this);
     }
 }

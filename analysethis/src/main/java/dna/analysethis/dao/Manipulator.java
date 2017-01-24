@@ -12,8 +12,30 @@ public class Manipulator {
         this.sequence = sequence;
     }
 
-    public String sequenceToString() {
-        return null;
+    public static String sequenceToString(Sequence sequence) {
+        String string = "";
+        
+        for (Base b : sequence.getSequence()) {
+            switch (b) {
+                case C:
+                    string += "C";
+                    break;
+                case G:
+                    string += "G";
+                    break;
+                case A:
+                    string += "A";
+                    break;
+                case T: 
+                    string += "T";
+                    break;
+                default:
+                    string += "_";
+                    break;
+            }
+        }
+        
+        return string;
     }
     
     public static List<Base> stringToList(String string) {
