@@ -1,25 +1,22 @@
 package dna.analysethis.domain;
-import java.util.ArrayList;
+
 import java.util.List;
 
 public class Sequence {
-    private List<Character> sequence;
+    private List<Base> sequence;
 
-    public Sequence(String seqString) {
-        if (seqString.isEmpty()) {
+    public Sequence(List<Base> sequence) {
+        if (sequence == null || sequence.isEmpty()) {
             throw new IllegalArgumentException("Sekvenssi ei voi olla tyhjä!");
         }
-
-        List<Character> seqList = new ArrayList<>();
-        
-        for (char c : seqString.toCharArray()) {
-            seqList.add(c);
-        }
-        
-        this.sequence = seqList;
+        this.sequence = sequence;
     }
 
-    public List<Character> getSequence() {
+    public List<Base> getSequence() {
         return this.sequence;
+    }
+
+    public void setSequence(List<Base> sequence) {
+        this.sequence = sequence;
     }
 }
