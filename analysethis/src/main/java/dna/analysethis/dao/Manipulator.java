@@ -2,6 +2,7 @@ package dna.analysethis.dao;
 
 import dna.analysethis.domain.Base;
 import dna.analysethis.domain.Sequence;
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -59,6 +60,34 @@ public class Manipulator {
     }
     
     public static Sequence stringToSequence(String string) {
-        return new Sequence(Manipulator.stringToList(string));
+        return new Sequence(stringToList(string));
+    }
+    
+    public static Sequence reverse(Sequence sequence) {
+        List<Base> bases = new LinkedList<>(sequence.getSequence());
+        Collections.reverse(bases);
+        return new Sequence(bases);
+    }
+    
+    public static Sequence complement(Sequence sequence) {
+        List<Base> bases = new LinkedList<>(sequence.getSequence());
+        
+        for (Base b : bases) {
+            if (b.equals(Base.T)) {
+                b = Base.A;
+            } else if (b == Base.A) {
+                b = Base.T;
+            } else if (b == Base.C) {
+                b = Base.G;
+            } else if (b == Base.G) {
+                b = Base.C;
+            }
+        }
+        
+        return new Sequence(bases);
+    }
+    
+    public static Sequence reverseComplement(Sequence sequence) {
+        return complement(reverse(sequence));
     }
 }

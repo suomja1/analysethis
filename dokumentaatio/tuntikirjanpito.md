@@ -13,4 +13,5 @@ Pvm | *t*/h | Kuvaus
 23.01.2017 | 2.5 | Ohjelmoinnin aloitus
 23.01.2017 | 0.5 | Luokkakaavion raapustusta
 24.01.2017 | 1.5 | Voimakas refaktorointi
-24.01.2017 | 1.0 | Uusia ominaisuuksia ja niiden testejä
+24.01.2017 | 1.0 | Analysator-luokan ominaisuuksia ja niiden testejä
+26.01.2017 | 1.5 | Manipulator-luokan metodeja ja niiden testejä

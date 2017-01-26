@@ -30,4 +30,12 @@ public class SequenceTest {
         Sequence s = Manipulator.stringToSequence("   A AC8sP OCTT GG");
         assertEquals(Manipulator.sequenceToString(s), s.toString());
     }
+
+    @Test
+    public void testEquals() {
+        List<Base> bases = Manipulator.stringToList("AACTXTG");
+        Sequence s1 = new Sequence(bases);
+        Sequence s2 = new Sequence(bases);
+        assertTrue(s1.equals(s2));
+    }
 }
