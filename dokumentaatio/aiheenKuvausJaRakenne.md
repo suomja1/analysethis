@@ -17,11 +17,12 @@
  - toistuvat jaksot ([toistojaksot](https://en.wikipedia.org/wiki/Repeated_sequence_(DNA)))
 - kahden sekvenssin vertailu 
  - esim. [Damerau–Levenšteinin etäisyys](https://en.wikipedia.org/wiki/Damerau%E2%80%93Levenshtein_distance)
-- sekvenssin käänteistoiston muodostaminen
+- edustaako sekvenssi ominaisuuksiltaan proteiinia koodaavaa sekvenssiä?
+- sekvenssin käänteistoiston muodostaminen / muokkaaminen
 - analyysin tuloksen
  - lukeminen
  - tulostaminen tiedostoon
 
-*Alustava luokkakaavio*:
+*Alustava luokkakaavio*: Luokkakaavioon on merkitty järjestelmän tärkeimmät luokat. Tapahtumankuuntelijat on merkitty tässä yhdeksi luokaksi.
 
 ![luokkakaavio](luokkakaavio.png)

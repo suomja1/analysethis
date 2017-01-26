@@ -6,12 +6,6 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class Manipulator {
-    private Sequence sequence;
-
-    public Manipulator(Sequence sequence) {
-        this.sequence = sequence;
-    }
-
     public static String sequenceToString(Sequence sequence) {
         String string = "";
         
