@@ -15,3 +15,4 @@ Pvm | *t*/h | Kuvaus
 24.01.2017 | 1.5 | Voimakas refaktorointi
 24.01.2017 | 1.0 | Analysator-luokan ominaisuuksia ja niiden testejä
 26.01.2017 | 1.5 | Manipulator-luokan metodeja ja niiden testejä
+27.01.2017 | 0.5 | Refaktorointi
