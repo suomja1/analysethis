@@ -33,9 +33,15 @@ public class SequenceTest {
 
     @Test
     public void testEquals() {
-        List<Base> bases = Manipulator.stringToList("AACTXTG");
+        String s = "AACTXTG";
+        List<Base> bases = Manipulator.stringToList(s);
         Sequence s1 = new Sequence(bases);
         Sequence s2 = new Sequence(bases);
-        assertTrue(s1.equals(s2));
+        assertEquals(s1, s1);
+        assertNotEquals(s1, null);
+        assertNotEquals(s1, s);
+        assertEquals(s1, s2);
+        s2.setSequence(Manipulator.stringToList("ATCTXTG"));
+        assertNotEquals(s1, s2);
     }
 }

@@ -29,23 +29,30 @@ public class ManipulatorTest {
     @Test
     public void testReverse() {
         Sequence s1 = Manipulator.stringToSequence("ACXACCXGCGAX");
+        Sequence temp = new Sequence(s1.getSequence());
         Sequence s2 = Manipulator.stringToSequence("XAGCGXCCAXCA");
-        assertTrue(Manipulator.reverse(s1).equals(s2));
+        assertEquals(s1, temp);
+        assertEquals(Manipulator.reverse(s1), s2);
+        assertEquals(s1, temp);
    }
     
     @Test
     public void testComplement() {
-        Sequence s1 = Manipulator.stringToSequence("ACXACCXGCGAX");
-        Sequence s2 = Manipulator.stringToSequence("TGXTGGXCGCTX");
-        
-        System.out.println(Manipulator.complement(s1));
-        System.out.println(s2);
-        
-//        assertTrue(Manipulator.complement(s1).equals(s2));
+        Sequence s1 = Manipulator.stringToSequence("ACXACCXGCGAXT");
+        Sequence temp = new Sequence(s1.getSequence());
+        Sequence s2 = Manipulator.stringToSequence("TGXTGGXCGCTXA");        
+        assertEquals(s1, temp);
+        assertEquals(Manipulator.complement(s1), s2);
+        assertEquals(s1, temp);
     }
     
     @Test
     public void testReverseComplement() {
-        
+        Sequence s1 = Manipulator.stringToSequence("ACXACCXGCGAX");
+        Sequence temp = new Sequence(s1.getSequence());
+        Sequence s2 = Manipulator.stringToSequence("XTCGCXGGTXGT");
+        assertEquals(s1, temp);
+        assertEquals(Manipulator.reverseComplement(s1), s2);
+        assertEquals(s1, temp);
     }
 }

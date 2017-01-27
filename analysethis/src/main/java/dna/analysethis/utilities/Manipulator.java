@@ -70,17 +70,19 @@ public class Manipulator {
     }
     
     public static Sequence complement(Sequence sequence) {
-        List<Base> bases = new LinkedList<>(sequence.getSequence());
+        List<Base> bases = new LinkedList<>();
         
-        for (Base b : bases) {
-            if (b.equals(Base.T)) {
-                b = Base.A;
+        for (Base b : sequence.getSequence()) {
+            if (b == Base.T) {
+                bases.add(Base.A);
             } else if (b == Base.A) {
-                b = Base.T;
+                bases.add(Base.T);
             } else if (b == Base.C) {
-                b = Base.G;
+                bases.add(Base.G);
             } else if (b == Base.G) {
-                b = Base.C;
+                bases.add(Base.C);
+            } else if (b == Base.X) {
+                bases.add(Base.X);
             }
         }
         
