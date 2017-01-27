@@ -1,8 +1,7 @@
 package dna.analysethis.domain;
 
-import dna.analysethis.dao.Manipulator;
+import dna.analysethis.utilities.Manipulator;
 import java.util.List;
-import java.util.Objects;
 
 public class Sequence {
     private List<Base> sequence;

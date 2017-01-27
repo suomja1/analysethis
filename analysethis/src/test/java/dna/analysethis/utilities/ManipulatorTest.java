@@ -1,4 +1,4 @@
-package dna.analysethis.dao;
+package dna.analysethis.utilities;
 
 import dna.analysethis.domain.Base;
 import dna.analysethis.domain.Sequence;

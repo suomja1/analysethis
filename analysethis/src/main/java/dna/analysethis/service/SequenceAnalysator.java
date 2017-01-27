@@ -1,13 +1,13 @@
-package dna.analysethis.dao;
+package dna.analysethis.service;
 
 import dna.analysethis.domain.Base;
 import dna.analysethis.domain.Sequence;
 import java.util.Collections;
 
-public class Analysator {
+public class SequenceAnalysator {
     private Sequence sequence;
 
-    public Analysator(Sequence sequence) {
+    public SequenceAnalysator(Sequence sequence) {
         this.sequence = sequence;
     }
     

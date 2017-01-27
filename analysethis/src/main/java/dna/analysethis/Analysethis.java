@@ -1,6 +1,6 @@
 package dna.analysethis;
 
-import dna.analysethis.dao.Manipulator;
+import dna.analysethis.utilities.Manipulator;
 import dna.analysethis.domain.Sequence;
 
 public class Analysethis {

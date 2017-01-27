@@ -1,6 +1,6 @@
 package dna.analysethis.domain;
 
-import dna.analysethis.dao.Manipulator;
+import dna.analysethis.utilities.Manipulator;
 import java.util.LinkedList;
 import java.util.List;
 import org.junit.Test;

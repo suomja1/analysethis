@@ -1,19 +1,20 @@
-package dna.analysethis.dao;
+package dna.analysethis.service;
 
+import dna.analysethis.utilities.Manipulator;
 import dna.analysethis.domain.Base;
 import dna.analysethis.domain.Sequence;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import org.junit.Before;
 
-public class AnalysatorTest {
+public class SequenceAnalysatorTest {
     Sequence s;
-    Analysator a;
+    SequenceAnalysator a;
     
     @Before
     public void setUp() {
         s = Manipulator.stringToSequence("AAAATTTTCCXY");
-        a = new Analysator(s);
+        a = new SequenceAnalysator(s);
     }
     
     @Test
