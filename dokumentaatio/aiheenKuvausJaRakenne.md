@@ -23,6 +23,6 @@
  - lukeminen
  - tulostaminen tiedostoon
 
-*Alustava luokkakaavio*: Luokkakaavioon on merkitty järjestelmän tärkeimmät luokat. Käyttöliittymä on tässä merkitty yhdeksi luokaksi.
+*Alustava määrittelyvaiheen luokkakaavio*: Luokkakaavioon on merkitty järjestelmän tärkeimmät luokat. Käyttöliittymä on tässä merkitty yhdeksi luokaksi.
 
 ![luokkakaavio](luokkakaavio.png)
