@@ -5,6 +5,7 @@ import dna.analysethis.domain.Sequence;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Random;
 
 public class Manipulator {
     public static String sequenceToString(Sequence sequence) {
@@ -91,5 +92,39 @@ public class Manipulator {
     
     public static Sequence reverseComplement(Sequence sequence) {
         return complement(reverse(sequence));
+    }
+    
+    public static Sequence random(int length) {
+        List<Base> bases = new LinkedList<>();
+        Random random = new Random();
+        
+        for (int i = 0; i < length; i++) {
+            int x = random.nextInt(4);
+            
+            if (x == 0) {
+                bases.add(Base.C);
+            } else if (x == 1) {
+                bases.add(Base.G);
+            } else if (x == 2) {
+                bases.add(Base.A);
+            } else if (x == 3) {
+                bases.add(Base.T);
+            }
+        }
+        
+        return new Sequence(bases);
+    }
+    
+    public static List<Sequence> sequenceToCodons(Sequence sequence) {
+        // Returns only triples of bases, that is some bases from the original sequence might get dropped
+        List<Sequence> codons = new LinkedList<>();
+        
+        int j = 1;
+        for (int i = 0; i <= sequence.getSequence().size() - 3; i = i + 3) {
+            codons.add(new Sequence(sequence.getSequence().subList(i, 3 * j)));
+            j++;
+        }
+        
+        return codons;
     }
 }

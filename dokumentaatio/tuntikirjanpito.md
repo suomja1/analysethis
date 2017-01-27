@@ -17,3 +17,4 @@ Pvm | *t*/h | Kuvaus
 26.01.2017 | 1.5 | Manipulator-luokan metodeja ja niiden testejä
 27.01.2017 | 0.5 | Refaktorointi
 27.01.2017 | 1.5 | Mutaatioiden tappamista
+27.01.2017 | 2.5 | Uusia metodeja (ilman testejä)

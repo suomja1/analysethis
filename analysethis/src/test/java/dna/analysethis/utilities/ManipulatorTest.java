@@ -55,4 +55,15 @@ public class ManipulatorTest {
         assertEquals(Manipulator.reverseComplement(s1), s2);
         assertEquals(s1, temp);
     }
+    
+    @Test
+    public void testRandom() {
+        int n = 60;
+        Sequence s = Manipulator.random(n);
+        assertEquals(n, s.getSequence().size());
+        assertTrue(s.getSequence().contains(Base.C)
+                || s.getSequence().contains(Base.G)
+                || s.getSequence().contains(Base.A)
+                || s.getSequence().contains(Base.T));
+    }
 }
