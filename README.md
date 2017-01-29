@@ -4,3 +4,7 @@
 ## Dokumentaatio
 - [Aiheen kuvaus](dokumentaatio/aiheenKuvausJaRakenne.md)
 - [Tuntikirjanpito](dokumentaatio/tuntikirjanpito.md)
+
+## Raportit
+- [PIT](https://htmlpreview.github.io/?https://github.com/suomja1/analysethis/blob/master/dokumentaatio/pit-raportti/201701272104/index.html)
+- [Checkstyle](https://htmlpreview.github.io/?https://github.com/suomja1/analysethis/blob/master/dokumentaatio/checkstyle-raportti/site/checkstyle.html)
