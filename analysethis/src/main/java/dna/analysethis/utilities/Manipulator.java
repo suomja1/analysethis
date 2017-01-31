@@ -115,12 +115,12 @@ public class Manipulator {
         return new Sequence(bases);
     }
     
-    public static List<Sequence> sequenceToCodons(Sequence sequence) {
+    public static LinkedList<Sequence> sequenceToCodons(Sequence sequence) {
         // Returns only triples of bases, that is some bases from the original sequence might get dropped
-        List<Sequence> codons = new LinkedList<>();
+        LinkedList<Sequence> codons = new LinkedList<>();
         
         int j = 1;
-        for (int i = 0; i <= sequence.getSequence().size() - 3; i = i + 3) {
+        for (int i = 0; i <= sequence.getSequence().size() - 3; i += 3) {
             codons.add(new Sequence(sequence.getSequence().subList(i, 3 * j)));
             j++;
         }

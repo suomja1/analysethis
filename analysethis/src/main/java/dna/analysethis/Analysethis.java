@@ -7,13 +7,7 @@ import dna.analysethis.utilities.Manipulator;
 public class Analysethis {
     public static void main(String[] args) {
         // TEST CODE
-        Sequence s = Manipulator.stringToSequence("ACTGAATXXXATG");
-        
-        for (Sequence se : Manipulator.sequenceToCodons(s)) {
-            System.out.println(se);
-        }
-        
-        SequenceAnalysator sa = new SequenceAnalysator(s);
-        System.out.println(sa.numberOfCodons());
+        SequenceAnalysator sa = new SequenceAnalysator(Manipulator.stringToSequence("ATGGAATCTCTCGCGCGCGCGCGGGGGTGA"));
+        System.out.println(sa.checkIfGene());
     }
 }

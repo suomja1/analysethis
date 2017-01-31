@@ -4,6 +4,8 @@ import dna.analysethis.domain.Base;
 import dna.analysethis.domain.Sequence;
 import dna.analysethis.utilities.Manipulator;
 import java.util.Collections;
+import java.util.LinkedList;
+import java.util.List;
 
 public class SequenceAnalysator {
     private Sequence sequence;
@@ -68,7 +70,30 @@ public class SequenceAnalysator {
         return Manipulator.sequenceToCodons(this.sequence).size();
     }
     
-    public boolean geneCheck() {
-        return this.numberOfCodons() >= 5 && this.relativeGcMass() >= .3; // && ...
+    public boolean checkStartAndStopCodons(Sequence seq) {
+        Sequence startCodon = Manipulator.stringToSequence("ATG");
+        
+        List<Sequence> stopCodons = new LinkedList<>();
+        stopCodons.add(Manipulator.stringToSequence("TAA"));
+        stopCodons.add(Manipulator.stringToSequence("TAG"));
+        stopCodons.add(Manipulator.stringToSequence("TGA"));
+        
+        LinkedList<Sequence> codons = Manipulator.sequenceToCodons(seq);
+        
+        return codons.getFirst().equals(startCodon) && stopCodons.contains(codons.getLast());
+        // We omit checking for possible stop codons inside the sequence – for now that is
+    }
+    
+    public boolean checkStartAndStopCodons() {
+        // Multiple reading frames (4) make this especially difficult
+        return this.checkStartAndStopCodons(this.sequence)
+                || this.checkStartAndStopCodons(Manipulator.reverse(this.sequence))
+                || this.checkStartAndStopCodons(Manipulator.complement(this.sequence))
+                || this.checkStartAndStopCodons(Manipulator.reverseComplement(this.sequence));
+    }
+    
+    public boolean checkIfGene() {
+        // Values used here are pulled out of a hat and have little scientific justification
+        return this.numberOfCodons() >= 5 && this.relativeGcMass() >= .3 && this.checkStartAndStopCodons();
     }
 }
