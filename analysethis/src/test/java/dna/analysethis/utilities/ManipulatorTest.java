@@ -2,6 +2,7 @@ package dna.analysethis.utilities;
 
 import dna.analysethis.domain.Base;
 import dna.analysethis.domain.Sequence;
+import java.util.LinkedList;
 import java.util.List;
 import org.junit.Test;
 import static org.junit.Assert.*;
@@ -18,7 +19,9 @@ public class ManipulatorTest {
     
     @Test
     public void testStringToSequence() {
-        assertFalse(Manipulator.stringToSequence(" AC6   h gX! t") == null);
+        String string = " AC6   h gX! t";
+        Sequence sequence = Manipulator.stringToSequence(string);
+        assertEquals(new Sequence(Manipulator.stringToList(string)), sequence);
     }
     
     @Test
@@ -65,5 +68,20 @@ public class ManipulatorTest {
                 || s.getSequence().contains(Base.G)
                 || s.getSequence().contains(Base.A)
                 || s.getSequence().contains(Base.T));
+    }
+    
+    @Test
+    public void testSequenceToCodons() {
+        List<Sequence> codons = new LinkedList<>();
+        codons.add(Manipulator.stringToSequence("ACT"));
+        codons.add(Manipulator.stringToSequence("GXG"));
+        codons.add(Manipulator.stringToSequence("TAC"));
+        
+        assertArrayEquals(codons.toArray(), 
+                Manipulator.sequenceToCodons(Manipulator.stringToSequence("ACTGXGTACAA")).toArray());
+        
+        codons = new LinkedList<>();
+        assertArrayEquals(codons.toArray(), 
+                Manipulator.sequenceToCodons(Manipulator.stringToSequence("AC")).toArray());
     }
 }

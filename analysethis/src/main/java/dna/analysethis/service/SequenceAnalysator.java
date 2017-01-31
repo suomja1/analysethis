@@ -54,12 +54,12 @@ public class SequenceAnalysator {
         return this.frequency(b) * mass;
     }
     
-    public double totalMass() {
+    public double mass() {
         return this.mass(Base.C) + this.mass(Base.G) + this.mass(Base.T) + this.mass(Base.A);
     }
     
     public double relativeMass(Base b) {
-        return this.mass(b) / this.totalMass();
+        return this.mass(b) / this.mass();
     }
     
     public double relativeGcMass() {
