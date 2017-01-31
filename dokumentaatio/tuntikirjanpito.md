@@ -19,3 +19,4 @@ Pvm | *t*/h | Kuvaus
 27.01.2017 | 1.5 | Mutaatioiden tappamista
 27.01.2017 | 2.5 | Uusia metodeja (ilman testejä)
 28.01.2017 | 0.5 | DL3:n aloitus, katselmoinnin ohjeisiin tutustuminen
+31.01.2017 | 1.0 | Koodikatselmoinnin aloitus
