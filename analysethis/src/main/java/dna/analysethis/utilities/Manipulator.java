@@ -12,22 +12,10 @@ public class Manipulator {
         String string = "";
         
         for (Base b : sequence.getSequence()) {
-            switch (b) {
-                case C:
-                    string += "C";
-                    break;
-                case G:
-                    string += "G";
-                    break;
-                case A:
-                    string += "A";
-                    break;
-                case T: 
-                    string += "T";
-                    break;
-                default:
-                    string += "_";
-                    break;
+            if (!b.equals(Base.X)) {
+                string += b;
+            } else {
+                string += "_";
             }
         }
         
@@ -95,6 +83,7 @@ public class Manipulator {
     }
     
     public static Sequence random(int length) {
+        // We don't want unknown bases in our random sequences
         List<Base> bases = new LinkedList<>();
         Random random = new Random();
         
