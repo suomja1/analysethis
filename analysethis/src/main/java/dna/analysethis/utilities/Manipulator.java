@@ -7,7 +7,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
 
-public class Manipulator {
+public final class Manipulator {
     public static String sequenceToString(Sequence sequence) {
         String string = "";
         

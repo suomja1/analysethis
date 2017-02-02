@@ -38,7 +38,6 @@ public class SequenceAnalysator {
         if (b == Base.X) {
             throw new IllegalArgumentException("Tuntemattoman emäksen moolimassaa ei tunneta!");
         }
-        
         return this.frequency(b) * b.getMass();
     }
     
