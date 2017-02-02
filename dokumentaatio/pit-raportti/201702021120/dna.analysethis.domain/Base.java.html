@@ -56,7 +56,7 @@ body{
 <body>
 
 
-<h1>Analysethis.java</h1>
+<h1>Base.java</h1>
 
 <table class="src">
 
@@ -73,7 +73,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>package dna.analysethis;</span></pre></td></tr>
+<td class=''><pre><span  class=''>package dna.analysethis.domain;</span></pre></td></tr>
 
 
 <tr>
@@ -91,7 +91,7 @@ body{
 
 
 <tr>
-<td class='na'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@6778aea6_3'/>
 3
 </td>
@@ -101,11 +101,11 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>import dna.analysethis.service.SequenceAnalysator;</span></pre></td></tr>
+<td class='covered'><pre><span  class=''>public enum Base {</span></pre></td></tr>
 
 
 <tr>
-<td class='na'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@6778aea6_4'/>
 4
 </td>
@@ -115,11 +115,11 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>import dna.analysethis.utilities.Manipulator;</span></pre></td></tr>
+<td class='covered'><pre><span  class=''>    C (111.10), // cytosine</span></pre></td></tr>
 
 
 <tr>
-<td class='na'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@6778aea6_5'/>
 5
 </td>
@@ -129,11 +129,11 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''></span></pre></td></tr>
+<td class='covered'><pre><span  class=''>    G (151.13), // guanine</span></pre></td></tr>
 
 
 <tr>
-<td class='uncovered'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@6778aea6_6'/>
 6
 </td>
@@ -143,11 +143,11 @@ body{
 <span>
 </span>
 </td>
-<td class='uncovered'><pre><span  class=''>public class Analysethis {</span></pre></td></tr>
+<td class='covered'><pre><span  class=''>    A (135.13), // adenine</span></pre></td></tr>
 
 
 <tr>
-<td class='na'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@6778aea6_7'/>
 7
 </td>
@@ -157,11 +157,11 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    public static void main(String[] args) {</span></pre></td></tr>
+<td class='covered'><pre><span  class=''>    T (126.12), // thymine</span></pre></td></tr>
 
 
 <tr>
-<td class='na'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@6778aea6_8'/>
 8
 </td>
@@ -171,11 +171,11 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>        // TEST CODE</span></pre></td></tr>
+<td class='covered'><pre><span  class=''>    X (0.0); // unknown</span></pre></td></tr>
 
 
 <tr>
-<td class='uncovered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@6778aea6_9'/>
 9
 </td>
@@ -185,27 +185,25 @@ body{
 <span>
 </span>
 </td>
-<td class='uncovered'><pre><span  class=''>        SequenceAnalysator sa = new SequenceAnalysator(Manipulator.stringToSequence(&#34;TACTTTAAAAGGACT&#34;));</span></pre></td></tr>
+<td class=''><pre><span  class=''>    </span></pre></td></tr>
 
 
 <tr>
-<td class='uncovered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@6778aea6_10'/>
 10
 </td>
-<td class='survived'>
+<td class=''>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6778aea6_10'>1</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6778aea6_10'></a>
 <span>
-1. main : removed call to java/io/PrintStream::println &rarr; NO_COVERAGE<br/>
-
 </span>
 </td>
-<td class='uncovered'><pre><span  class='survived'>        System.out.println(sa.checkIfGene());</span></pre></td></tr>
+<td class=''><pre><span  class=''>    private final double mass;</span></pre></td></tr>
 
 
 <tr>
-<td class='uncovered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@6778aea6_11'/>
 11
 </td>
@@ -215,17 +213,117 @@ body{
 <span>
 </span>
 </td>
-<td class='uncovered'><pre><span  class=''>    }</span></pre></td></tr>
+<td class=''><pre><span  class=''></span></pre></td></tr>
 
 
 <tr>
-<td class='na'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@6778aea6_12'/>
 12
 </td>
 <td class=''>
 <span class='pop'>
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6778aea6_12'></a>
+<span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    private Base(double mass) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6778aea6_13'/>
+13
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6778aea6_13'></a>
+<span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        this.mass = mass;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6778aea6_14'/>
+14
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6778aea6_14'></a>
+<span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6778aea6_15'/>
+15
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6778aea6_15'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6778aea6_16'/>
+16
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6778aea6_16'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public double getMass() {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6778aea6_17'/>
+17
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6778aea6_17'>1</a>
+<span>
+1. getMass : replaced return of double value with -(x + 1) for dna/analysethis/domain/Base::getMass &rarr; SURVIVED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>        return this.mass;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6778aea6_18'/>
+18
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6778aea6_18'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6778aea6_19'/>
+19
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6778aea6_19'></a>
 <span>
 </span>
 </td>
@@ -236,13 +334,13 @@ body{
 <tr><td></td><td></td><td><h2>Mutations</h2></td></tr>
 
 <tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@6778aea6_10'>10</a></td> 
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@6778aea6_17'>17</a></td> 
 <td></td>
 <td>
 
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@6778aea6_10'/> 
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@6778aea6_17'/> 
 
-<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>main<br/><b>Killed by : </b>none</span></span> removed call to java/io/PrintStream::println &rarr; NO_COVERAGE</p> 
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getMass<br/><b>Killed by : </b>none</span></span> replaced return of double value with -(x + 1) for dna/analysethis/domain/Base::getMass &rarr; SURVIVED</p> 
 </td>
 </tr>
 
@@ -263,6 +361,7 @@ body{
 
 <h2>Tests examined</h2>
 <ul>
+<li>dna.analysethis.service.SequenceAnalysatorTest.testMass3(dna.analysethis.service.SequenceAnalysatorTest) (4 ms)</li><li>dna.analysethis.service.SequenceAnalysatorTest.testRelativeGcMass(dna.analysethis.service.SequenceAnalysatorTest) (1 ms)</li><li>dna.analysethis.service.SequenceAnalysatorTest.testCheckIfGene(dna.analysethis.service.SequenceAnalysatorTest) (7 ms)</li><li>dna.analysethis.service.SequenceAnalysatorTest.testMass2(dna.analysethis.service.SequenceAnalysatorTest) (5 ms)</li><li>dna.analysethis.service.SequenceAnalysatorTest.testRelativeMass(dna.analysethis.service.SequenceAnalysatorTest) (2 ms)</li>
 </ul>
 
 <br/>

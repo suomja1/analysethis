@@ -62,16 +62,20 @@ public class SequenceAnalysatorTest {
     
     @Test
     public void testMass2() {
-        assertEquals(4 * 135.13, a.mass(Base.A), .001);
-        assertEquals(4 * 126.12, a.mass(Base.T), .001);
-        assertEquals(2 * 111.10, a.mass(Base.C), .001);
-        assertEquals(0.0, a.mass(Base.G), .001);
+        assertEquals(4 * Base.A.getMass(), a.mass(Base.A), .001);
+        assertEquals(4 * Base.T.getMass(), a.mass(Base.T), .001);
+        assertEquals(2 * Base.C.getMass(), a.mass(Base.C), .001);
+        assertEquals(0 * Base.G.getMass(), a.mass(Base.G), .001);
     }
     
     @Test
     public void testMass3() {
         s.setSequence(Manipulator.stringToList("AAAATTTTCCXYG"));
-        assertEquals(4 * 135.13 + 4 * 126.12 + 2 * 111.10 + 1 * 151.13, a.mass(), .001);
+        assertEquals(4 * Base.A.getMass()
+                + 4 * Base.T.getMass()
+                + 2 * Base.C.getMass()
+                + 1 * Base.G.getMass(), 
+                a.mass(), .001);
     }
     
     @Test

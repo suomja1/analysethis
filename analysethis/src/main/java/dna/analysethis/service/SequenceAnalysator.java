@@ -39,19 +39,7 @@ public class SequenceAnalysator {
             throw new IllegalArgumentException("Tuntemattoman emäksen moolimassaa ei tunneta!");
         }
         
-        double mass = 0;
-        
-        if (b == Base.A) {
-            mass = 135.13;
-        } else if (b == Base.T) {
-            mass = 126.12;
-        } else if (b == Base.C) {
-            mass = 111.10;
-        } else if (b == Base.G) {
-            mass = 151.13;
-        }
-        
-        return this.frequency(b) * mass;
+        return this.frequency(b) * b.getMass();
     }
     
     public double mass() {
