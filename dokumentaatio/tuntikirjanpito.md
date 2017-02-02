@@ -24,3 +24,4 @@ Pvm | *t*/h | Kuvaus
 31.01.2017 | 1.0 | Uusia metodeja (ilman testejä)
 31.01.2017 | 1.0 | Asianmukaiset testit uusille metodeille
 02.02.2017 | 0.5 | Refaktorointi
+02.02.2017 | 1.0 | Raportit kuntoon ja käyttöliittymäluokka

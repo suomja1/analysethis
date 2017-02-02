@@ -1,15 +1,9 @@
 package dna.analysethis;
 
-import dna.analysethis.domain.Base;
-import dna.analysethis.service.SequenceAnalysator;
-import dna.analysethis.utilities.Manipulator;
+import javax.swing.SwingUtilities;
 
 public class Analysethis {
     public static void main(String[] args) {
-        // TEST CODE
-        SequenceAnalysator sa = new SequenceAnalysator(Manipulator.stringToSequence("TACTTTAAAAGGACT"));
-        System.out.println(sa.checkIfGene());
-        
-        System.out.println(Base.X);
+        SwingUtilities.invokeLater(new UI());
     }
 }
