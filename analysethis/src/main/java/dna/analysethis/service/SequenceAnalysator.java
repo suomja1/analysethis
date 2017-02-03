@@ -13,6 +13,14 @@ public class SequenceAnalysator {
     public SequenceAnalysator(Sequence sequence) {
         this.sequence = sequence;
     }
+
+    public SequenceAnalysator(String string) {
+        if (string.endsWith(".txt")) {
+            // TODO
+        } else {
+            this.sequence = Manipulator.stringToSequence(string);
+        }
+    }
     
     public int frequency(Base b) {
         return Collections.frequency(this.sequence.getSequence(), b);
