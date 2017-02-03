@@ -1,25 +1,31 @@
 package dna.analysethis;
 
 import dna.analysethis.service.SequenceAnalysator;
+import java.awt.CardLayout;
 import java.awt.Container;
 import java.awt.Dimension;
 import java.awt.GridLayout;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.io.FileNotFoundException;
 import javax.swing.JButton;
-import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 import javax.swing.JTextArea;
 import javax.swing.SwingConstants;
-import javax.swing.Timer;
 import javax.swing.WindowConstants;
-import static javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE;
 
 public class UI implements Runnable {
-
     private JFrame frame;
+    
+    private JPanel panels;
+    
+    private JPanel indexPanel;
+    final static String INDEX = "INDEX";
+    
+    private JPanel resultPanel;
+    final static String RESULT = "RESULT";
+    
     private SequenceAnalysator analysator;
 
     public UI() {
@@ -40,43 +46,54 @@ public class UI implements Runnable {
     }
 
     private void createComponents(Container container) {
-        GridLayout layout = new GridLayout(3, 1);
-        container.setLayout(layout);
+        createIndexPanel();
+        createResultPanel();
+        
+        this.panels = new JPanel(new CardLayout());
+        this.panels.add(this.indexPanel, INDEX);
+        this.panels.add(this.resultPanel, RESULT);
+        
+        showPanel(INDEX);
+        
+        this.frame.add(this.panels);
+    }
 
+    private void createIndexPanel() {
+        this.indexPanel = new JPanel(new GridLayout(3, 1));
+        
         JLabel text = new JLabel("Syötä DNA-sekvenssi.", SwingConstants.CENTER);
-        container.add(text);
+        this.indexPanel.add(text);
 
         JTextArea input = new JTextArea();
         input.setLineWrap(true);
-        container.add(input);
+        this.indexPanel.add(input);
 
         JButton button = new JButton("Analysoi!");
 
         button.addActionListener(a -> {
             try {
                 this.analysator = new SequenceAnalysator(input.getText());
-
-                JDialog dialog = new JDialog(this.frame, "OK!", true);
-                dialog.setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
-                JLabel message = new JLabel("Analysoidaan...", SwingConstants.CENTER);
-                dialog.add(message);
-                dialog.setSize(250, 50);
-                
-                Timer timer = new Timer(3000, (ActionEvent e) -> {
-                    dialog.setVisible(false);
-                    dialog.dispose();
-                });
-                timer.start();
-
-                dialog.setVisible(true);
-            } catch (Exception e) {
+                showPanel(RESULT);
+            } catch (FileNotFoundException | IllegalArgumentException e) {
                 JOptionPane.showMessageDialog(this.frame,
-                        "Sekvenssin luku epäonnistui.\nYritä uudelleen.",
+                        "Sekvenssinluku epäonnistui.\nYritä uudelleen.",
                         "Virhe!",
                         JOptionPane.ERROR_MESSAGE);
             }
         });
 
-        container.add(button);
+        this.indexPanel.add(button);
+    }
+    
+    private void createResultPanel() {
+        this.resultPanel = new JPanel(new GridLayout(1, 1));
+
+        JLabel text = new JLabel("Tänne tuleekin jo jotain muuta!", SwingConstants.CENTER);
+        this.resultPanel.add(text);
+    }
+    
+    private void showPanel(String card) {
+        CardLayout cl = (CardLayout) (this.panels.getLayout());
+        cl.show(this.panels, card);
     }
 }
