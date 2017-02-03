@@ -17,7 +17,7 @@ public class SequenceAnalysator {
 
     public SequenceAnalysator(String string) throws FileNotFoundException {
         if (string.endsWith(".txt")) {
-            // TODO
+            throw new UnsupportedOperationException("TODO");
         } else {
             this.sequence = Manipulator.stringToSequence(string);
         }
