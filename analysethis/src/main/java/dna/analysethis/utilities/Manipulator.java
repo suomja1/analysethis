@@ -7,7 +7,15 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
 
+/**
+ * Basic utility class for manipulating DNA sequences.
+ */
 public final class Manipulator {
+    /**
+     * Converts given sequence to string format.
+     * @param sequence  Sequence to be converted
+     * @return result of the conversion
+     */
     public static String sequenceToString(Sequence sequence) {
         String string = "";
         
@@ -22,6 +30,11 @@ public final class Manipulator {
         return string;
     }
     
+    /**
+     * Converts given string to a list of bases.
+     * @param string    String to be converted
+     * @return result of the conversion
+     */
     public static List<Base> stringToList(String string) {
         List<Base> bases = new LinkedList<>();
 
@@ -48,16 +61,31 @@ public final class Manipulator {
         return bases;
     }
     
+    /**
+     * Converts given string to sequence.
+     * @param string    String to be converted
+     * @return result of the conversion
+     */
     public static Sequence stringToSequence(String string) {
         return new Sequence(stringToList(string));
     }
     
+    /**
+     * Reverses the order of the bases of given sequence.
+     * @param sequence  Sequence to be reversed
+     * @return result of the conversion
+     */
     public static Sequence reverse(Sequence sequence) {
         List<Base> bases = new LinkedList<>(sequence.getSequence());
         Collections.reverse(bases);
         return new Sequence(bases);
     }
     
+    /**
+     * Creates the complement of given sequence using the Base-pairing rule.
+     * @param sequence  Sequence to be complemented
+     * @return result of the conversion
+     */
     public static Sequence complement(Sequence sequence) {
         List<Base> bases = new LinkedList<>();
         
@@ -78,10 +106,20 @@ public final class Manipulator {
         return new Sequence(bases);
     }
     
+    /**
+     * Reverses the order of the bases of given sequence and creates its complement using the Base-pairing rule.
+     * @param sequence  Sequence to be reversed and complemented
+     * @return result of the conversion
+     */
     public static Sequence reverseComplement(Sequence sequence) {
         return complement(reverse(sequence));
     }
     
+    /**
+     * Creates a random sequence of given length.
+     * @param length    The length of the sequence
+     * @return random sequence of required length
+     */
     public static Sequence random(int length) {
         if (length < 1) {
             throw new IllegalArgumentException("Emäksiä on oltava vähintään yksi!");
@@ -108,6 +146,11 @@ public final class Manipulator {
         return new Sequence(bases);
     }
     
+    /**
+     * Converts given sequence to a list of codons.
+     * @param sequence  Sequence to be converted
+     * @return result of the conversion
+     */
     public static LinkedList<Sequence> sequenceToCodons(Sequence sequence) {
         // Returns only triples of bases, that is some bases from the original sequence might get dropped
         LinkedList<Sequence> codons = new LinkedList<>();

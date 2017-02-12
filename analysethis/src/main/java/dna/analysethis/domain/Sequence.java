@@ -3,9 +3,16 @@ package dna.analysethis.domain;
 import dna.analysethis.utilities.Manipulator;
 import java.util.List;
 
+/**
+ * Class for the representation of DNA sequences.
+ */
 public class Sequence {
     private List<Base> sequence;
 
+    /**
+     * Constructor.
+     * @param sequence  List of bases to be interpreted as a sequence
+     */
     public Sequence(List<Base> sequence) {
         if (sequence == null || sequence.isEmpty()) {
             throw new IllegalArgumentException("Sekvenssi ei voi olla tyhjä!");

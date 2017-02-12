@@ -104,9 +104,7 @@ public class UI implements Runnable {
     
     private void createResultPanel() {
         this.resultPanel = new JPanel(new GridLayout(1, 1));
-
-        JLabel text = new JLabel("Tänne tuleekin jo jotain muuta!", SwingConstants.CENTER);
-        this.resultPanel.add(text);
+        
     }
     
     private void showPanel(String card) {

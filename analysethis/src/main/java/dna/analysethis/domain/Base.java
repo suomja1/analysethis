@@ -1,11 +1,33 @@
 package dna.analysethis.domain;
 
+/**
+ * Class for the representation of nucleobases in DNA.
+ */
 public enum Base {
-    C (111.10), // cytosine
-    G (151.13), // guanine
-    A (135.13), // adenine
-    T (126.12), // thymine
-    X (-1.0); // unknown
+    /**
+     * Cytosine.
+     */
+    C (111.10),
+
+    /**
+     * Guanine.
+     */
+    G (151.13),
+
+    /**
+     * Adenine.
+     */
+    A (135.13),
+
+    /**
+     * Thymine.
+     */
+    T (126.12),
+
+    /**
+     * Unknown base.
+     */
+    X (-1.0);
     
     private final double mass;
 
