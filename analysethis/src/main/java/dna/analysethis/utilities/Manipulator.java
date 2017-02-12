@@ -83,6 +83,10 @@ public final class Manipulator {
     }
     
     public static Sequence random(int length) {
+        if (length < 1) {
+            throw new IllegalArgumentException("Emäksiä on oltava vähintään yksi!");
+        }
+        
         // We don't want unknown bases in our random sequences
         List<Base> bases = new LinkedList<>();
         Random random = new Random();

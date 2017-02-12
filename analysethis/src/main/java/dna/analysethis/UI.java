@@ -1,6 +1,7 @@
 package dna.analysethis;
 
 import dna.analysethis.service.SequenceAnalysator;
+import dna.analysethis.utilities.Manipulator;
 import java.awt.CardLayout;
 import java.awt.Container;
 import java.awt.Dimension;
@@ -59,7 +60,7 @@ public class UI implements Runnable {
     }
 
     private void createIndexPanel() {
-        this.indexPanel = new JPanel(new GridLayout(3, 1));
+        this.indexPanel = new JPanel(new GridLayout(4, 1));
         
         JLabel text = new JLabel("Syötä DNA-sekvenssi.", SwingConstants.CENTER);
         this.indexPanel.add(text);
@@ -67,9 +68,26 @@ public class UI implements Runnable {
         JTextArea input = new JTextArea();
         input.setLineWrap(true);
         this.indexPanel.add(input);
+        
+        JButton button2 = new JButton("Satunnainen sekvenssi.");
+        button2.addActionListener(a -> {
+            String string = JOptionPane.showInputDialog(this.frame,
+                    "Emästen lukumäärä:",
+                    "Satunnainen sekvenssi",
+                    JOptionPane.PLAIN_MESSAGE);
+            
+            try {
+                input.setText(Manipulator.random(Integer.parseInt(string)).toString());
+            } catch (IllegalArgumentException e) {
+                JOptionPane.showMessageDialog(this.frame,
+                        "Sekvenssin generointi epäonnistui.\nYritä uudelleen.",
+                        "Virhe!",
+                        JOptionPane.ERROR_MESSAGE);
+            }
+        });
+        this.indexPanel.add(button2);
 
         JButton button = new JButton("Analysoi!");
-
         button.addActionListener(a -> {
             try {
                 this.analysator = new SequenceAnalysator(input.getText());
@@ -81,7 +99,6 @@ public class UI implements Runnable {
                         JOptionPane.ERROR_MESSAGE);
             }
         });
-
         this.indexPanel.add(button);
     }
     
