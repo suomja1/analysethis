@@ -60,7 +60,7 @@ public class ManipulatorTest {
     }
     
     @Test
-    public void testRandom() {
+    public void testRandom1() {
         int n = 60;
         Sequence s = Manipulator.random(n);
         assertEquals(n, s.getSequence().size());
@@ -68,6 +68,13 @@ public class ManipulatorTest {
                 || s.getSequence().contains(Base.G)
                 || s.getSequence().contains(Base.A)
                 || s.getSequence().contains(Base.T));
+        
+        assertFalse(Manipulator.random(1).toString().isEmpty());
+    }
+    
+    @Test(expected = IllegalArgumentException.class)
+    public void testRandom2() {
+        Manipulator.random(0);
     }
     
     @Test
