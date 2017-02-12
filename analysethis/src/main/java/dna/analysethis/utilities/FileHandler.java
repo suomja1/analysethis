@@ -16,15 +16,6 @@ public final class FileHandler {
      * @throws FileNotFoundException
      */
     public static String read(String filename) throws FileNotFoundException {
-        File file = new File(filename);
-        String string = "";
-        
-        try (Scanner reader = new Scanner(file)) {
-            while (reader.hasNextLine()) {
-                string += reader.nextLine();
-            }
-        }
-        
-        return string;
+        return new Scanner(new File(filename)).useDelimiter("\\Z").next();
     }
 }

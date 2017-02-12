@@ -26,3 +26,4 @@ Pvm | *t*/h | Kuvaus
 02.02.2017 | 0.5 | Refaktorointi
 02.02.2017 | 1.0 | Raportit kuntoon ja käyttöliittymäluokka
 03.02.2017 | 1.5 | Käyttöliittymän hahmottelua
+12.02.2017 | 5.0 | DL4:n saavuttelua
