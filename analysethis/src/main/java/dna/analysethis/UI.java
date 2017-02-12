@@ -18,15 +18,11 @@ import javax.swing.WindowConstants;
 
 public class UI implements Runnable {
     private JFrame frame;
-    
     private JPanel panels;
-    
     private JPanel indexPanel;
     final static String INDEX = "INDEX";
-    
     private JPanel resultPanel;
     final static String RESULT = "RESULT";
-    
     private SequenceAnalysator analysator;
 
     public UI() {
@@ -103,8 +99,32 @@ public class UI implements Runnable {
     }
     
     private void createResultPanel() {
-        this.resultPanel = new JPanel(new GridLayout(1, 1));
+        this.resultPanel = new JPanel(new GridLayout(8, 1));
         
+        JLabel adenine = new JLabel("Adeniini: ");
+        this.resultPanel.add(adenine);
+        
+        JLabel guanine = new JLabel("Guaniini: ");
+        this.resultPanel.add(guanine);
+        
+        JLabel cytosine = new JLabel("Sytosiini: ");
+        this.resultPanel.add(cytosine);
+        
+        JLabel thymine = new JLabel("Tymiini: ");
+        this.resultPanel.add(thymine);
+        
+        JLabel unknown = new JLabel("Tuntematon emäs: ");
+        this.resultPanel.add(unknown);
+        
+        JLabel total = new JLabel("Emästen lukumäärä: ");
+        this.resultPanel.add(total);
+        
+        JLabel gc = new JLabel("GC%: ");
+        this.resultPanel.add(gc);
+        
+        JButton button = new JButton("Aloita alusta.");
+        button.addActionListener(a -> showPanel(INDEX));
+        this.resultPanel.add(button);
     }
     
     private void showPanel(String card) {
