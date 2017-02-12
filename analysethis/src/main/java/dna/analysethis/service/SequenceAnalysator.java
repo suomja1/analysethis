@@ -2,6 +2,7 @@ package dna.analysethis.service;
 
 import dna.analysethis.domain.Base;
 import dna.analysethis.domain.Sequence;
+import dna.analysethis.utilities.FileHandler;
 import dna.analysethis.utilities.Manipulator;
 import java.io.FileNotFoundException;
 import java.util.Collections;
@@ -17,7 +18,7 @@ public class SequenceAnalysator {
 
     public SequenceAnalysator(String string) throws FileNotFoundException {
         if (string.endsWith(".txt") || string.endsWith(".TXT")) {
-            throw new UnsupportedOperationException("TODO");
+            this.sequence = Manipulator.stringToSequence(FileHandler.read(string));
         } else {
             this.sequence = Manipulator.stringToSequence(string);
         }
