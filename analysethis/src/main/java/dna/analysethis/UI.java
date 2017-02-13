@@ -1,5 +1,6 @@
 package dna.analysethis;
 
+import dna.analysethis.domain.Base;
 import dna.analysethis.service.SequenceAnalysator;
 import dna.analysethis.utilities.Manipulator;
 import java.awt.CardLayout;
@@ -44,11 +45,9 @@ public class UI implements Runnable {
 
     private void createComponents(Container container) {
         createIndexPanel();
-        createResultPanel();
         
         this.panels = new JPanel(new CardLayout());
         this.panels.add(this.indexPanel, INDEX);
-        this.panels.add(this.resultPanel, RESULT);
         
         showPanel(INDEX);
         
@@ -87,6 +86,10 @@ public class UI implements Runnable {
         button.addActionListener(a -> {
             try {
                 this.analysator = new SequenceAnalysator(input.getText());
+                
+                createResultPanel();
+                this.panels.add(this.resultPanel, RESULT);
+                
                 showPanel(RESULT);
             } catch (FileNotFoundException | IllegalArgumentException e) {
                 JOptionPane.showMessageDialog(this.frame,
@@ -101,25 +104,18 @@ public class UI implements Runnable {
     private void createResultPanel() {
         this.resultPanel = new JPanel(new GridLayout(8, 1));
         
-        JLabel adenine = new JLabel("Adeniini: ");
-        this.resultPanel.add(adenine);
+        for (Base b : Base.values()) {
+            JLabel base = new JLabel(b.getName() 
+                    + " "
+                    + this.analysator.frequency(b)
+                    + " (" + Math.round(this.analysator.relativeFrequency(b) * 10000.0) / 100.0 + " %)");
+            this.resultPanel.add(base);
+        }
         
-        JLabel guanine = new JLabel("Guaniini: ");
-        this.resultPanel.add(guanine);
-        
-        JLabel cytosine = new JLabel("Sytosiini: ");
-        this.resultPanel.add(cytosine);
-        
-        JLabel thymine = new JLabel("Tymiini: ");
-        this.resultPanel.add(thymine);
-        
-        JLabel unknown = new JLabel("Tuntematon emäs: ");
-        this.resultPanel.add(unknown);
-        
-        JLabel total = new JLabel("Emästen lukumäärä: ");
+        JLabel total = new JLabel("Emästen lukumäärä: " + this.analysator.numberOfBases());
         this.resultPanel.add(total);
         
-        JLabel gc = new JLabel("GC%: ");
+        JLabel gc = new JLabel("GC%: " + Math.round(this.analysator.gcContent() * 10000.0) / 100.0 + " %");
         this.resultPanel.add(gc);
         
         JButton button = new JButton("Aloita alusta.");
