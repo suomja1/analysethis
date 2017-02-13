@@ -26,7 +26,7 @@ public class SequenceAnalysator {
     /**
      * Alternative constructor, which creates the sequence to be analysed from a string.
      * @param string    String-representation of the sequence to be analysed
-     * @throws FileNotFoundException
+     * @throws FileNotFoundException    If the file can't be found, an exception is thrown.
      */
     public SequenceAnalysator(String string) throws FileNotFoundException {
         if (string.endsWith(".txt") || string.endsWith(".TXT")) {

@@ -28,3 +28,5 @@ Pvm | *t*/h | Kuvaus
 03.02.2017 | 1.5 | Käyttöliittymän hahmottelua
 12.02.2017 | 5.0 | DL4:n saavuttelua
 12.02.2017 | 0.5 | DL4:n viimeistely
+13.02.2017 | 0.5 | CheckStyle-moduulin lisäys ja virheiden korjaus
+

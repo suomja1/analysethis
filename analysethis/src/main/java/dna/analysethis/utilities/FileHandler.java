@@ -13,7 +13,7 @@ public final class FileHandler {
      * Reads the given file to a string.
      * @param filename  File to be read
      * @return string-representation of given file
-     * @throws FileNotFoundException
+     * @throws FileNotFoundException    If the file can't be found, an exception is thrown.
      */
     public static String read(String filename) throws FileNotFoundException {
         return new Scanner(new File(filename)).useDelimiter("\\Z").next();
