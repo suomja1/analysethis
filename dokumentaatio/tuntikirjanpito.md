@@ -29,4 +29,4 @@ Pvm | *t*/h | Kuvaus
 12.02.2017 | 5.0 | DL4:n saavuttelua
 12.02.2017 | 0.5 | DL4:n viimeistely
 13.02.2017 | 0.5 | CheckStyle-moduulin lisäys ja virheiden korjaus
-
+13.02.2017 | 0.5 | Refaktorointi
