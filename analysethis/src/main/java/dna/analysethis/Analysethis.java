@@ -9,7 +9,7 @@ import javax.swing.SwingUtilities;
 public class Analysethis {
     /**
      * Starts the graphical user interface of the analysator.
-     * @param args  Possible arguments for main.
+     * @param args  Possible arguments for main
      */
     public static void main(String[] args) {
         SwingUtilities.invokeLater(new UI());
