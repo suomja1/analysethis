@@ -31,3 +31,4 @@ Pvm | *t*/h | Kuvaus
 13.02.2017 | 0.5 | CheckStyle-moduulin lisäys ja virheiden korjaus
 13.02.2017 | 0.5 | Refaktorointi
 15.02.2017 | 0.5 | Tiedostometodien viilausta
+15.02.2017 | 2.0 | Koodikatselmointi (lue: tetriksen pelaamista)
