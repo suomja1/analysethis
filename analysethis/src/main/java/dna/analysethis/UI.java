@@ -7,7 +7,7 @@ import java.awt.CardLayout;
 import java.awt.Container;
 import java.awt.Dimension;
 import java.awt.GridLayout;
-import java.io.FileNotFoundException;
+import java.io.IOException;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -91,7 +91,7 @@ public class UI implements Runnable {
                 this.panels.add(this.resultPanel, RESULT);
                 
                 showPanel(RESULT);
-            } catch (FileNotFoundException | IllegalArgumentException e) {
+            } catch (IOException | IllegalArgumentException e) {
                 JOptionPane.showMessageDialog(this.frame,
                         "Sekvenssinluku epäonnistui.\nYritä uudelleen.",
                         "Virhe!",

@@ -4,7 +4,7 @@ import dna.analysethis.domain.Base;
 import dna.analysethis.domain.Sequence;
 import dna.analysethis.utilities.FileHandler;
 import dna.analysethis.utilities.Manipulator;
-import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
@@ -26,9 +26,9 @@ public class SequenceAnalysator {
     /**
      * Alternative constructor, which creates the sequence to be analysed from a string.
      * @param string    String-representation of the sequence to be analysed
-     * @throws FileNotFoundException    If the file can't be found, an exception is thrown
+     * @throws java.io.IOException  Throws an exception if the file can't be found
      */
-    public SequenceAnalysator(String string) throws FileNotFoundException {
+    public SequenceAnalysator(String string) throws IOException {
         if (string.endsWith(".txt") || string.endsWith(".TXT")) {
             this.sequence = Manipulator.stringToSequence(FileHandler.read(string));
         } else {
