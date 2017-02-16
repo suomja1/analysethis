@@ -105,7 +105,7 @@ public class UI implements Runnable {
     }
     
     private void createResultPanel() {
-        this.resultPanel = new JPanel(new GridLayout(3, 1));
+        this.resultPanel = new JPanel(new GridLayout(4, 1));
         String resultsText = "";
         
         for (Base b : Base.values()) {
@@ -142,9 +142,15 @@ public class UI implements Runnable {
         });
         this.resultPanel.add(printButton);
         
-        JButton button = new JButton("Aloita alusta.");
-        button.addActionListener(a -> showPanel(INDEX));
-        this.resultPanel.add(button);
+        JButton compareButton = new JButton("Vertaa.");
+        compareButton.addActionListener(a -> {
+            // TODO
+        });
+        this.resultPanel.add(compareButton);
+        
+        JButton backButton = new JButton("Aloita alusta.");
+        backButton.addActionListener(a -> showPanel(INDEX));
+        this.resultPanel.add(backButton);
     }
     
     private void showPanel(String card) {
