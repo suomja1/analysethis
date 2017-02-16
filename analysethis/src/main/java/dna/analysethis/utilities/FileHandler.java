@@ -10,17 +10,17 @@ import java.nio.file.Paths;
 public final class FileHandler {
 
     /**
-     * Reads the given file to a string.
+     * Reads given file to a string.
      * @param filename  File to be read
-     * @return string-representation of given file
-     * @throws java.io.IOException  Throws an exception if the file can't be found
+     * @return  String-representation of given file
+     * @throws java.io.IOException  File can't be found
      */
     public static String read(String filename) throws IOException {
         return new String(Files.readAllBytes(Paths.get(filename)));
     }
     
     /**
-     * Writes the given string to a file.
+     * Writes given string to a file.
      * @param sequence  String to write
      * @return  True if successful
      */
@@ -28,7 +28,7 @@ public final class FileHandler {
         try {
             Files.write(Paths.get("./tuloste.txt"), sequence.getBytes());
             return true;
-        } catch (IOException es) {
+        } catch (IOException e) {
             return false;
         }
     }

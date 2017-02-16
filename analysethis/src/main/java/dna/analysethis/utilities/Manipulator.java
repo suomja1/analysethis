@@ -14,7 +14,7 @@ public final class Manipulator {
     /**
      * Converts given sequence to string format.
      * @param sequence  Sequence to be converted
-     * @return result of the conversion
+     * @return  Result of the conversion
      */
     public static String sequenceToString(Sequence sequence) {
         String string = "";
@@ -33,7 +33,7 @@ public final class Manipulator {
     /**
      * Converts given string to a list of bases.
      * @param string    String to be converted
-     * @return result of the conversion
+     * @return  Result of the conversion
      */
     public static List<Base> stringToList(String string) {
         List<Base> bases = new LinkedList<>();
@@ -62,9 +62,9 @@ public final class Manipulator {
     }
     
     /**
-     * Converts given string to sequence.
+     * Converts given string to a sequence.
      * @param string    String to be converted
-     * @return result of the conversion
+     * @return  Result of the conversion
      */
     public static Sequence stringToSequence(String string) {
         return new Sequence(stringToList(string));
@@ -73,7 +73,7 @@ public final class Manipulator {
     /**
      * Reverses the order of the bases of given sequence.
      * @param sequence  Sequence to be reversed
-     * @return result of the conversion
+     * @return  Reverse of given sequence
      */
     public static Sequence reverse(Sequence sequence) {
         List<Base> bases = new LinkedList<>(sequence.getSequence());
@@ -84,7 +84,7 @@ public final class Manipulator {
     /**
      * Creates the complement of given sequence using the Base-pairing rule.
      * @param sequence  Sequence to be complemented
-     * @return result of the conversion
+     * @return  Complement of given sequence
      */
     public static Sequence complement(Sequence sequence) {
         List<Base> bases = new LinkedList<>();
@@ -109,7 +109,7 @@ public final class Manipulator {
     /**
      * Reverses the order of the bases of given sequence and creates its complement using the Base-pairing rule.
      * @param sequence  Sequence to be reversed and complemented
-     * @return result of the conversion
+     * @return  Reverse-complement of given sequence
      */
     public static Sequence reverseComplement(Sequence sequence) {
         return complement(reverse(sequence));
@@ -118,7 +118,7 @@ public final class Manipulator {
     /**
      * Creates a random sequence of given length.
      * @param length    The length of the sequence
-     * @return random sequence of required length
+     * @return  Random sequence of required length
      */
     public static Sequence random(int length) {
         if (length < 1) {
@@ -149,7 +149,7 @@ public final class Manipulator {
     /**
      * Converts given sequence to a list of codons.
      * @param sequence  Sequence to be converted
-     * @return result of the conversion
+     * @return  List of codons (sequences)
      */
     public static LinkedList<Sequence> sequenceToCodons(Sequence sequence) {
         // Returns only triples of bases, that is some bases from the original sequence might get dropped
