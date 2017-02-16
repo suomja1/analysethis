@@ -2,6 +2,7 @@ package dna.analysethis;
 
 import dna.analysethis.domain.Base;
 import dna.analysethis.service.SequenceAnalysator;
+import dna.analysethis.utilities.FileHandler;
 import dna.analysethis.utilities.Manipulator;
 import java.awt.CardLayout;
 import java.awt.Container;
@@ -13,6 +14,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.SwingConstants;
 import javax.swing.WindowConstants;
@@ -60,9 +62,10 @@ public class UI implements Runnable {
         JLabel text = new JLabel("Syötä DNA-sekvenssi.", SwingConstants.CENTER);
         this.indexPanel.add(text);
 
-        JTextArea input = new JTextArea();
+        JTextArea input = new JTextArea(8, 1);
         input.setLineWrap(true);
-        this.indexPanel.add(input);
+        JScrollPane scroll = new JScrollPane(input);
+        this.indexPanel.add(scroll);
         
         JButton button2 = new JButton("Satunnainen sekvenssi.");
         button2.addActionListener(a -> {
@@ -102,21 +105,42 @@ public class UI implements Runnable {
     }
     
     private void createResultPanel() {
-        this.resultPanel = new JPanel(new GridLayout(8, 1));
+        this.resultPanel = new JPanel(new GridLayout(3, 1));
+        String resultsText = "";
         
         for (Base b : Base.values()) {
-            JLabel base = new JLabel(b.getName() 
-                    + " "
+            resultsText += b.getName() 
+                    + ": "
                     + this.analysator.frequency(b)
-                    + " (" + Math.round(this.analysator.relativeFrequency(b) * 10000.0) / 100.0 + " %)");
-            this.resultPanel.add(base);
+                    + " (" + Math.round(this.analysator.relativeFrequency(b) * 10000.0) / 100.0 + " %)"
+                    + "\n";
         }
         
-        JLabel total = new JLabel("Emästen lukumäärä: " + this.analysator.numberOfBases());
-        this.resultPanel.add(total);
+        resultsText += "Emästen lukumäärä: " + this.analysator.numberOfBases() + "\n"
+                + "GC%: " + Math.round(this.analysator.gcContent() * 10000.0) / 100.0 + " %";
         
-        JLabel gc = new JLabel("GC%: " + Math.round(this.analysator.gcContent() * 10000.0) / 100.0 + " %");
-        this.resultPanel.add(gc);
+        JTextArea results = new JTextArea(resultsText);
+        results.setEditable(false);
+        this.resultPanel.add(results);
+        
+        JButton printButton = new JButton("Tulosta.");
+        String resultsText2 = resultsText;
+        printButton.addActionListener(a -> {
+            boolean success = FileHandler.write(resultsText2);
+            
+            if (!success) {
+                JOptionPane.showMessageDialog(this.frame,
+                        "Tulostus epäonnistui.",
+                        "Virhe!",
+                        JOptionPane.ERROR_MESSAGE);
+            } else {
+                JOptionPane.showMessageDialog(this.frame,
+                        "Tiedosto 'tuloste.txt' kirjoitettu.",
+                        "Tulostus",
+                        JOptionPane.INFORMATION_MESSAGE);
+            }
+        });
+        this.resultPanel.add(printButton);
         
         JButton button = new JButton("Aloita alusta.");
         button.addActionListener(a -> showPanel(INDEX));

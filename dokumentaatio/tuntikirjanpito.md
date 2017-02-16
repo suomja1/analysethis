@@ -32,3 +32,4 @@ Pvm | *t*/h | Kuvaus
 13.02.2017 | 0.5 | Refaktorointi
 15.02.2017 | 0.5 | Tiedostometodien viilausta
 15.02.2017 | 2.0 | Koodikatselmointi (lue: tetriksen pelaamista)
+16.02.2017 | 1.5 | Refaktorointi, tiedoston kirjoittaminen käyttöliittymään

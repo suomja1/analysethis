@@ -22,7 +22,7 @@
 <a class="jxr_linenumber" name="L14" href="#L14">14</a>      <em class="jxr_javadoccomment">/**</em>
 <a class="jxr_linenumber" name="L15" href="#L15">15</a>  <em class="jxr_javadoccomment">     * Converts given sequence to string format.</em>
 <a class="jxr_linenumber" name="L16" href="#L16">16</a>  <em class="jxr_javadoccomment">     * @param sequence  Sequence to be converted</em>
-<a class="jxr_linenumber" name="L17" href="#L17">17</a>  <em class="jxr_javadoccomment">     * @return result of the conversion</em>
+<a class="jxr_linenumber" name="L17" href="#L17">17</a>  <em class="jxr_javadoccomment">     * @return  Result of the conversion</em>
 <a class="jxr_linenumber" name="L18" href="#L18">18</a>  <em class="jxr_javadoccomment">     */</em>
 <a class="jxr_linenumber" name="L19" href="#L19">19</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> String sequenceToString(<a href="../../../dna/analysethis/domain/Sequence.html">Sequence</a> sequence) {
 <a class="jxr_linenumber" name="L20" href="#L20">20</a>          String string = <span class="jxr_string">""</span>;
@@ -41,7 +41,7 @@
 <a class="jxr_linenumber" name="L33" href="#L33">33</a>      <em class="jxr_javadoccomment">/**</em>
 <a class="jxr_linenumber" name="L34" href="#L34">34</a>  <em class="jxr_javadoccomment">     * Converts given string to a list of bases.</em>
 <a class="jxr_linenumber" name="L35" href="#L35">35</a>  <em class="jxr_javadoccomment">     * @param string    String to be converted</em>
-<a class="jxr_linenumber" name="L36" href="#L36">36</a>  <em class="jxr_javadoccomment">     * @return result of the conversion</em>
+<a class="jxr_linenumber" name="L36" href="#L36">36</a>  <em class="jxr_javadoccomment">     * @return  Result of the conversion</em>
 <a class="jxr_linenumber" name="L37" href="#L37">37</a>  <em class="jxr_javadoccomment">     */</em>
 <a class="jxr_linenumber" name="L38" href="#L38">38</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> List&lt;Base&gt; stringToList(String string) {
 <a class="jxr_linenumber" name="L39" href="#L39">39</a>          List&lt;Base&gt; bases = <strong class="jxr_keyword">new</strong> LinkedList&lt;&gt;();
@@ -70,9 +70,9 @@
 <a class="jxr_linenumber" name="L62" href="#L62">62</a>      }
 <a class="jxr_linenumber" name="L63" href="#L63">63</a>      
 <a class="jxr_linenumber" name="L64" href="#L64">64</a>      <em class="jxr_javadoccomment">/**</em>
-<a class="jxr_linenumber" name="L65" href="#L65">65</a>  <em class="jxr_javadoccomment">     * Converts given string to sequence.</em>
+<a class="jxr_linenumber" name="L65" href="#L65">65</a>  <em class="jxr_javadoccomment">     * Converts given string to a sequence.</em>
 <a class="jxr_linenumber" name="L66" href="#L66">66</a>  <em class="jxr_javadoccomment">     * @param string    String to be converted</em>
-<a class="jxr_linenumber" name="L67" href="#L67">67</a>  <em class="jxr_javadoccomment">     * @return result of the conversion</em>
+<a class="jxr_linenumber" name="L67" href="#L67">67</a>  <em class="jxr_javadoccomment">     * @return  Result of the conversion</em>
 <a class="jxr_linenumber" name="L68" href="#L68">68</a>  <em class="jxr_javadoccomment">     */</em>
 <a class="jxr_linenumber" name="L69" href="#L69">69</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../dna/analysethis/domain/Sequence.html">Sequence</a> stringToSequence(String string) {
 <a class="jxr_linenumber" name="L70" href="#L70">70</a>          <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> <a href="../../../dna/analysethis/domain/Sequence.html">Sequence</a>(stringToList(string));
@@ -81,7 +81,7 @@
 <a class="jxr_linenumber" name="L73" href="#L73">73</a>      <em class="jxr_javadoccomment">/**</em>
 <a class="jxr_linenumber" name="L74" href="#L74">74</a>  <em class="jxr_javadoccomment">     * Reverses the order of the bases of given sequence.</em>
 <a class="jxr_linenumber" name="L75" href="#L75">75</a>  <em class="jxr_javadoccomment">     * @param sequence  Sequence to be reversed</em>
-<a class="jxr_linenumber" name="L76" href="#L76">76</a>  <em class="jxr_javadoccomment">     * @return result of the conversion</em>
+<a class="jxr_linenumber" name="L76" href="#L76">76</a>  <em class="jxr_javadoccomment">     * @return  Reverse of given sequence</em>
 <a class="jxr_linenumber" name="L77" href="#L77">77</a>  <em class="jxr_javadoccomment">     */</em>
 <a class="jxr_linenumber" name="L78" href="#L78">78</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../dna/analysethis/domain/Sequence.html">Sequence</a> reverse(<a href="../../../dna/analysethis/domain/Sequence.html">Sequence</a> sequence) {
 <a class="jxr_linenumber" name="L79" href="#L79">79</a>          List&lt;Base&gt; bases = <strong class="jxr_keyword">new</strong> LinkedList&lt;&gt;(sequence.getSequence());
@@ -92,7 +92,7 @@
 <a class="jxr_linenumber" name="L84" href="#L84">84</a>      <em class="jxr_javadoccomment">/**</em>
 <a class="jxr_linenumber" name="L85" href="#L85">85</a>  <em class="jxr_javadoccomment">     * Creates the complement of given sequence using the Base-pairing rule.</em>
 <a class="jxr_linenumber" name="L86" href="#L86">86</a>  <em class="jxr_javadoccomment">     * @param sequence  Sequence to be complemented</em>
-<a class="jxr_linenumber" name="L87" href="#L87">87</a>  <em class="jxr_javadoccomment">     * @return result of the conversion</em>
+<a class="jxr_linenumber" name="L87" href="#L87">87</a>  <em class="jxr_javadoccomment">     * @return  Complement of given sequence</em>
 <a class="jxr_linenumber" name="L88" href="#L88">88</a>  <em class="jxr_javadoccomment">     */</em>
 <a class="jxr_linenumber" name="L89" href="#L89">89</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../dna/analysethis/domain/Sequence.html">Sequence</a> complement(<a href="../../../dna/analysethis/domain/Sequence.html">Sequence</a> sequence) {
 <a class="jxr_linenumber" name="L90" href="#L90">90</a>          List&lt;Base&gt; bases = <strong class="jxr_keyword">new</strong> LinkedList&lt;&gt;();
@@ -117,7 +117,7 @@
 <a class="jxr_linenumber" name="L109" href="#L109">109</a>     <em class="jxr_javadoccomment">/**</em>
 <a class="jxr_linenumber" name="L110" href="#L110">110</a> <em class="jxr_javadoccomment">     * Reverses the order of the bases of given sequence and creates its complement using the Base-pairing rule.</em>
 <a class="jxr_linenumber" name="L111" href="#L111">111</a> <em class="jxr_javadoccomment">     * @param sequence  Sequence to be reversed and complemented</em>
-<a class="jxr_linenumber" name="L112" href="#L112">112</a> <em class="jxr_javadoccomment">     * @return result of the conversion</em>
+<a class="jxr_linenumber" name="L112" href="#L112">112</a> <em class="jxr_javadoccomment">     * @return  Reverse-complement of given sequence</em>
 <a class="jxr_linenumber" name="L113" href="#L113">113</a> <em class="jxr_javadoccomment">     */</em>
 <a class="jxr_linenumber" name="L114" href="#L114">114</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../dna/analysethis/domain/Sequence.html">Sequence</a> reverseComplement(<a href="../../../dna/analysethis/domain/Sequence.html">Sequence</a> sequence) {
 <a class="jxr_linenumber" name="L115" href="#L115">115</a>         <strong class="jxr_keyword">return</strong> complement(reverse(sequence));
@@ -126,7 +126,7 @@
 <a class="jxr_linenumber" name="L118" href="#L118">118</a>     <em class="jxr_javadoccomment">/**</em>
 <a class="jxr_linenumber" name="L119" href="#L119">119</a> <em class="jxr_javadoccomment">     * Creates a random sequence of given length.</em>
 <a class="jxr_linenumber" name="L120" href="#L120">120</a> <em class="jxr_javadoccomment">     * @param length    The length of the sequence</em>
-<a class="jxr_linenumber" name="L121" href="#L121">121</a> <em class="jxr_javadoccomment">     * @return random sequence of required length</em>
+<a class="jxr_linenumber" name="L121" href="#L121">121</a> <em class="jxr_javadoccomment">     * @return  Random sequence of required length</em>
 <a class="jxr_linenumber" name="L122" href="#L122">122</a> <em class="jxr_javadoccomment">     */</em>
 <a class="jxr_linenumber" name="L123" href="#L123">123</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../dna/analysethis/domain/Sequence.html">Sequence</a> random(<strong class="jxr_keyword">int</strong> length) {
 <a class="jxr_linenumber" name="L124" href="#L124">124</a>         <strong class="jxr_keyword">if</strong> (length &lt; 1) {
@@ -157,7 +157,7 @@
 <a class="jxr_linenumber" name="L149" href="#L149">149</a>     <em class="jxr_javadoccomment">/**</em>
 <a class="jxr_linenumber" name="L150" href="#L150">150</a> <em class="jxr_javadoccomment">     * Converts given sequence to a list of codons.</em>
 <a class="jxr_linenumber" name="L151" href="#L151">151</a> <em class="jxr_javadoccomment">     * @param sequence  Sequence to be converted</em>
-<a class="jxr_linenumber" name="L152" href="#L152">152</a> <em class="jxr_javadoccomment">     * @return result of the conversion</em>
+<a class="jxr_linenumber" name="L152" href="#L152">152</a> <em class="jxr_javadoccomment">     * @return  List of codons (sequences)</em>
 <a class="jxr_linenumber" name="L153" href="#L153">153</a> <em class="jxr_javadoccomment">     */</em>
 <a class="jxr_linenumber" name="L154" href="#L154">154</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> LinkedList&lt;Sequence&gt; sequenceToCodons(<a href="../../../dna/analysethis/domain/Sequence.html">Sequence</a> sequence) {
 <a class="jxr_linenumber" name="L155" href="#L155">155</a>         <em class="jxr_comment">// Returns only triples of bases, that is some bases from the original sequence might get dropped</em>
