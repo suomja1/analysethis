@@ -3,6 +3,7 @@ package dna.analysethis.service;
 import dna.analysethis.utilities.Manipulator;
 import dna.analysethis.domain.Base;
 import dna.analysethis.domain.Sequence;
+import java.io.IOException;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import org.junit.Before;
@@ -15,6 +16,12 @@ public class SequenceAnalysatorTest {
     public void setUp() {
         s = Manipulator.stringToSequence("AAAATTTTCCXY");
         a = new SequenceAnalysator(s);
+    }
+    
+    @Test
+    public void testConstructor() throws IOException {
+        assertEquals("ACTCTGCTGAGCCTAGGCTAG", new SequenceAnalysator("testi.txt").getSequence().toString());
+        assertEquals("T__T__T_", new SequenceAnalysator("testi.tx").getSequence().toString());
     }
     
     @Test

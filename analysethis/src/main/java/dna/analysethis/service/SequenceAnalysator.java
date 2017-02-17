@@ -29,11 +29,15 @@ public class SequenceAnalysator {
      * @throws java.io.IOException  File can't be found
      */
     public SequenceAnalysator(String string) throws IOException {
-        if (string.endsWith(".txt") || string.endsWith(".TXT")) {
+        if (string.endsWith(".txt")) {
             this.sequence = Manipulator.stringToSequence(FileHandler.read(string));
         } else {
             this.sequence = Manipulator.stringToSequence(string);
         }
+    }
+
+    public Sequence getSequence() {
+        return sequence;
     }
     
     /**
