@@ -1,7 +1,1 @@
-Sytosiini: 0 (0.0 %)
-Guaniini: 0 (0.0 %)
-Adeniini: 0 (0.0 %)
-Tymiini: 0 (0.0 %)
-Tuntematon emäs: 1 (100.0 %)
-Emästen lukumäärä: 1
-GC%: 0.0 %
+9b9c5edf-3cb5-47ae-a804-0d7f759ea2a4

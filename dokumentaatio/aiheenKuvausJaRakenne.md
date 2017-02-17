@@ -26,3 +26,11 @@
 *Alustava määrittelyvaiheen luokkakaavio*: Luokkakaavioon on merkitty järjestelmän tärkeimmät luokat. Käyttöliittymä on tässä merkitty yhdeksi luokaksi. Sekavuuden lisäämiseksi kaavioon on merkitty myös luokkien välisiä riippuvuuksia...
 
 ![luokkakaavio](luokkakaavio.png)
+
+*Käyttötapauksien sekvenssikaavioita*
+
+![sekvenssikaavio1](DNA-sekvenssianalysaattori merkkijonosta.png)
+
+![sekvenssikaavio2](DNA-sekvenssi suhteellinen GC-massa.png)
+
+![sekvenssikaavio3](Aloitus- ja lopetuskodonien tarkastus.png)
