@@ -113,7 +113,7 @@
 <a class="jxr_linenumber" name="L105" href="#L105">105</a>     }
 <a class="jxr_linenumber" name="L106" href="#L106">106</a>     
 <a class="jxr_linenumber" name="L107" href="#L107">107</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> createResultPanel() {
-<a class="jxr_linenumber" name="L108" href="#L108">108</a>         <strong class="jxr_keyword">this</strong>.resultPanel = <strong class="jxr_keyword">new</strong> JPanel(<strong class="jxr_keyword">new</strong> GridLayout(3, 1));
+<a class="jxr_linenumber" name="L108" href="#L108">108</a>         <strong class="jxr_keyword">this</strong>.resultPanel = <strong class="jxr_keyword">new</strong> JPanel(<strong class="jxr_keyword">new</strong> GridLayout(4, 1));
 <a class="jxr_linenumber" name="L109" href="#L109">109</a>         String resultsText = <span class="jxr_string">""</span>;
 <a class="jxr_linenumber" name="L110" href="#L110">110</a>         
 <a class="jxr_linenumber" name="L111" href="#L111">111</a>         <strong class="jxr_keyword">for</strong> (Base b : Base.values()) {
@@ -150,16 +150,22 @@
 <a class="jxr_linenumber" name="L142" href="#L142">142</a>         });
 <a class="jxr_linenumber" name="L143" href="#L143">143</a>         <strong class="jxr_keyword">this</strong>.resultPanel.add(printButton);
 <a class="jxr_linenumber" name="L144" href="#L144">144</a>         
-<a class="jxr_linenumber" name="L145" href="#L145">145</a>         JButton button = <strong class="jxr_keyword">new</strong> JButton(<span class="jxr_string">"Aloita alusta."</span>);
-<a class="jxr_linenumber" name="L146" href="#L146">146</a>         button.addActionListener(a -&gt; showPanel(INDEX));
-<a class="jxr_linenumber" name="L147" href="#L147">147</a>         <strong class="jxr_keyword">this</strong>.resultPanel.add(button);
-<a class="jxr_linenumber" name="L148" href="#L148">148</a>     }
-<a class="jxr_linenumber" name="L149" href="#L149">149</a>     
-<a class="jxr_linenumber" name="L150" href="#L150">150</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> showPanel(String card) {
-<a class="jxr_linenumber" name="L151" href="#L151">151</a>         CardLayout cl = (CardLayout) (<strong class="jxr_keyword">this</strong>.panels.getLayout());
-<a class="jxr_linenumber" name="L152" href="#L152">152</a>         cl.show(<strong class="jxr_keyword">this</strong>.panels, card);
-<a class="jxr_linenumber" name="L153" href="#L153">153</a>     }
-<a class="jxr_linenumber" name="L154" href="#L154">154</a> }
+<a class="jxr_linenumber" name="L145" href="#L145">145</a>         JButton compareButton = <strong class="jxr_keyword">new</strong> JButton(<span class="jxr_string">"Vertaa."</span>);
+<a class="jxr_linenumber" name="L146" href="#L146">146</a>         compareButton.addActionListener(a -&gt; {
+<a class="jxr_linenumber" name="L147" href="#L147">147</a>             <em class="jxr_comment">// TODO</em>
+<a class="jxr_linenumber" name="L148" href="#L148">148</a>         });
+<a class="jxr_linenumber" name="L149" href="#L149">149</a>         <strong class="jxr_keyword">this</strong>.resultPanel.add(compareButton);
+<a class="jxr_linenumber" name="L150" href="#L150">150</a>         
+<a class="jxr_linenumber" name="L151" href="#L151">151</a>         JButton backButton = <strong class="jxr_keyword">new</strong> JButton(<span class="jxr_string">"Aloita alusta."</span>);
+<a class="jxr_linenumber" name="L152" href="#L152">152</a>         backButton.addActionListener(a -&gt; showPanel(INDEX));
+<a class="jxr_linenumber" name="L153" href="#L153">153</a>         <strong class="jxr_keyword">this</strong>.resultPanel.add(backButton);
+<a class="jxr_linenumber" name="L154" href="#L154">154</a>     }
+<a class="jxr_linenumber" name="L155" href="#L155">155</a>     
+<a class="jxr_linenumber" name="L156" href="#L156">156</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> showPanel(String card) {
+<a class="jxr_linenumber" name="L157" href="#L157">157</a>         CardLayout cl = (CardLayout) (<strong class="jxr_keyword">this</strong>.panels.getLayout());
+<a class="jxr_linenumber" name="L158" href="#L158">158</a>         cl.show(<strong class="jxr_keyword">this</strong>.panels, card);
+<a class="jxr_linenumber" name="L159" href="#L159">159</a>     }
+<a class="jxr_linenumber" name="L160" href="#L160">160</a> }
 </pre>
 <hr/>
 <div id="footer">Copyright &#169; 2017. All rights reserved.</div>
