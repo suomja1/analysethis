@@ -12,7 +12,7 @@
 - sekvenssin analysointi
  - emästen lukumäärä, tuntemattomat emäkset
  - frekvenssit ja suhteelliset frekvenssit
-   - emäs, emäskaksikko, kodoni
+   - emäs, kodoni
  - guaniinin ja  sytosiinin suhteellinen osuus ([GC-pitoisuus](https://en.wikipedia.org/wiki/GC-content))
  - toistuvat jaksot ([toistojaksot](https://en.wikipedia.org/wiki/Repeated_sequence_(DNA)))
 - kahden sekvenssin vertailu 

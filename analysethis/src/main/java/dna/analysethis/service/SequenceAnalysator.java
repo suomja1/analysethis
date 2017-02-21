@@ -165,4 +165,69 @@ public class SequenceAnalysator {
         // Values used here are pulled out of a hat and have little scientific justification
         return this.numberOfCodons() >= 5 && this.relativeGcMass() >= .3 && this.checkStartAndStopCodons();
     }
+    
+    /**
+     * Compares given sequence with the sequence. All mismatches in the sequences are marked with an asterix.
+     * @param another   Sequence to be compared
+     * @return  String-representation of the comparison
+     */
+    public String compare(Sequence another) {
+        String string = "";
+        
+        for (int i = 0; i < Math.min(this.numberOfBases(), another.getSequence().size()); i++) {
+            Base b = this.sequence.getSequence().get(i);
+            
+            if (b.equals(another.getSequence().get(i))) {
+                string += b;
+            } else {
+                string += "*";
+            }
+        }
+        
+        for (int i = 0; i < Math.abs(this.numberOfBases() - another.getSequence().size()); i++) {
+            string += "*";
+        }
+        
+        return string;
+    }
+    
+    /**
+     * Counts the Levenshtein distance between given sequence and the sequence. For this the method uses a well-known algorithm for two strings.
+     * @param another   Sequence to be compared
+     * @return  The minimum number of single-base edits required to change given sequence into the other
+     */
+    public int levenshteinDistance(Sequence another) {
+        return levenshteinDistance(this.sequence.toString(), another.toString());
+    }
+
+    private int levenshteinDistance(String a, String b) {
+        if (a.equals(b)) {
+            return 0;
+        }
+        
+        int[] v0 = new int[b.length() + 1];
+        int[] v1 = new int[b.length() + 1];
+
+        for (int i = 0; i < v0.length; i++) {
+            v0[i] = i;
+        }
+        
+        for (int i = 0; i < a.length(); i++) {
+            v1[0] = i + 1;
+            
+            for (int j = 0; j < b.length(); j++) {
+                int cost = 1;
+                
+                if (a.charAt(i) == b.charAt(j)) {
+                    cost = 0;
+                }
+                
+                v1[j + 1] = Math.min(v1[j] + 1, Math.min(v0[j + 1] + 1, v0[j] + cost));
+            }
+            
+            System.arraycopy(v1, 0, v0, 0, v0.length);
+        }
+        
+        return v1[b.length()];
+    }
 }
