@@ -26,7 +26,10 @@ public class UI implements Runnable {
     final static String INDEX = "INDEX";
     private JPanel resultPanel;
     final static String RESULT = "RESULT";
+    private JPanel comparisonPanel;
+    final static String COMPARISON = "COMPARISON";
     private SequenceAnalysator analysator;
+    private SequenceAnalysator compare;
 
     public UI() {
     }
@@ -94,6 +97,7 @@ public class UI implements Runnable {
                 this.panels.add(this.resultPanel, RESULT);
                 
                 showPanel(RESULT);
+                input.setText("");
             } catch (IOException | IllegalArgumentException e) {
                 JOptionPane.showMessageDialog(this.frame,
                         "Sekvenssinluku epäonnistui.\nYritä uudelleen.",
@@ -124,7 +128,7 @@ public class UI implements Runnable {
         this.resultPanel.add(results);
         
         JButton printButton = new JButton("Tulosta.");
-        String resultsText2 = resultsText;
+        String resultsText2 = this.analysator.getSequence() + "\n\n" + resultsText;
         printButton.addActionListener(a -> {
             boolean success = FileHandler.write(resultsText2);
             
@@ -144,7 +148,24 @@ public class UI implements Runnable {
         
         JButton compareButton = new JButton("Vertaa.");
         compareButton.addActionListener(a -> {
-            // TODO
+            String string = JOptionPane.showInputDialog(this.frame,
+                    "Syötä verrattava sekvessi:",
+                    "Vertaa",
+                    JOptionPane.PLAIN_MESSAGE);
+            
+            try {
+                this.compare = new SequenceAnalysator(string);
+                
+                createComparisonPanel();
+                this.panels.add(this.comparisonPanel, COMPARISON);
+
+                showPanel(COMPARISON);
+            } catch (IOException | IllegalArgumentException e) {
+                JOptionPane.showMessageDialog(this.frame,
+                        "Sekvenssinluku epäonnistui.\nYritä uudelleen.",
+                        "Virhe!",
+                        JOptionPane.ERROR_MESSAGE);
+            }
         });
         this.resultPanel.add(compareButton);
         
@@ -152,6 +173,33 @@ public class UI implements Runnable {
         backButton.addActionListener(a -> showPanel(INDEX));
         this.resultPanel.add(backButton);
     }
+    
+    private void createComparisonPanel() {
+        this.comparisonPanel = new JPanel(new GridLayout(4, 1));
+        
+        String result = Manipulator.compoundSequence(analysator.getSequence(), compare.getSequence());
+        String resultText = "Vertailun tulos:\n" + result;
+        JTextArea results = new JTextArea(8, 1);
+        results.setText(resultText);
+        results.setLineWrap(true);
+        results.setEditable(false);
+        JScrollPane scroll = new JScrollPane(results);
+        this.comparisonPanel.add(scroll);
+        
+        JTextArea text = new JTextArea("Sekvenssien Levenšteinin etäisyys on "
+                + this.analysator.levenshteinDistance(this.compare.getSequence()));
+        text.setEditable(false);
+        text.setLineWrap(true);
+        this.comparisonPanel.add(text);
+        
+        JButton backButton = new JButton("Takaisin.");
+        backButton.addActionListener(a -> showPanel(RESULT));
+        this.comparisonPanel.add(backButton);
+        
+        JButton back2Button = new JButton("Aloita alusta.");
+        back2Button.addActionListener(a -> showPanel(INDEX));
+        this.comparisonPanel.add(back2Button);
+    }    
     
     private void showPanel(String card) {
         CardLayout cl = (CardLayout) (this.panels.getLayout());
