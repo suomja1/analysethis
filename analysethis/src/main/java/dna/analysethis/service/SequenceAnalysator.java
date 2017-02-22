@@ -135,8 +135,7 @@ public class SequenceAnalysator {
      */
     public boolean checkStartAndStopCodons(Sequence seq) {
         LinkedList<Codon> codons = Manipulator.sequenceToCodons(seq);
-        return codons.getFirst().isStartCodon() && codons.getLast().isStopCodon();
-        // We omit checking for possible stop codons inside the sequence – for now that is
+        return codons.getFirst().isStartCodon() && codons.getLast().isStopCodon(); // We omit checking for possible stop codons inside the sequence – for now that is
     }
     
     /**
@@ -155,8 +154,7 @@ public class SequenceAnalysator {
      * @return True if the sequence represents a gene
      */
     public boolean checkIfGene() {
-        // Values used here are pulled out of a hat and have little scientific justification
-        return this.numberOfCodons() >= 5 && this.relativeGcMass() >= .3 && this.checkStartAndStopCodons();
+        return this.numberOfCodons() >= 5 && this.relativeGcMass() >= .3 && this.checkStartAndStopCodons(); // Values used here are pulled out of a hat and have little scientific justification
     }
     
     /**
