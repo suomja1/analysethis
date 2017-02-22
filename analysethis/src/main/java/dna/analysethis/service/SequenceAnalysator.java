@@ -1,6 +1,7 @@
 package dna.analysethis.service;
 
 import dna.analysethis.domain.Base;
+import dna.analysethis.domain.Codon;
 import dna.analysethis.domain.Sequence;
 import dna.analysethis.utilities.FileHandler;
 import dna.analysethis.utilities.Manipulator;
@@ -88,7 +89,7 @@ public class SequenceAnalysator {
      * @return  Total mass of the base
      */
     public double mass(Base b) {
-        if (b == Base.X) {
+        if (b.equals(Base.X)) {
             throw new IllegalArgumentException("Tuntemattoman emäksen moolimassaa ei tunneta!");
         }
         return this.frequency(b) * b.getMass();
@@ -133,16 +134,8 @@ public class SequenceAnalysator {
      * @return  True if both start and stop codons occur in the sequence
      */
     public boolean checkStartAndStopCodons(Sequence seq) {
-        Sequence startCodon = Manipulator.stringToSequence("ATG");
-        
-        List<Sequence> stopCodons = new LinkedList<>();
-        stopCodons.add(Manipulator.stringToSequence("TAA"));
-        stopCodons.add(Manipulator.stringToSequence("TAG"));
-        stopCodons.add(Manipulator.stringToSequence("TGA"));
-        
-        LinkedList<Sequence> codons = Manipulator.sequenceToCodons(seq);
-        
-        return codons.getFirst().equals(startCodon) && stopCodons.contains(codons.getLast());
+        LinkedList<Codon> codons = Manipulator.sequenceToCodons(seq);
+        return codons.getFirst().isStartCodon() && codons.getLast().isStopCodon();
         // We omit checking for possible stop codons inside the sequence – for now that is
     }
     
@@ -164,31 +157,6 @@ public class SequenceAnalysator {
     public boolean checkIfGene() {
         // Values used here are pulled out of a hat and have little scientific justification
         return this.numberOfCodons() >= 5 && this.relativeGcMass() >= .3 && this.checkStartAndStopCodons();
-    }
-    
-    /**
-     * Compares given sequence with the sequence. All mismatches in the sequences are marked with an asterix.
-     * @param another   Sequence to be compared
-     * @return  String-representation of the comparison
-     */
-    public String compare(Sequence another) {
-        String string = "";
-        
-        for (int i = 0; i < Math.min(this.numberOfBases(), another.getSequence().size()); i++) {
-            Base b = this.sequence.getSequence().get(i);
-            
-            if (b.equals(another.getSequence().get(i))) {
-                string += b;
-            } else {
-                string += "*";
-            }
-        }
-        
-        for (int i = 0; i < Math.abs(this.numberOfBases() - another.getSequence().size()); i++) {
-            string += "*";
-        }
-        
-        return string;
     }
     
     /**

@@ -1,6 +1,7 @@
 package dna.analysethis.utilities;
 
 import dna.analysethis.domain.Base;
+import dna.analysethis.domain.Codon;
 import dna.analysethis.domain.Sequence;
 import java.util.Collections;
 import java.util.LinkedList;
@@ -151,16 +152,42 @@ public final class Manipulator {
      * @param sequence  Sequence to be converted
      * @return  List of codons (sequences)
      */
-    public static LinkedList<Sequence> sequenceToCodons(Sequence sequence) {
+    public static LinkedList<Codon> sequenceToCodons(Sequence sequence) {
         // Returns only triples of bases, that is some bases from the original sequence might get dropped
-        LinkedList<Sequence> codons = new LinkedList<>();
+        LinkedList<Codon> codons = new LinkedList<>();
         
         int j = 1;
         for (int i = 0; i <= sequence.getSequence().size() - 3; i += 3) {
-            codons.add(new Sequence(sequence.getSequence().subList(i, 3 * j)));
+            codons.add(new Codon(sequence.getSequence().subList(i, 3 * j)));
             j++;
         }
         
         return codons;
+    }
+    
+    /**
+     * Compares given sequences and retuns a String-representation. All mismatches in the sequences are marked with an asterix.
+     * @param seq1  First sequence to be compared
+     * @param seq2  Second sequence to be compared
+     * @return  String-representation of the comparison
+     */
+    public static String compoundSequence(Sequence seq1, Sequence seq2) {
+        String string = "";
+
+        for (int i = 0; i < Math.min(seq1.getSequence().size(), seq2.getSequence().size()); i++) {
+            Base b = seq1.getSequence().get(i);
+
+            if (b.equals(seq2.getSequence().get(i))) {
+                string += b;
+            } else {
+                string += "*";
+            }
+        }
+
+        for (int i = 0; i < Math.abs(seq1.getSequence().size() - seq2.getSequence().size()); i++) {
+            string += "*";
+        }
+
+        return string;
     }
 }

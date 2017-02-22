@@ -1,6 +1,7 @@
 package dna.analysethis.utilities;
 
 import dna.analysethis.domain.Base;
+import dna.analysethis.domain.Codon;
 import dna.analysethis.domain.Sequence;
 import java.util.LinkedList;
 import java.util.List;
@@ -79,10 +80,10 @@ public class ManipulatorTest {
     
     @Test
     public void testSequenceToCodons() {
-        List<Sequence> codons = new LinkedList<>();
-        codons.add(Manipulator.stringToSequence("ACT"));
-        codons.add(Manipulator.stringToSequence("GXG"));
-        codons.add(Manipulator.stringToSequence("TAC"));
+        List<Codon> codons = new LinkedList<>();
+        codons.add(new Codon(Manipulator.stringToList("ACT")));
+        codons.add(new Codon(Manipulator.stringToList("GXG")));
+        codons.add(new Codon(Manipulator.stringToList("TAC")));
         
         assertArrayEquals(codons.toArray(), 
                 Manipulator.sequenceToCodons(Manipulator.stringToSequence("ACTGXGTACAA")).toArray());
