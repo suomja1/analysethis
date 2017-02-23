@@ -1,1 +1,9 @@
-ec613e0d-414a-4bad-9f07-06a958925ad8
+ACTG
+
+Sytosiini: 1 (25.0 %)
+Guaniini: 1 (25.0 %)
+Adeniini: 1 (25.0 %)
+Tymiini: 1 (25.0 %)
+Tuntematon emäs: 0 (0.0 %)
+Emästen lukumäärä: 4
+GC%: 50.0 %

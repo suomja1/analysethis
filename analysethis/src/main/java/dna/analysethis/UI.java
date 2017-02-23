@@ -81,7 +81,7 @@ public class UI implements Runnable {
                 input.setText(Manipulator.random(Integer.parseInt(string)).toString());
             } catch (IllegalArgumentException e) {
                 JOptionPane.showMessageDialog(this.frame,
-                        "Sekvenssin generointi epäonnistui.\nYritä uudelleen.",
+                        "Sekvenssin generointi epäonnistui." + System.getProperty("line.separator") + "Yritä uudelleen.",
                         "Virhe!",
                         JOptionPane.ERROR_MESSAGE);
             }
@@ -100,7 +100,7 @@ public class UI implements Runnable {
                 input.setText("");
             } catch (IOException | IllegalArgumentException e) {
                 JOptionPane.showMessageDialog(this.frame,
-                        "Sekvenssinluku epäonnistui.\nYritä uudelleen.",
+                        "Sekvenssinluku epäonnistui." + System.getProperty("line.separator") + "Yritä uudelleen.",
                         "Virhe!",
                         JOptionPane.ERROR_MESSAGE);
             }
@@ -117,10 +117,10 @@ public class UI implements Runnable {
                     + ": "
                     + this.analysator.frequency(b)
                     + " (" + Math.round(this.analysator.relativeFrequency(b) * 10000.0) / 100.0 + " %)"
-                    + "\n";
+                    + System.getProperty("line.separator");
         }
         
-        resultsText += "Emästen lukumäärä: " + this.analysator.numberOfBases() + "\n"
+        resultsText += "Emästen lukumäärä: " + this.analysator.numberOfBases() + System.getProperty("line.separator")
                 + "GC%: " + Math.round(this.analysator.gcContent() * 10000.0) / 100.0 + " %";
         
         JTextArea results = new JTextArea(resultsText);
@@ -128,7 +128,7 @@ public class UI implements Runnable {
         this.resultPanel.add(results);
         
         JButton printButton = new JButton("Tulosta.");
-        String resultsText2 = this.analysator.getSequence() + "\n\n" + resultsText;
+        String resultsText2 = this.analysator.getSequence() + System.getProperty("line.separator") + System.getProperty("line.separator") + resultsText;
         printButton.addActionListener(a -> {
             boolean success = FileHandler.write(resultsText2);
             
@@ -162,7 +162,7 @@ public class UI implements Runnable {
                 showPanel(COMPARISON);
             } catch (IOException | IllegalArgumentException e) {
                 JOptionPane.showMessageDialog(this.frame,
-                        "Sekvenssinluku epäonnistui.\nYritä uudelleen.",
+                        "Sekvenssinluku epäonnistui." + System.getProperty("line.separator") + "Yritä uudelleen.",
                         "Virhe!",
                         JOptionPane.ERROR_MESSAGE);
             }
@@ -178,7 +178,7 @@ public class UI implements Runnable {
         this.comparisonPanel = new JPanel(new GridLayout(4, 1));
         
         String result = Manipulator.compoundSequence(analysator.getSequence(), compare.getSequence());
-        String resultText = "Vertailun tulos:\n" + result;
+        String resultText = "Vertailun tulos:" + System.getProperty("line.separator") + result;
         JTextArea results = new JTextArea(8, 1);
         results.setText(resultText);
         results.setLineWrap(true);
