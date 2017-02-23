@@ -23,9 +23,13 @@
  - lukeminen
  - tulostaminen tiedostoon
 
+### Rakenne
+
 *Määrittelyvaiheen luokkakaavio*: Luokkakaavioon on merkitty järjestelmän tärkeimmät luokat. Käyttöliittymä on tässä merkitty yhdeksi luokaksi.
 
 ![luokkakaavio](luokkakaavio.png)
+
+*Rakennekuvaus*: TODO
 
 *Käyttötapauksien sekvenssikaavioita*
 
