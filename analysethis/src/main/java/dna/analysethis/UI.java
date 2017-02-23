@@ -121,7 +121,8 @@ public class UI implements Runnable {
         }
         
         resultsText += "Emästen lukumäärä: " + this.analysator.numberOfBases() + System.getProperty("line.separator")
-                + "GC%: " + Math.round(this.analysator.gcContent() * 10000.0) / 100.0 + " %";
+                + "GC%: " + Math.round(this.analysator.gcContent() * 10000.0) / 100.0 + " %" + System.getProperty("line.separator")
+                + "Onko geeni? " + this.analysator.checkIfGene();
         
         JTextArea results = new JTextArea(resultsText);
         results.setEditable(false);
