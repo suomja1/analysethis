@@ -43,6 +43,6 @@
 
 ![sekvenssikaavio2](DNA-sekvenssi suhteellinen GC-massa.png)
 
-![sekvenssikaavio3](Aloitus- ja lopetuskodonien tarkastus.png)
+![sekvenssikaavio3](Aloitus ja lopetuskodonien tarkastus.png)
 
 Tähän tulee päivittynyt versio yllä olevasta!
