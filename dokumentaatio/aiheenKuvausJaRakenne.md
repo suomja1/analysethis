@@ -12,7 +12,6 @@
 - sekvenssin analysointi
  - emästen lukumäärä, tuntemattomat emäkset
  - frekvenssit ja suhteelliset frekvenssit
-   - emäs, kodoni
  - guaniinin ja  sytosiinin suhteellinen osuus ([GC-pitoisuus](https://en.wikipedia.org/wiki/GC-content))
 - kahden sekvenssin vertailu 
  - [Levenšteinin etäisyys](https://en.wikipedia.org/wiki/Levenshtein_distance)
@@ -44,5 +43,3 @@
 ![sekvenssikaavio2](DNA-sekvenssi suhteellinen GC-massa.png)
 
 ![sekvenssikaavio3](Aloitus ja lopetuskodonien tarkastus.png)
-
-Tähän tulee päivittynyt versio yllä olevasta!
