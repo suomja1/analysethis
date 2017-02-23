@@ -28,7 +28,7 @@ public class SequenceTest {
     @Test
     public void testToString() {
         Sequence s = Manipulator.stringToSequence("   A AC8sP OCTT GG");
-        assertEquals(Manipulator.sequenceToString(s), s.toString());
+        assertEquals("AACXXXXCTTGG", s.toString());
     }
 
     @Test

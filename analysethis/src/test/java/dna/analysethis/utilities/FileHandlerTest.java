@@ -19,7 +19,7 @@ public class FileHandlerTest {
     @Test
     public void testWrite() throws IOException {
         String s = UUID.randomUUID().toString();
-        FileHandler.write(s);
+        assertTrue(FileHandler.write(s));
         assertEquals(s, FileHandler.read("tuloste.txt"));
     }
 }

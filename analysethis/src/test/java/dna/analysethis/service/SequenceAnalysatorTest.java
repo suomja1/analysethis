@@ -21,7 +21,7 @@ public class SequenceAnalysatorTest {
     @Test
     public void testConstructor() throws IOException {
         assertEquals("ACTCTGCTGAGCCTAGGCTAG", new SequenceAnalysator("testi.txt").getSequence().toString());
-        assertEquals("T__T__T_", new SequenceAnalysator("testi.tx").getSequence().toString());
+        assertEquals("TXXTXXTX", new SequenceAnalysator("testi.tx").getSequence().toString());
     }
     
     @Test
@@ -169,5 +169,27 @@ public class SequenceAnalysatorTest {
         assertTrue(a.checkIfGene());
         
         // To get rid of the mutation, construct a sequence with relative GC-mass of exactly 0.3
+    }
+
+    @Test
+    public void testLevenshteinDistance1() {
+//        AAAATTTTCCXY
+        assertEquals(0, a.levenshteinDistance(s));
+        assertEquals(1, a.levenshteinDistance(Manipulator.stringToSequence("AAAATGTTCCXY"))); // substitution
+        assertEquals(1, a.levenshteinDistance(Manipulator.stringToSequence("AAAATTTTCCX"))); // deletion
+        assertEquals(1, a.levenshteinDistance(Manipulator.stringToSequence("AAAATTTTCCXYA"))); // insertion
+        assertEquals(2, a.levenshteinDistance(Manipulator.stringToSequence("AAAATGTTCCX"))); // substitution and deletion
+        assertEquals(2, a.levenshteinDistance(Manipulator.stringToSequence("TAAAATTTTCCX"))); // deletion and insertion
+        assertEquals(2, a.levenshteinDistance(Manipulator.stringToSequence("AACATTTTCCXYA"))); // insertion and substitution
+        assertEquals(3, a.levenshteinDistance(Manipulator.stringToSequence("AAAAATGTTCCX"))); // insertion, substitution and deletion
+    }
+    
+    @Test
+    public void testLevenshteinDistance2() {
+//        AAAATTTTCCXY
+        assertEquals(2, a.levenshteinDistance(Manipulator.stringToSequence("AAAATTGGCCXY"))); // multiple substitutions
+        assertEquals(2, a.levenshteinDistance(Manipulator.stringToSequence("AATTTTCCXY"))); // multiple deletions
+        assertEquals(11, a.levenshteinDistance(Manipulator.stringToSequence("A")));
+        assertEquals(2, a.levenshteinDistance(Manipulator.stringToSequence("AAAATATATTCCXY"))); // multiple insertions
     }
 }

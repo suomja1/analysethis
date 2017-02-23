@@ -26,11 +26,6 @@ public class ManipulatorTest {
     }
     
     @Test
-    public void testSequenceToString() {
-        assertEquals("AC__G__T", Manipulator.sequenceToString(Manipulator.stringToSequence(" AC6   h gX! t")));
-    }
-    
-    @Test
     public void testReverse() {
         Sequence s1 = Manipulator.stringToSequence("ACXACCXGCGAX");
         Sequence temp = new Sequence(s1.getSequence());
@@ -91,5 +86,12 @@ public class ManipulatorTest {
         codons = new LinkedList<>();
         assertArrayEquals(codons.toArray(), 
                 Manipulator.sequenceToCodons(Manipulator.stringToSequence("AC")).toArray());
+    }
+
+    @Test
+    public void testCompoundSequence() {
+        assertEquals("ACTG", Manipulator.compoundSequence(Manipulator.stringToSequence("ACTG"), Manipulator.stringToSequence("ACTG")));
+        assertEquals("AC*G", Manipulator.compoundSequence(Manipulator.stringToSequence("ACCG"), Manipulator.stringToSequence("ACTG")));
+        assertEquals("ACTG*", Manipulator.compoundSequence(Manipulator.stringToSequence("ACTG"), Manipulator.stringToSequence("ACTGA")));
     }
 }

@@ -13,25 +13,6 @@ import java.util.Random;
  */
 public final class Manipulator {
     /**
-     * Converts given sequence to string format.
-     * @param sequence  Sequence to be converted
-     * @return  Result of the conversion
-     */
-    public static String sequenceToString(Sequence sequence) {
-        String string = "";
-        
-        for (Base b : sequence.getSequence()) {
-            if (!b.equals(Base.X)) {
-                string += b;
-            } else {
-                string += "_";
-            }
-        }
-        
-        return string;
-    }
-    
-    /**
      * Converts given string to a list of bases.
      * @param string    String to be converted
      * @return  Result of the conversion

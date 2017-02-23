@@ -36,3 +36,4 @@ Pvm | *t*/h | Kuvaus
 17.02.2017 | 2.0 | Sekvenssikaaviot
 21.02.2017 | 1.0 | Vertailumetodeja
 22.02.2017 | 2.0 | Vertailu käyttöliittymässä
+23.02.2017 | 1.5 | Testit lopuille

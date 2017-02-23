@@ -8,7 +8,6 @@ import dna.analysethis.utilities.Manipulator;
 import java.io.IOException;
 import java.util.Collections;
 import java.util.LinkedList;
-import java.util.List;
 
 /**
  * SequenceAnalysator provides multiple methods for analysing DNA sequences statistically.

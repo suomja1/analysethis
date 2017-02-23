@@ -9,13 +9,13 @@
 <a class="jxr_linenumber" name="L1" href="#L1">1</a>   <strong class="jxr_keyword">package</strong> dna.analysethis.service;
 <a class="jxr_linenumber" name="L2" href="#L2">2</a>   
 <a class="jxr_linenumber" name="L3" href="#L3">3</a>   <strong class="jxr_keyword">import</strong> dna.analysethis.domain.Base;
-<a class="jxr_linenumber" name="L4" href="#L4">4</a>   <strong class="jxr_keyword">import</strong> dna.analysethis.domain.Sequence;
-<a class="jxr_linenumber" name="L5" href="#L5">5</a>   <strong class="jxr_keyword">import</strong> dna.analysethis.utilities.FileHandler;
-<a class="jxr_linenumber" name="L6" href="#L6">6</a>   <strong class="jxr_keyword">import</strong> dna.analysethis.utilities.Manipulator;
-<a class="jxr_linenumber" name="L7" href="#L7">7</a>   <strong class="jxr_keyword">import</strong> java.io.IOException;
-<a class="jxr_linenumber" name="L8" href="#L8">8</a>   <strong class="jxr_keyword">import</strong> java.util.Collections;
-<a class="jxr_linenumber" name="L9" href="#L9">9</a>   <strong class="jxr_keyword">import</strong> java.util.LinkedList;
-<a class="jxr_linenumber" name="L10" href="#L10">10</a>  <strong class="jxr_keyword">import</strong> java.util.List;
+<a class="jxr_linenumber" name="L4" href="#L4">4</a>   <strong class="jxr_keyword">import</strong> dna.analysethis.domain.Codon;
+<a class="jxr_linenumber" name="L5" href="#L5">5</a>   <strong class="jxr_keyword">import</strong> dna.analysethis.domain.Sequence;
+<a class="jxr_linenumber" name="L6" href="#L6">6</a>   <strong class="jxr_keyword">import</strong> dna.analysethis.utilities.FileHandler;
+<a class="jxr_linenumber" name="L7" href="#L7">7</a>   <strong class="jxr_keyword">import</strong> dna.analysethis.utilities.Manipulator;
+<a class="jxr_linenumber" name="L8" href="#L8">8</a>   <strong class="jxr_keyword">import</strong> java.io.IOException;
+<a class="jxr_linenumber" name="L9" href="#L9">9</a>   <strong class="jxr_keyword">import</strong> java.util.Collections;
+<a class="jxr_linenumber" name="L10" href="#L10">10</a>  <strong class="jxr_keyword">import</strong> java.util.LinkedList;
 <a class="jxr_linenumber" name="L11" href="#L11">11</a>  
 <a class="jxr_linenumber" name="L12" href="#L12">12</a>  <em class="jxr_javadoccomment">/**</em>
 <a class="jxr_linenumber" name="L13" href="#L13">13</a>  <em class="jxr_javadoccomment"> * SequenceAnalysator provides multiple methods for analysing DNA sequences statistically.</em>
@@ -96,7 +96,7 @@
 <a class="jxr_linenumber" name="L88" href="#L88">88</a>  <em class="jxr_javadoccomment">     * @return  Total mass of the base</em>
 <a class="jxr_linenumber" name="L89" href="#L89">89</a>  <em class="jxr_javadoccomment">     */</em>
 <a class="jxr_linenumber" name="L90" href="#L90">90</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">double</strong> mass(<a href="../../../dna/analysethis/domain/Base.html">Base</a> b) {
-<a class="jxr_linenumber" name="L91" href="#L91">91</a>          <strong class="jxr_keyword">if</strong> (b == Base.X) {
+<a class="jxr_linenumber" name="L91" href="#L91">91</a>          <strong class="jxr_keyword">if</strong> (b.equals(Base.X)) {
 <a class="jxr_linenumber" name="L92" href="#L92">92</a>              <strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> IllegalArgumentException(<span class="jxr_string">"Tuntemattoman emäksen moolimassaa ei tunneta!"</span>);
 <a class="jxr_linenumber" name="L93" href="#L93">93</a>          }
 <a class="jxr_linenumber" name="L94" href="#L94">94</a>          <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">this</strong>.frequency(b) * b.getMass();
@@ -141,39 +141,69 @@
 <a class="jxr_linenumber" name="L133" href="#L133">133</a> <em class="jxr_javadoccomment">     * @return  True if both start and stop codons occur in the sequence</em>
 <a class="jxr_linenumber" name="L134" href="#L134">134</a> <em class="jxr_javadoccomment">     */</em>
 <a class="jxr_linenumber" name="L135" href="#L135">135</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">boolean</strong> checkStartAndStopCodons(<a href="../../../dna/analysethis/domain/Sequence.html">Sequence</a> seq) {
-<a class="jxr_linenumber" name="L136" href="#L136">136</a>         <a href="../../../dna/analysethis/domain/Sequence.html">Sequence</a> startCodon = Manipulator.stringToSequence(<span class="jxr_string">"ATG"</span>);
-<a class="jxr_linenumber" name="L137" href="#L137">137</a>         
-<a class="jxr_linenumber" name="L138" href="#L138">138</a>         List&lt;Sequence&gt; stopCodons = <strong class="jxr_keyword">new</strong> LinkedList&lt;&gt;();
-<a class="jxr_linenumber" name="L139" href="#L139">139</a>         stopCodons.add(Manipulator.stringToSequence(<span class="jxr_string">"TAA"</span>));
-<a class="jxr_linenumber" name="L140" href="#L140">140</a>         stopCodons.add(Manipulator.stringToSequence(<span class="jxr_string">"TAG"</span>));
-<a class="jxr_linenumber" name="L141" href="#L141">141</a>         stopCodons.add(Manipulator.stringToSequence(<span class="jxr_string">"TGA"</span>));
-<a class="jxr_linenumber" name="L142" href="#L142">142</a>         
-<a class="jxr_linenumber" name="L143" href="#L143">143</a>         LinkedList&lt;Sequence&gt; codons = Manipulator.sequenceToCodons(seq);
-<a class="jxr_linenumber" name="L144" href="#L144">144</a>         
-<a class="jxr_linenumber" name="L145" href="#L145">145</a>         <strong class="jxr_keyword">return</strong> codons.getFirst().equals(startCodon) &amp;&amp; stopCodons.contains(codons.getLast());
-<a class="jxr_linenumber" name="L146" href="#L146">146</a>         <em class="jxr_comment">// We omit checking for possible stop codons inside the sequence – for now that is</em>
-<a class="jxr_linenumber" name="L147" href="#L147">147</a>     }
-<a class="jxr_linenumber" name="L148" href="#L148">148</a>     
-<a class="jxr_linenumber" name="L149" href="#L149">149</a>     <em class="jxr_javadoccomment">/**</em>
-<a class="jxr_linenumber" name="L150" href="#L150">150</a> <em class="jxr_javadoccomment">     * Checks the start and stop codons of the sequence taking into account the multiple reading frames.</em>
-<a class="jxr_linenumber" name="L151" href="#L151">151</a> <em class="jxr_javadoccomment">     * @return True if both start and stop codon occur in a reading frame</em>
-<a class="jxr_linenumber" name="L152" href="#L152">152</a> <em class="jxr_javadoccomment">     */</em>
-<a class="jxr_linenumber" name="L153" href="#L153">153</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">boolean</strong> checkStartAndStopCodons() {
-<a class="jxr_linenumber" name="L154" href="#L154">154</a>         <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">this</strong>.checkStartAndStopCodons(<strong class="jxr_keyword">this</strong>.sequence)
-<a class="jxr_linenumber" name="L155" href="#L155">155</a>                 || <strong class="jxr_keyword">this</strong>.checkStartAndStopCodons(Manipulator.reverse(<strong class="jxr_keyword">this</strong>.sequence))
-<a class="jxr_linenumber" name="L156" href="#L156">156</a>                 || <strong class="jxr_keyword">this</strong>.checkStartAndStopCodons(Manipulator.complement(<strong class="jxr_keyword">this</strong>.sequence))
-<a class="jxr_linenumber" name="L157" href="#L157">157</a>                 || <strong class="jxr_keyword">this</strong>.checkStartAndStopCodons(Manipulator.reverseComplement(<strong class="jxr_keyword">this</strong>.sequence));
-<a class="jxr_linenumber" name="L158" href="#L158">158</a>     }
-<a class="jxr_linenumber" name="L159" href="#L159">159</a>     
-<a class="jxr_linenumber" name="L160" href="#L160">160</a>     <em class="jxr_javadoccomment">/**</em>
-<a class="jxr_linenumber" name="L161" href="#L161">161</a> <em class="jxr_javadoccomment">     * Checks whether the sequence represents a theoretically functioning gene.</em>
-<a class="jxr_linenumber" name="L162" href="#L162">162</a> <em class="jxr_javadoccomment">     * @return True if the sequence represents a gene</em>
+<a class="jxr_linenumber" name="L136" href="#L136">136</a>         LinkedList&lt;Codon&gt; codons = Manipulator.sequenceToCodons(seq);
+<a class="jxr_linenumber" name="L137" href="#L137">137</a>         <strong class="jxr_keyword">return</strong> codons.getFirst().isStartCodon() &amp;&amp; codons.getLast().isStopCodon(); <em class="jxr_comment">// We omit checking for possible stop codons inside the sequence – for now that is</em>
+<a class="jxr_linenumber" name="L138" href="#L138">138</a>     }
+<a class="jxr_linenumber" name="L139" href="#L139">139</a>     
+<a class="jxr_linenumber" name="L140" href="#L140">140</a>     <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="L141" href="#L141">141</a> <em class="jxr_javadoccomment">     * Checks the start and stop codons of the sequence taking into account the multiple reading frames.</em>
+<a class="jxr_linenumber" name="L142" href="#L142">142</a> <em class="jxr_javadoccomment">     * @return True if both start and stop codon occur in a reading frame</em>
+<a class="jxr_linenumber" name="L143" href="#L143">143</a> <em class="jxr_javadoccomment">     */</em>
+<a class="jxr_linenumber" name="L144" href="#L144">144</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">boolean</strong> checkStartAndStopCodons() {
+<a class="jxr_linenumber" name="L145" href="#L145">145</a>         <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">this</strong>.checkStartAndStopCodons(<strong class="jxr_keyword">this</strong>.sequence)
+<a class="jxr_linenumber" name="L146" href="#L146">146</a>                 || <strong class="jxr_keyword">this</strong>.checkStartAndStopCodons(Manipulator.reverse(<strong class="jxr_keyword">this</strong>.sequence))
+<a class="jxr_linenumber" name="L147" href="#L147">147</a>                 || <strong class="jxr_keyword">this</strong>.checkStartAndStopCodons(Manipulator.complement(<strong class="jxr_keyword">this</strong>.sequence))
+<a class="jxr_linenumber" name="L148" href="#L148">148</a>                 || <strong class="jxr_keyword">this</strong>.checkStartAndStopCodons(Manipulator.reverseComplement(<strong class="jxr_keyword">this</strong>.sequence));
+<a class="jxr_linenumber" name="L149" href="#L149">149</a>     }
+<a class="jxr_linenumber" name="L150" href="#L150">150</a>     
+<a class="jxr_linenumber" name="L151" href="#L151">151</a>     <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="L152" href="#L152">152</a> <em class="jxr_javadoccomment">     * Checks whether the sequence represents a theoretically functioning gene.</em>
+<a class="jxr_linenumber" name="L153" href="#L153">153</a> <em class="jxr_javadoccomment">     * @return True if the sequence represents a gene</em>
+<a class="jxr_linenumber" name="L154" href="#L154">154</a> <em class="jxr_javadoccomment">     */</em>
+<a class="jxr_linenumber" name="L155" href="#L155">155</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">boolean</strong> checkIfGene() {
+<a class="jxr_linenumber" name="L156" href="#L156">156</a>         <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">this</strong>.numberOfCodons() &gt;= 5 &amp;&amp; <strong class="jxr_keyword">this</strong>.relativeGcMass() &gt;= .3 &amp;&amp; <strong class="jxr_keyword">this</strong>.checkStartAndStopCodons(); <em class="jxr_comment">// Values used here are pulled out of a hat and have little scientific justification</em>
+<a class="jxr_linenumber" name="L157" href="#L157">157</a>     }
+<a class="jxr_linenumber" name="L158" href="#L158">158</a>     
+<a class="jxr_linenumber" name="L159" href="#L159">159</a>     <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="L160" href="#L160">160</a> <em class="jxr_javadoccomment">     * Counts the Levenshtein distance between given sequence and the sequence. For this the method uses a well-known algorithm for two strings.</em>
+<a class="jxr_linenumber" name="L161" href="#L161">161</a> <em class="jxr_javadoccomment">     * @param another   Sequence to be compared</em>
+<a class="jxr_linenumber" name="L162" href="#L162">162</a> <em class="jxr_javadoccomment">     * @return  The minimum number of single-base edits required to change given sequence into the other</em>
 <a class="jxr_linenumber" name="L163" href="#L163">163</a> <em class="jxr_javadoccomment">     */</em>
-<a class="jxr_linenumber" name="L164" href="#L164">164</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">boolean</strong> checkIfGene() {
-<a class="jxr_linenumber" name="L165" href="#L165">165</a>         <em class="jxr_comment">// Values used here are pulled out of a hat and have little scientific justification</em>
-<a class="jxr_linenumber" name="L166" href="#L166">166</a>         <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">this</strong>.numberOfCodons() &gt;= 5 &amp;&amp; <strong class="jxr_keyword">this</strong>.relativeGcMass() &gt;= .3 &amp;&amp; <strong class="jxr_keyword">this</strong>.checkStartAndStopCodons();
-<a class="jxr_linenumber" name="L167" href="#L167">167</a>     }
-<a class="jxr_linenumber" name="L168" href="#L168">168</a> }
+<a class="jxr_linenumber" name="L164" href="#L164">164</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">int</strong> levenshteinDistance(<a href="../../../dna/analysethis/domain/Sequence.html">Sequence</a> another) {
+<a class="jxr_linenumber" name="L165" href="#L165">165</a>         <strong class="jxr_keyword">return</strong> levenshteinDistance(<strong class="jxr_keyword">this</strong>.sequence.toString(), another.toString());
+<a class="jxr_linenumber" name="L166" href="#L166">166</a>     }
+<a class="jxr_linenumber" name="L167" href="#L167">167</a> 
+<a class="jxr_linenumber" name="L168" href="#L168">168</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">int</strong> levenshteinDistance(String a, String b) {
+<a class="jxr_linenumber" name="L169" href="#L169">169</a>         <strong class="jxr_keyword">if</strong> (a.equals(b)) {
+<a class="jxr_linenumber" name="L170" href="#L170">170</a>             <strong class="jxr_keyword">return</strong> 0;
+<a class="jxr_linenumber" name="L171" href="#L171">171</a>         }
+<a class="jxr_linenumber" name="L172" href="#L172">172</a>         
+<a class="jxr_linenumber" name="L173" href="#L173">173</a>         <strong class="jxr_keyword">int</strong>[] v0 = <strong class="jxr_keyword">new</strong> <strong class="jxr_keyword">int</strong>[b.length() + 1];
+<a class="jxr_linenumber" name="L174" href="#L174">174</a>         <strong class="jxr_keyword">int</strong>[] v1 = <strong class="jxr_keyword">new</strong> <strong class="jxr_keyword">int</strong>[b.length() + 1];
+<a class="jxr_linenumber" name="L175" href="#L175">175</a> 
+<a class="jxr_linenumber" name="L176" href="#L176">176</a>         <strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> i = 0; i &lt; v0.length; i++) {
+<a class="jxr_linenumber" name="L177" href="#L177">177</a>             v0[i] = i;
+<a class="jxr_linenumber" name="L178" href="#L178">178</a>         }
+<a class="jxr_linenumber" name="L179" href="#L179">179</a>         
+<a class="jxr_linenumber" name="L180" href="#L180">180</a>         <strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> i = 0; i &lt; a.length(); i++) {
+<a class="jxr_linenumber" name="L181" href="#L181">181</a>             v1[0] = i + 1;
+<a class="jxr_linenumber" name="L182" href="#L182">182</a>             
+<a class="jxr_linenumber" name="L183" href="#L183">183</a>             <strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> j = 0; j &lt; b.length(); j++) {
+<a class="jxr_linenumber" name="L184" href="#L184">184</a>                 <strong class="jxr_keyword">int</strong> cost = 1;
+<a class="jxr_linenumber" name="L185" href="#L185">185</a>                 
+<a class="jxr_linenumber" name="L186" href="#L186">186</a>                 <strong class="jxr_keyword">if</strong> (a.charAt(i) == b.charAt(j)) {
+<a class="jxr_linenumber" name="L187" href="#L187">187</a>                     cost = 0;
+<a class="jxr_linenumber" name="L188" href="#L188">188</a>                 }
+<a class="jxr_linenumber" name="L189" href="#L189">189</a>                 
+<a class="jxr_linenumber" name="L190" href="#L190">190</a>                 v1[j + 1] = Math.min(v1[j] + 1, Math.min(v0[j + 1] + 1, v0[j] + cost));
+<a class="jxr_linenumber" name="L191" href="#L191">191</a>             }
+<a class="jxr_linenumber" name="L192" href="#L192">192</a>             
+<a class="jxr_linenumber" name="L193" href="#L193">193</a>             System.arraycopy(v1, 0, v0, 0, v0.length);
+<a class="jxr_linenumber" name="L194" href="#L194">194</a>         }
+<a class="jxr_linenumber" name="L195" href="#L195">195</a>         
+<a class="jxr_linenumber" name="L196" href="#L196">196</a>         <strong class="jxr_keyword">return</strong> v1[b.length()];
+<a class="jxr_linenumber" name="L197" href="#L197">197</a>     }
+<a class="jxr_linenumber" name="L198" href="#L198">198</a> }
 </pre>
 <hr/>
 <div id="footer">Copyright &#169; 2017. All rights reserved.</div>

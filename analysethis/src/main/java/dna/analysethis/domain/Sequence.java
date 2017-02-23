@@ -1,6 +1,5 @@
 package dna.analysethis.domain;
 
-import dna.analysethis.utilities.Manipulator;
 import java.util.List;
 
 /**
@@ -30,7 +29,7 @@ public class Sequence {
 
     @Override
     public String toString() {
-        return Manipulator.sequenceToString(this);
+        return this.sequence.stream().map(b -> b.toString()).reduce("", String::concat);
     }
     
     @Override
