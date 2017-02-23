@@ -34,7 +34,7 @@
 
 ![luokkakaavio](luokkakaavio.png)
 
-*Rakennekuvaus*: TODO
+*Rakennekuvaus*: DNA:n perusyksikkö on emäs (`Base`). Erilaisia emäksiä on äärellinen määrä, joten literaalitoteutus on perusteltu. DNA-sekvenssit (`Sequence`) koostuvat yhdestä tai useammasta emäksestä; luokalla on oliomuuttujana lista emäksiä. Oleellista on, että emäkset on tallennettu järjestyksen säilyttävään tietorakenteeseen. Kodoni (`Codon`) määrää DNA:n koodaaman aminohapon; tietyt kodonit toimivat geenin aloitus-, tietyt lopetuskohtana. Kodonit ovat kolmen emäksen sekvenssejä, minkä vuoksi `Codon` perii `Sequence`:n. Sekvenssin laskennallisesta analysoinnista vastaa analysaattori (`SequenceAnalysator`). Käyttöliittymän (`UI`) avulla hoidetaan analyysin tuloksen lukeminen. Edellä mainittujen lisäksi järjestelmään kuuluu kaksi apuluokkaa: `Manipulator` ja `FileHandler`. Ensimmäinen vastaa sekvenssien manipuloinnista ja käännöksistä tietomuodosta toiseen. Luokka ei muuta sen metodeille muutujana annettujen olioiden tilaa. Jälkimmäinen hoitaa tiedoston lukemisen ja tiedostoon kirjoittamisen.
 
 *Käyttötapauksien sekvenssikaavioita*
 
