@@ -14,18 +14,24 @@
  - frekvenssit ja suhteelliset frekvenssit
    - emäs, kodoni
  - guaniinin ja  sytosiinin suhteellinen osuus ([GC-pitoisuus](https://en.wikipedia.org/wiki/GC-content))
- - toistuvat jaksot ([toistojaksot](https://en.wikipedia.org/wiki/Repeated_sequence_(DNA)))
 - kahden sekvenssin vertailu 
- - esim. [Damerau–Levenšteinin etäisyys](https://en.wikipedia.org/wiki/Damerau%E2%80%93Levenshtein_distance)
+ - [Levenšteinin etäisyys](https://en.wikipedia.org/wiki/Levenshtein_distance)
 - edustaako sekvenssi ominaisuuksiltaan proteiinia koodaavaa sekvenssiä?
 - sekvenssin käänteistoiston muodostaminen / muokkaaminen
 - analyysin tuloksen
  - lukeminen
  - tulostaminen tiedostoon
 
+*Jatkokehitys*:
+- sekvenssin analysointi
+ - toistuvat jaksot ([toistojaksot](https://en.wikipedia.org/wiki/Repeated_sequence_(DNA)))
+- kahden sekvenssin vertailu 
+ - [Damerau–Levenšteinin etäisyys](https://en.wikipedia.org/wiki/Damerau%E2%80%93Levenshtein_distance)
+- aloitus- ja lopetuskodonien tunnistaminen sekvenssin sisältä
+
 ### Rakenne
 
-*Määrittelyvaiheen luokkakaavio*: Luokkakaavioon on merkitty järjestelmän tärkeimmät luokat. Käyttöliittymä on tässä merkitty yhdeksi luokaksi.
+*Määrittelyvaiheen luokkakaavio*: Luokkakaavioon on merkitty järjestelmän tärkeimmät luokat.
 
 ![luokkakaavio](luokkakaavio.png)
 
