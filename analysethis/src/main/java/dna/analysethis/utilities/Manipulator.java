@@ -86,9 +86,7 @@ public final class Manipulator {
         }
         
         Base[] options = Base.values();
-        Random random = new Random();
-        
-        return new Sequence(random.ints(length, 0, 4).mapToObj(i -> options[i]).collect(Collectors.toList()));
+        return new Sequence(new Random().ints(length, 0, 4).mapToObj(i -> options[i]).collect(Collectors.toList()));
     }
     
     /**
