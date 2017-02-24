@@ -40,4 +40,4 @@ Pvm | *t*/h | Kuvaus
 23.02.2017 | 0.5 | DL6 valmistelua
 23.02.2017 | 2.5 | DL6:n viimeistelyä
 24.02.2017 | 1.0 | JavaDocin päivitys
-24.02.2017 | 1.5 | Siistimistä ja Java8:n hyödyntämistä
+24.02.2017 | 2.0 | Siistimistä ja Java8:n hyödyntämistä
