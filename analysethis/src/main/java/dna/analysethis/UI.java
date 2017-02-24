@@ -19,6 +19,9 @@ import javax.swing.JTextArea;
 import javax.swing.SwingConstants;
 import javax.swing.WindowConstants;
 
+/**
+ * Class for the user interface.
+ */
 public class UI implements Runnable {
     private JFrame frame;
     private JPanel panels;

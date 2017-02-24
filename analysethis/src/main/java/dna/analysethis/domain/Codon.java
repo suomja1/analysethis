@@ -1,7 +1,7 @@
 package dna.analysethis.domain;
 
 import dna.analysethis.utilities.Manipulator;
-import java.util.LinkedList;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -32,7 +32,7 @@ public class Codon extends Sequence {
      * @see dna.analysethis.service.SequenceAnalysator#checkStartAndStopCodons(dna.analysethis.domain.Sequence) 
      */
     public boolean isStopCodon() {
-        List<Sequence> stopCodons = new LinkedList<>();
+        List<Sequence> stopCodons = new ArrayList<>();
         stopCodons.add(new Codon(Manipulator.stringToList("TAA")));
         stopCodons.add(new Codon(Manipulator.stringToList("TAG")));
         stopCodons.add(new Codon(Manipulator.stringToList("TGA")));

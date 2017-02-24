@@ -164,37 +164,36 @@ public class SequenceAnalysator {
      * @return  The minimum number of single-base edits required to change given sequence into the other
      */
     public int levenshteinDistance(Sequence another) {
-        return levenshteinDistance(this.sequence.toString(), another.toString());
+        return this.levenshteinDistance(this.sequence.toString(), another.toString());
     }
 
     private int levenshteinDistance(String a, String b) {
-        if (a.equals(b)) {
-            return 0;
-        }
+        int bLength = b.length();
+        int[] vector0 = new int[bLength + 1];
+        int[] vector1 = new int[bLength + 1];
         
-        int[] v0 = new int[b.length() + 1];
-        int[] v1 = new int[b.length() + 1];
-
-        for (int i = 0; i < v0.length; i++) {
-            v0[i] = i;
-        }
-        
-        for (int i = 0; i < a.length(); i++) {
-            v1[0] = i + 1;
-            
-            for (int j = 0; j < b.length(); j++) {
-                int cost = 1;
-                
-                if (a.charAt(i) == b.charAt(j)) {
-                    cost = 0;
-                }
-                
-                v1[j + 1] = Math.min(v1[j] + 1, Math.min(v0[j + 1] + 1, v0[j] + cost));
+        if (!a.equals(b)) {
+            for (int i = 0; i < vector0.length; i++) {
+                vector0[i] = i;
             }
-            
-            System.arraycopy(v1, 0, v0, 0, v0.length);
+
+            for (int i = 0; i < a.length(); i++) {
+                vector1[0] = i + 1;
+
+                for (int j = 0; j < bLength; j++) {
+                    int cost = 1;
+
+                    if (a.charAt(i) == b.charAt(j)) {
+                        cost = 0;
+                    }
+
+                    vector1[j + 1] = Math.min(vector1[j] + 1, Math.min(vector0[j + 1] + 1, vector0[j] + cost));
+                }
+
+                System.arraycopy(vector1, 0, vector0, 0, vector0.length);
+            }
         }
         
-        return v1[b.length()];
+        return vector1[bLength];
     }
 }

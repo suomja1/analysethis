@@ -57,7 +57,7 @@ public class ManipulatorTest {
     
     @Test
     public void testRandom1() {
-        int n = 60;
+        int n = 6000;
         Sequence s = Manipulator.random(n);
         assertEquals(n, s.getSequence().size());
         assertTrue(s.getSequence().contains(Base.C)
@@ -66,6 +66,8 @@ public class ManipulatorTest {
                 || s.getSequence().contains(Base.T));
         
         assertFalse(Manipulator.random(1).toString().isEmpty());
+        
+        assertFalse(s.getSequence().contains(Base.X));
     }
     
     @Test(expected = IllegalArgumentException.class)

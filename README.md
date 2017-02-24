@@ -8,5 +8,5 @@
 - [Testausdokumentaatio](dokumentaatio/testausdokumentti.md)
 
 ## Raportit
-- [PIT](https://htmlpreview.github.io/?https://github.com/suomja1/analysethis/blob/master/dokumentaatio/pit-raportti/201702241148/index.html)
+- [PIT](https://htmlpreview.github.io/?https://github.com/suomja1/analysethis/blob/master/dokumentaatio/pit-raportti/201702242013/index.html)
 - [Checkstyle](https://htmlpreview.github.io/?https://github.com/suomja1/analysethis/blob/master/dokumentaatio/checkstyle-raportti/site/checkstyle.html)

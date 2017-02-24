@@ -4,9 +4,12 @@ import dna.analysethis.domain.Base;
 import dna.analysethis.domain.Codon;
 import dna.analysethis.domain.Sequence;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 import java.util.Random;
+import java.util.stream.Collectors;
 
 /**
  * Basic utility class for manipulating DNA sequences.
@@ -18,29 +21,9 @@ public final class Manipulator {
      * @return  Result of the conversion
      */
     public static List<Base> stringToList(String string) {
-        List<Base> bases = new LinkedList<>();
-
-        for (char c : string.replaceAll(" ", "").toUpperCase().toCharArray()) {
-            switch (c) {
-                case 'C':
-                    bases.add(Base.C);
-                    break;
-                case 'G':
-                    bases.add(Base.G);
-                    break;
-                case 'A':
-                    bases.add(Base.A);
-                    break;
-                case 'T':
-                    bases.add(Base.T);
-                    break;
-                default:
-                    bases.add(Base.X);
-                    break;
-            }
-        }
-
-        return bases;
+        return string.replaceAll(" ", "").toUpperCase().replaceAll("[^CGAT]", "X")
+                .chars().mapToObj(i -> String.valueOf((char) i))
+                .map(Base::valueOf).collect(Collectors.toList());
     }
     
     /**
@@ -69,23 +52,15 @@ public final class Manipulator {
      * @return  Complement of given sequence
      */
     public static Sequence complement(Sequence sequence) {
-        List<Base> bases = new LinkedList<>();
+        Map<Base, Base> basePairing = new HashMap<>();
+        basePairing.put(Base.C, Base.G);
+        basePairing.put(Base.G, Base.C);
+        basePairing.put(Base.A, Base.T);
+        basePairing.put(Base.T, Base.A);
+        basePairing.put(Base.X, Base.X);
         
-        for (Base b : sequence.getSequence()) {
-            if (b == Base.T) {
-                bases.add(Base.A);
-            } else if (b == Base.A) {
-                bases.add(Base.T);
-            } else if (b == Base.C) {
-                bases.add(Base.G);
-            } else if (b == Base.G) {
-                bases.add(Base.C);
-            } else if (b == Base.X) {
-                bases.add(Base.X);
-            }
-        }
-        
-        return new Sequence(bases);
+        return new Sequence(sequence.getSequence().stream()
+                .map(b -> basePairing.get(b)).collect(Collectors.toList()));
     }
     
     /**
@@ -112,20 +87,11 @@ public final class Manipulator {
         
         // We don't want unknown bases in our random sequences
         List<Base> bases = new LinkedList<>();
+        Base[] options = Base.values();
         Random random = new Random();
         
         for (int i = 0; i < length; i++) {
-            int x = random.nextInt(4);
-            
-            if (x == 0) {
-                bases.add(Base.C);
-            } else if (x == 1) {
-                bases.add(Base.G);
-            } else if (x == 2) {
-                bases.add(Base.A);
-            } else if (x == 3) {
-                bases.add(Base.T);
-            }
+            bases.add(options[random.nextInt(4)]);
         }
         
         return new Sequence(bases);

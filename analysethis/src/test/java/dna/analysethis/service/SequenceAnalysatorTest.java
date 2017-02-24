@@ -173,7 +173,6 @@ public class SequenceAnalysatorTest {
 
     @Test
     public void testLevenshteinDistance1() {
-//        AAAATTTTCCXY
         assertEquals(0, a.levenshteinDistance(s));
         assertEquals(1, a.levenshteinDistance(Manipulator.stringToSequence("AAAATGTTCCXY"))); // substitution
         assertEquals(1, a.levenshteinDistance(Manipulator.stringToSequence("AAAATTTTCCX"))); // deletion
@@ -186,7 +185,6 @@ public class SequenceAnalysatorTest {
     
     @Test
     public void testLevenshteinDistance2() {
-//        AAAATTTTCCXY
         assertEquals(2, a.levenshteinDistance(Manipulator.stringToSequence("AAAATTGGCCXY"))); // multiple substitutions
         assertEquals(2, a.levenshteinDistance(Manipulator.stringToSequence("AATTTTCCXY"))); // multiple deletions
         assertEquals(11, a.levenshteinDistance(Manipulator.stringToSequence("A")));
