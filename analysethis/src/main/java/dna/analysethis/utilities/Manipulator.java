@@ -85,16 +85,10 @@ public final class Manipulator {
             throw new IllegalArgumentException("Emäksiä on oltava vähintään yksi!");
         }
         
-        // We don't want unknown bases in our random sequences
-        List<Base> bases = new LinkedList<>();
         Base[] options = Base.values();
         Random random = new Random();
         
-        for (int i = 0; i < length; i++) {
-            bases.add(options[random.nextInt(4)]);
-        }
-        
-        return new Sequence(bases);
+        return new Sequence(random.ints(length, 0, 4).mapToObj(i -> options[i]).collect(Collectors.toList()));
     }
     
     /**
