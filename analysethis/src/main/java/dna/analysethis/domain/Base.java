@@ -1,7 +1,8 @@
 package dna.analysethis.domain;
 
 /**
- * Class for the representation of nucleobases in DNA.
+ * Class for the representation of nucleobases in DNA, basic building blocks of DNA sequences.
+ * @see dna.analysethis.domain.Sequence
  */
 public enum Base {
     /**

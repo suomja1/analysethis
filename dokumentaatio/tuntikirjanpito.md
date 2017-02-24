@@ -39,3 +39,4 @@ Pvm | *t*/h | Kuvaus
 23.02.2017 | 1.5 | Testit lopuille
 23.02.2017 | 0.5 | DL6 valmistelua
 23.02.2017 | 2.5 | DL6:n viimeistelyä
+24.02.2017 | 1.0 | JavaDocin päivitys

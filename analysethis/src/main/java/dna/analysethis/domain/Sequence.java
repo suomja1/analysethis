@@ -3,7 +3,8 @@ package dna.analysethis.domain;
 import java.util.List;
 
 /**
- * Class for the representation of DNA sequences.
+ * Class for the representation of DNA sequences. Sequences consist of a list of bases.
+ * @see dna.analysethis.domain.Base
  */
 public class Sequence {
     private List<Base> sequence;
@@ -11,6 +12,7 @@ public class Sequence {
     /**
      * Constructor.
      * @param sequence  List of bases to be interpreted as a sequence
+     * @throws IllegalArgumentException Given list of bases is null or empty
      */
     public Sequence(List<Base> sequence) {
         if (sequence == null || sequence.isEmpty()) {

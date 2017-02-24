@@ -11,6 +11,7 @@ import java.util.LinkedList;
 
 /**
  * SequenceAnalysator provides multiple methods for analysing DNA sequences statistically.
+ * @see dna.analysethis.domain.Sequence
  */
 public class SequenceAnalysator {
     private Sequence sequence;
@@ -86,6 +87,7 @@ public class SequenceAnalysator {
      * Counts the total mass of given base in the sequence.
      * @param b Base to be analysed
      * @return  Total mass of the base
+     * @throws IllegalArgumentException The mass of given base is unknown
      */
     public double mass(Base b) {
         if (b.equals(Base.X)) {

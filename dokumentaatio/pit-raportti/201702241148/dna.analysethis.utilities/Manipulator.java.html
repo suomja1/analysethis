@@ -1415,7 +1415,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>     */</span></pre></td></tr>
+<td class=''><pre><span  class=''>     * @see dna.analysethis.utilities.Manipulator#reverse(dna.analysethis.domain.Sequence) </span></pre></td></tr>
 
 
 <tr>
@@ -1429,23 +1429,21 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    public static Sequence reverseComplement(Sequence sequence) {</span></pre></td></tr>
+<td class=''><pre><span  class=''>     * @see dna.analysethis.utilities.Manipulator#complement(dna.analysethis.domain.Sequence) </span></pre></td></tr>
 
 
 <tr>
-<td class='covered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@113e13f9_97'/>
 97
 </td>
-<td class='killed'>
+<td class=''>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@113e13f9_97'>1</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@113e13f9_97'></a>
 <span>
-1. reverseComplement : mutated return of Object value for dna/analysethis/utilities/Manipulator::reverseComplement to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
-
 </span>
 </td>
-<td class='covered'><pre><span  class='killed'>        return complement(reverse(sequence));</span></pre></td></tr>
+<td class=''><pre><span  class=''>     */</span></pre></td></tr>
 
 
 <tr>
@@ -1459,21 +1457,23 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+<td class=''><pre><span  class=''>    public static Sequence reverseComplement(Sequence sequence) {</span></pre></td></tr>
 
 
 <tr>
-<td class='na'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@113e13f9_99'/>
 99
 </td>
-<td class=''>
+<td class='killed'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@113e13f9_99'></a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@113e13f9_99'>1</a>
 <span>
+1. reverseComplement : mutated return of Object value for dna/analysethis/utilities/Manipulator::reverseComplement to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
+
 </span>
 </td>
-<td class=''><pre><span  class=''>    </span></pre></td></tr>
+<td class='covered'><pre><span  class='killed'>        return complement(reverse(sequence));</span></pre></td></tr>
 
 
 <tr>
@@ -1487,7 +1487,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    /**</span></pre></td></tr>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
 
 
 <tr>
@@ -1501,7 +1501,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>     * Creates a random sequence of given length.</span></pre></td></tr>
+<td class=''><pre><span  class=''>    </span></pre></td></tr>
 
 
 <tr>
@@ -1515,7 +1515,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>     * @param length    The length of the sequence</span></pre></td></tr>
+<td class=''><pre><span  class=''>    /**</span></pre></td></tr>
 
 
 <tr>
@@ -1529,7 +1529,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>     * @return  Random sequence of required length</span></pre></td></tr>
+<td class=''><pre><span  class=''>     * Creates a random sequence of given length.</span></pre></td></tr>
 
 
 <tr>
@@ -1543,7 +1543,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>     */</span></pre></td></tr>
+<td class=''><pre><span  class=''>     * @param length    The length of the sequence</span></pre></td></tr>
 
 
 <tr>
@@ -1557,28 +1557,25 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    public static Sequence random(int length) {</span></pre></td></tr>
+<td class=''><pre><span  class=''>     * @return  Random sequence of required length</span></pre></td></tr>
 
 
 <tr>
-<td class='covered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@113e13f9_106'/>
 106
 </td>
-<td class='killed'>
+<td class=''>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@113e13f9_106'>2</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@113e13f9_106'></a>
 <span>
-1. random : changed conditional boundary &rarr; KILLED<br/>
-2. random : negated conditional &rarr; KILLED<br/>
-
 </span>
 </td>
-<td class='covered'><pre><span  class='killed'>        if (length &#60; 1) {</span></pre></td></tr>
+<td class=''><pre><span  class=''>     * @throws IllegalArgumentException Required length is out of bounds</span></pre></td></tr>
 
 
 <tr>
-<td class='covered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@113e13f9_107'/>
 107
 </td>
@@ -1588,7 +1585,7 @@ body{
 <span>
 </span>
 </td>
-<td class='covered'><pre><span  class=''>            throw new IllegalArgumentException(&#34;Em&#228;ksi&#228; on oltava v&#228;hint&#228;&#228;n yksi!&#34;);</span></pre></td></tr>
+<td class=''><pre><span  class=''>     */</span></pre></td></tr>
 
 
 <tr>
@@ -1602,25 +1599,28 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>        }</span></pre></td></tr>
+<td class=''><pre><span  class=''>    public static Sequence random(int length) {</span></pre></td></tr>
 
 
 <tr>
-<td class='na'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@113e13f9_109'/>
 109
 </td>
-<td class=''>
+<td class='killed'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@113e13f9_109'></a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@113e13f9_109'>2</a>
 <span>
+1. random : changed conditional boundary &rarr; KILLED<br/>
+2. random : negated conditional &rarr; KILLED<br/>
+
 </span>
 </td>
-<td class=''><pre><span  class=''>        </span></pre></td></tr>
+<td class='covered'><pre><span  class='killed'>        if (length &#60; 1) {</span></pre></td></tr>
 
 
 <tr>
-<td class='na'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@113e13f9_110'/>
 110
 </td>
@@ -1630,11 +1630,11 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>        // We don&#39;t want unknown bases in our random sequences</span></pre></td></tr>
+<td class='covered'><pre><span  class=''>            throw new IllegalArgumentException(&#34;Em&#228;ksi&#228; on oltava v&#228;hint&#228;&#228;n yksi!&#34;);</span></pre></td></tr>
 
 
 <tr>
-<td class='covered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@113e13f9_111'/>
 111
 </td>
@@ -1644,11 +1644,11 @@ body{
 <span>
 </span>
 </td>
-<td class='covered'><pre><span  class=''>        List&#60;Base&#62; bases = new LinkedList&#60;&#62;();</span></pre></td></tr>
+<td class=''><pre><span  class=''>        }</span></pre></td></tr>
 
 
 <tr>
-<td class='covered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@113e13f9_112'/>
 112
 </td>
@@ -1658,7 +1658,7 @@ body{
 <span>
 </span>
 </td>
-<td class='covered'><pre><span  class=''>        Random random = new Random();</span></pre></td></tr>
+<td class=''><pre><span  class=''>        </span></pre></td></tr>
 
 
 <tr>
@@ -1672,7 +1672,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>        </span></pre></td></tr>
+<td class=''><pre><span  class=''>        // We don&#39;t want unknown bases in our random sequences</span></pre></td></tr>
 
 
 <tr>
@@ -1680,17 +1680,13 @@ body{
 <a name='org.pitest.mutationtest.report.html.SourceFile@113e13f9_114'/>
 114
 </td>
-<td class='uncertain'>
+<td class=''>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@113e13f9_114'>3</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@113e13f9_114'></a>
 <span>
-1. random : Changed increment from 1 to -1 &rarr; TIMED_OUT<br/>
-2. random : changed conditional boundary &rarr; KILLED<br/>
-3. random : negated conditional &rarr; KILLED<br/>
-
 </span>
 </td>
-<td class='covered'><pre><span  class='uncertain'>        for (int i = 0; i &#60; length; i++) {</span></pre></td></tr>
+<td class='covered'><pre><span  class=''>        List&#60;Base&#62; bases = new LinkedList&#60;&#62;();</span></pre></td></tr>
 
 
 <tr>
@@ -1704,7 +1700,7 @@ body{
 <span>
 </span>
 </td>
-<td class='covered'><pre><span  class=''>            int x = random.nextInt(4);</span></pre></td></tr>
+<td class='covered'><pre><span  class=''>        Random random = new Random();</span></pre></td></tr>
 
 
 <tr>
@@ -1718,7 +1714,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>            </span></pre></td></tr>
+<td class=''><pre><span  class=''>        </span></pre></td></tr>
 
 
 <tr>
@@ -1726,15 +1722,17 @@ body{
 <a name='org.pitest.mutationtest.report.html.SourceFile@113e13f9_117'/>
 117
 </td>
-<td class='killed'>
+<td class='uncertain'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@113e13f9_117'>1</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@113e13f9_117'>3</a>
 <span>
-1. random : negated conditional &rarr; KILLED<br/>
+1. random : Changed increment from 1 to -1 &rarr; TIMED_OUT<br/>
+2. random : changed conditional boundary &rarr; KILLED<br/>
+3. random : negated conditional &rarr; KILLED<br/>
 
 </span>
 </td>
-<td class='covered'><pre><span  class='killed'>            if (x == 0) {</span></pre></td></tr>
+<td class='covered'><pre><span  class='uncertain'>        for (int i = 0; i &#60; length; i++) {</span></pre></td></tr>
 
 
 <tr>
@@ -1748,17 +1746,61 @@ body{
 <span>
 </span>
 </td>
+<td class='covered'><pre><span  class=''>            int x = random.nextInt(4);</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@113e13f9_119'/>
+119
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@113e13f9_119'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>            </span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@113e13f9_120'/>
+120
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@113e13f9_120'>1</a>
+<span>
+1. random : negated conditional &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>            if (x == 0) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@113e13f9_121'/>
+121
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@113e13f9_121'></a>
+<span>
+</span>
+</td>
 <td class='covered'><pre><span  class=''>                bases.add(Base.C);</span></pre></td></tr>
 
 
 <tr>
 <td class='covered'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@113e13f9_119'/>
-119
+<a name='org.pitest.mutationtest.report.html.SourceFile@113e13f9_122'/>
+122
 </td>
 <td class='killed'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@113e13f9_119'>1</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@113e13f9_122'>1</a>
 <span>
 1. random : negated conditional &rarr; KILLED<br/>
 
@@ -1769,12 +1811,12 @@ body{
 
 <tr>
 <td class='covered'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@113e13f9_120'/>
-120
+<a name='org.pitest.mutationtest.report.html.SourceFile@113e13f9_123'/>
+123
 </td>
 <td class=''>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@113e13f9_120'></a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@113e13f9_123'></a>
 <span>
 </span>
 </td>
@@ -1783,12 +1825,12 @@ body{
 
 <tr>
 <td class='covered'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@113e13f9_121'/>
-121
+<a name='org.pitest.mutationtest.report.html.SourceFile@113e13f9_124'/>
+124
 </td>
 <td class='killed'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@113e13f9_121'>1</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@113e13f9_124'>1</a>
 <span>
 1. random : negated conditional &rarr; KILLED<br/>
 
@@ -1799,12 +1841,12 @@ body{
 
 <tr>
 <td class='covered'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@113e13f9_122'/>
-122
+<a name='org.pitest.mutationtest.report.html.SourceFile@113e13f9_125'/>
+125
 </td>
 <td class=''>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@113e13f9_122'></a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@113e13f9_125'></a>
 <span>
 </span>
 </td>
@@ -1813,12 +1855,12 @@ body{
 
 <tr>
 <td class='covered'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@113e13f9_123'/>
-123
+<a name='org.pitest.mutationtest.report.html.SourceFile@113e13f9_126'/>
+126
 </td>
 <td class='killed'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@113e13f9_123'>1</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@113e13f9_126'>1</a>
 <span>
 1. random : negated conditional &rarr; KILLED<br/>
 
@@ -1829,48 +1871,6 @@ body{
 
 <tr>
 <td class='covered'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@113e13f9_124'/>
-124
-</td>
-<td class=''>
-<span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@113e13f9_124'></a>
-<span>
-</span>
-</td>
-<td class='covered'><pre><span  class=''>                bases.add(Base.T);</span></pre></td></tr>
-
-
-<tr>
-<td class='na'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@113e13f9_125'/>
-125
-</td>
-<td class=''>
-<span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@113e13f9_125'></a>
-<span>
-</span>
-</td>
-<td class=''><pre><span  class=''>            }</span></pre></td></tr>
-
-
-<tr>
-<td class='na'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@113e13f9_126'/>
-126
-</td>
-<td class=''>
-<span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@113e13f9_126'></a>
-<span>
-</span>
-</td>
-<td class=''><pre><span  class=''>        }</span></pre></td></tr>
-
-
-<tr>
-<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@113e13f9_127'/>
 127
 </td>
@@ -1880,23 +1880,21 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>        </span></pre></td></tr>
+<td class='covered'><pre><span  class=''>                bases.add(Base.T);</span></pre></td></tr>
 
 
 <tr>
-<td class='covered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@113e13f9_128'/>
 128
 </td>
-<td class='killed'>
+<td class=''>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@113e13f9_128'>1</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@113e13f9_128'></a>
 <span>
-1. random : mutated return of Object value for dna/analysethis/utilities/Manipulator::random to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
-
 </span>
 </td>
-<td class='covered'><pre><span  class='killed'>        return new Sequence(bases);</span></pre></td></tr>
+<td class=''><pre><span  class=''>            }</span></pre></td></tr>
 
 
 <tr>
@@ -1910,7 +1908,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+<td class=''><pre><span  class=''>        }</span></pre></td></tr>
 
 
 <tr>
@@ -1924,21 +1922,23 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    </span></pre></td></tr>
+<td class=''><pre><span  class=''>        </span></pre></td></tr>
 
 
 <tr>
-<td class='na'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@113e13f9_131'/>
 131
 </td>
-<td class=''>
+<td class='killed'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@113e13f9_131'></a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@113e13f9_131'>1</a>
 <span>
+1. random : mutated return of Object value for dna/analysethis/utilities/Manipulator::random to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
+
 </span>
 </td>
-<td class=''><pre><span  class=''>    /**</span></pre></td></tr>
+<td class='covered'><pre><span  class='killed'>        return new Sequence(bases);</span></pre></td></tr>
 
 
 <tr>
@@ -1952,7 +1952,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>     * Converts given sequence to a list of codons.</span></pre></td></tr>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
 
 
 <tr>
@@ -1966,7 +1966,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>     * @param sequence  Sequence to be converted</span></pre></td></tr>
+<td class=''><pre><span  class=''>    </span></pre></td></tr>
 
 
 <tr>
@@ -1980,7 +1980,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>     * @return  List of codons (sequences)</span></pre></td></tr>
+<td class=''><pre><span  class=''>    /**</span></pre></td></tr>
 
 
 <tr>
@@ -1994,7 +1994,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>     */</span></pre></td></tr>
+<td class=''><pre><span  class=''>     * Converts given sequence to a list of codons.</span></pre></td></tr>
 
 
 <tr>
@@ -2008,7 +2008,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    public static LinkedList&#60;Codon&#62; sequenceToCodons(Sequence sequence) {</span></pre></td></tr>
+<td class=''><pre><span  class=''>     * @param sequence  Sequence to be converted</span></pre></td></tr>
 
 
 <tr>
@@ -2022,11 +2022,11 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>        // Returns only triples of bases, that is some bases from the original sequence might get dropped</span></pre></td></tr>
+<td class=''><pre><span  class=''>     * @return  List of codons (sequences)</span></pre></td></tr>
 
 
 <tr>
-<td class='covered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@113e13f9_138'/>
 138
 </td>
@@ -2036,7 +2036,7 @@ body{
 <span>
 </span>
 </td>
-<td class='covered'><pre><span  class=''>        LinkedList&#60;Codon&#62; codons = new LinkedList&#60;&#62;();</span></pre></td></tr>
+<td class=''><pre><span  class=''>     */</span></pre></td></tr>
 
 
 <tr>
@@ -2050,11 +2050,11 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>        </span></pre></td></tr>
+<td class=''><pre><span  class=''>    public static LinkedList&#60;Codon&#62; sequenceToCodons(Sequence sequence) {</span></pre></td></tr>
 
 
 <tr>
-<td class='covered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@113e13f9_140'/>
 140
 </td>
@@ -2064,7 +2064,7 @@ body{
 <span>
 </span>
 </td>
-<td class='covered'><pre><span  class=''>        int j = 1;</span></pre></td></tr>
+<td class=''><pre><span  class=''>        // Returns only triples of bases, that is some bases from the original sequence might get dropped</span></pre></td></tr>
 
 
 <tr>
@@ -2072,9 +2072,51 @@ body{
 <a name='org.pitest.mutationtest.report.html.SourceFile@113e13f9_141'/>
 141
 </td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@113e13f9_141'></a>
+<span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        LinkedList&#60;Codon&#62; codons = new LinkedList&#60;&#62;();</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@113e13f9_142'/>
+142
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@113e13f9_142'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>        </span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@113e13f9_143'/>
+143
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@113e13f9_143'></a>
+<span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        int j = 1;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@113e13f9_144'/>
+144
+</td>
 <td class='killed'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@113e13f9_141'>4</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@113e13f9_144'>4</a>
 <span>
 1. sequenceToCodons : changed conditional boundary &rarr; KILLED<br/>
 2. sequenceToCodons : Changed increment from 3 to -3 &rarr; KILLED<br/>
@@ -2088,62 +2130,18 @@ body{
 
 <tr>
 <td class='covered'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@113e13f9_142'/>
-142
+<a name='org.pitest.mutationtest.report.html.SourceFile@113e13f9_145'/>
+145
 </td>
 <td class='killed'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@113e13f9_142'>1</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@113e13f9_145'>1</a>
 <span>
 1. sequenceToCodons : Replaced integer multiplication with division &rarr; KILLED<br/>
 
 </span>
 </td>
 <td class='covered'><pre><span  class='killed'>            codons.add(new Codon(sequence.getSequence().subList(i, 3 * j)));</span></pre></td></tr>
-
-
-<tr>
-<td class='covered'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@113e13f9_143'/>
-143
-</td>
-<td class='killed'>
-<span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@113e13f9_143'>1</a>
-<span>
-1. sequenceToCodons : Changed increment from 1 to -1 &rarr; KILLED<br/>
-
-</span>
-</td>
-<td class='covered'><pre><span  class='killed'>            j++;</span></pre></td></tr>
-
-
-<tr>
-<td class='na'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@113e13f9_144'/>
-144
-</td>
-<td class=''>
-<span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@113e13f9_144'></a>
-<span>
-</span>
-</td>
-<td class=''><pre><span  class=''>        }</span></pre></td></tr>
-
-
-<tr>
-<td class='na'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@113e13f9_145'/>
-145
-</td>
-<td class=''>
-<span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@113e13f9_145'></a>
-<span>
-</span>
-</td>
-<td class=''><pre><span  class=''>        </span></pre></td></tr>
 
 
 <tr>
@@ -2155,11 +2153,11 @@ body{
 <span class='pop'>
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@113e13f9_146'>1</a>
 <span>
-1. sequenceToCodons : mutated return of Object value for dna/analysethis/utilities/Manipulator::sequenceToCodons to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
+1. sequenceToCodons : Changed increment from 1 to -1 &rarr; KILLED<br/>
 
 </span>
 </td>
-<td class='covered'><pre><span  class='killed'>        return codons;</span></pre></td></tr>
+<td class='covered'><pre><span  class='killed'>            j++;</span></pre></td></tr>
 
 
 <tr>
@@ -2173,7 +2171,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+<td class=''><pre><span  class=''>        }</span></pre></td></tr>
 
 
 <tr>
@@ -2187,21 +2185,23 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    </span></pre></td></tr>
+<td class=''><pre><span  class=''>        </span></pre></td></tr>
 
 
 <tr>
-<td class='na'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@113e13f9_149'/>
 149
 </td>
-<td class=''>
+<td class='killed'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@113e13f9_149'></a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@113e13f9_149'>1</a>
 <span>
+1. sequenceToCodons : mutated return of Object value for dna/analysethis/utilities/Manipulator::sequenceToCodons to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
+
 </span>
 </td>
-<td class=''><pre><span  class=''>    /**</span></pre></td></tr>
+<td class='covered'><pre><span  class='killed'>        return codons;</span></pre></td></tr>
 
 
 <tr>
@@ -2215,7 +2215,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>     * Compares given sequences and retuns a String-representation. All mismatches in the sequences are marked with an asterix.</span></pre></td></tr>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
 
 
 <tr>
@@ -2229,7 +2229,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>     * @param seq1  First sequence to be compared</span></pre></td></tr>
+<td class=''><pre><span  class=''>    </span></pre></td></tr>
 
 
 <tr>
@@ -2243,7 +2243,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>     * @param seq2  Second sequence to be compared</span></pre></td></tr>
+<td class=''><pre><span  class=''>    /**</span></pre></td></tr>
 
 
 <tr>
@@ -2257,7 +2257,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>     * @return  String-representation of the comparison</span></pre></td></tr>
+<td class=''><pre><span  class=''>     * Compares given sequences and retuns a String-representation. All mismatches in the sequences are marked with an asterix.</span></pre></td></tr>
 
 
 <tr>
@@ -2271,7 +2271,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>     */</span></pre></td></tr>
+<td class=''><pre><span  class=''>     * @param seq1  First sequence to be compared</span></pre></td></tr>
 
 
 <tr>
@@ -2285,11 +2285,11 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    public static String compoundSequence(Sequence seq1, Sequence seq2) {</span></pre></td></tr>
+<td class=''><pre><span  class=''>     * @param seq2  Second sequence to be compared</span></pre></td></tr>
 
 
 <tr>
-<td class='covered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@113e13f9_156'/>
 156
 </td>
@@ -2299,7 +2299,7 @@ body{
 <span>
 </span>
 </td>
-<td class='covered'><pre><span  class=''>        String string = &#34;&#34;;</span></pre></td></tr>
+<td class=''><pre><span  class=''>     * @return  String-representation of the comparison</span></pre></td></tr>
 
 
 <tr>
@@ -2313,25 +2313,21 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''></span></pre></td></tr>
+<td class=''><pre><span  class=''>     */</span></pre></td></tr>
 
 
 <tr>
-<td class='covered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@113e13f9_158'/>
 158
 </td>
-<td class='killed'>
+<td class=''>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@113e13f9_158'>3</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@113e13f9_158'></a>
 <span>
-1. compoundSequence : changed conditional boundary &rarr; KILLED<br/>
-2. compoundSequence : Changed increment from 1 to -1 &rarr; KILLED<br/>
-3. compoundSequence : negated conditional &rarr; KILLED<br/>
-
 </span>
 </td>
-<td class='covered'><pre><span  class='killed'>        for (int i = 0; i &#60; Math.min(seq1.getSequence().size(), seq2.getSequence().size()); i++) {</span></pre></td></tr>
+<td class=''><pre><span  class=''>    public static String compoundSequence(Sequence seq1, Sequence seq2) {</span></pre></td></tr>
 
 
 <tr>
@@ -2345,7 +2341,7 @@ body{
 <span>
 </span>
 </td>
-<td class='covered'><pre><span  class=''>            Base b = seq1.getSequence().get(i);</span></pre></td></tr>
+<td class='covered'><pre><span  class=''>        String string = &#34;&#34;;</span></pre></td></tr>
 
 
 <tr>
@@ -2369,13 +2365,15 @@ body{
 </td>
 <td class='killed'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@113e13f9_161'>1</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@113e13f9_161'>3</a>
 <span>
-1. compoundSequence : negated conditional &rarr; KILLED<br/>
+1. compoundSequence : changed conditional boundary &rarr; KILLED<br/>
+2. compoundSequence : Changed increment from 1 to -1 &rarr; KILLED<br/>
+3. compoundSequence : negated conditional &rarr; KILLED<br/>
 
 </span>
 </td>
-<td class='covered'><pre><span  class='killed'>            if (b.equals(seq2.getSequence().get(i))) {</span></pre></td></tr>
+<td class='covered'><pre><span  class='killed'>        for (int i = 0; i &#60; Math.min(seq1.getSequence().size(), seq2.getSequence().size()); i++) {</span></pre></td></tr>
 
 
 <tr>
@@ -2389,7 +2387,7 @@ body{
 <span>
 </span>
 </td>
-<td class='covered'><pre><span  class=''>                string += b;</span></pre></td></tr>
+<td class='covered'><pre><span  class=''>            Base b = seq1.getSequence().get(i);</span></pre></td></tr>
 
 
 <tr>
@@ -2403,7 +2401,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>            } else {</span></pre></td></tr>
+<td class=''><pre><span  class=''></span></pre></td></tr>
 
 
 <tr>
@@ -2411,17 +2409,19 @@ body{
 <a name='org.pitest.mutationtest.report.html.SourceFile@113e13f9_164'/>
 164
 </td>
-<td class=''>
+<td class='killed'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@113e13f9_164'></a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@113e13f9_164'>1</a>
 <span>
+1. compoundSequence : negated conditional &rarr; KILLED<br/>
+
 </span>
 </td>
-<td class='covered'><pre><span  class=''>                string += &#34;*&#34;;</span></pre></td></tr>
+<td class='covered'><pre><span  class='killed'>            if (b.equals(seq2.getSequence().get(i))) {</span></pre></td></tr>
 
 
 <tr>
-<td class='na'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@113e13f9_165'/>
 165
 </td>
@@ -2431,7 +2431,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>            }</span></pre></td></tr>
+<td class='covered'><pre><span  class=''>                string += b;</span></pre></td></tr>
 
 
 <tr>
@@ -2445,11 +2445,11 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>        }</span></pre></td></tr>
+<td class=''><pre><span  class=''>            } else {</span></pre></td></tr>
 
 
 <tr>
-<td class='na'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@113e13f9_167'/>
 167
 </td>
@@ -2459,30 +2459,25 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''></span></pre></td></tr>
+<td class='covered'><pre><span  class=''>                string += &#34;*&#34;;</span></pre></td></tr>
 
 
 <tr>
-<td class='covered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@113e13f9_168'/>
 168
 </td>
-<td class='uncertain'>
+<td class=''>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@113e13f9_168'>4</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@113e13f9_168'></a>
 <span>
-1. compoundSequence : Changed increment from 1 to -1 &rarr; TIMED_OUT<br/>
-2. compoundSequence : negated conditional &rarr; TIMED_OUT<br/>
-3. compoundSequence : changed conditional boundary &rarr; KILLED<br/>
-4. compoundSequence : Replaced integer subtraction with addition &rarr; KILLED<br/>
-
 </span>
 </td>
-<td class='covered'><pre><span  class='uncertain'>        for (int i = 0; i &#60; Math.abs(seq1.getSequence().size() - seq2.getSequence().size()); i++) {</span></pre></td></tr>
+<td class=''><pre><span  class=''>            }</span></pre></td></tr>
 
 
 <tr>
-<td class='covered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@113e13f9_169'/>
 169
 </td>
@@ -2492,7 +2487,7 @@ body{
 <span>
 </span>
 </td>
-<td class='covered'><pre><span  class=''>            string += &#34;*&#34;;</span></pre></td></tr>
+<td class=''><pre><span  class=''>        }</span></pre></td></tr>
 
 
 <tr>
@@ -2506,21 +2501,26 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>        }</span></pre></td></tr>
+<td class=''><pre><span  class=''></span></pre></td></tr>
 
 
 <tr>
-<td class='na'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@113e13f9_171'/>
 171
 </td>
-<td class=''>
+<td class='uncertain'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@113e13f9_171'></a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@113e13f9_171'>4</a>
 <span>
+1. compoundSequence : Changed increment from 1 to -1 &rarr; TIMED_OUT<br/>
+2. compoundSequence : negated conditional &rarr; TIMED_OUT<br/>
+3. compoundSequence : changed conditional boundary &rarr; KILLED<br/>
+4. compoundSequence : Replaced integer subtraction with addition &rarr; KILLED<br/>
+
 </span>
 </td>
-<td class=''><pre><span  class=''></span></pre></td></tr>
+<td class='covered'><pre><span  class='uncertain'>        for (int i = 0; i &#60; Math.abs(seq1.getSequence().size() - seq2.getSequence().size()); i++) {</span></pre></td></tr>
 
 
 <tr>
@@ -2528,15 +2528,13 @@ body{
 <a name='org.pitest.mutationtest.report.html.SourceFile@113e13f9_172'/>
 172
 </td>
-<td class='killed'>
+<td class=''>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@113e13f9_172'>1</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@113e13f9_172'></a>
 <span>
-1. compoundSequence : mutated return of Object value for dna/analysethis/utilities/Manipulator::compoundSequence to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
-
 </span>
 </td>
-<td class='covered'><pre><span  class='killed'>        return string;</span></pre></td></tr>
+<td class='covered'><pre><span  class=''>            string += &#34;*&#34;;</span></pre></td></tr>
 
 
 <tr>
@@ -2550,7 +2548,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+<td class=''><pre><span  class=''>        }</span></pre></td></tr>
 
 
 <tr>
@@ -2561,6 +2559,50 @@ body{
 <td class=''>
 <span class='pop'>
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@113e13f9_174'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@113e13f9_175'/>
+175
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@113e13f9_175'>1</a>
+<span>
+1. compoundSequence : mutated return of Object value for dna/analysethis/utilities/Manipulator::compoundSequence to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        return string;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@113e13f9_176'/>
+176
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@113e13f9_176'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@113e13f9_177'/>
+177
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@113e13f9_177'></a>
 <span>
 </span>
 </td>
@@ -2597,7 +2639,7 @@ body{
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@113e13f9_52'/> 
 
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>stringToSequence<br/><b>Killed by : </b>dna.analysethis.utilities.ManipulatorTest.testReverse(dna.analysethis.utilities.ManipulatorTest)</span></span> mutated return of Object value for dna/analysethis/utilities/Manipulator::stringToSequence to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED</p> 
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>stringToSequence<br/><b>Killed by : </b>dna.analysethis.utilities.ManipulatorTest.testCompoundSequence(dna.analysethis.utilities.ManipulatorTest)</span></span> mutated return of Object value for dna/analysethis/utilities/Manipulator::stringToSequence to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED</p> 
 </td>
 </tr>
 <tr>
@@ -2607,7 +2649,7 @@ body{
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@113e13f9_62'/> 
 
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>reverse<br/><b>Killed by : </b>dna.analysethis.utilities.ManipulatorTest.testReverse(dna.analysethis.utilities.ManipulatorTest)</span></span> removed call to java/util/Collections::reverse &rarr; KILLED</p> 
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>reverse<br/><b>Killed by : </b>dna.analysethis.utilities.ManipulatorTest.testReverseComplement(dna.analysethis.utilities.ManipulatorTest)</span></span> removed call to java/util/Collections::reverse &rarr; KILLED</p> 
 </td>
 </tr>
 <tr>
@@ -2617,7 +2659,7 @@ body{
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@113e13f9_63'/> 
 
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>reverse<br/><b>Killed by : </b>dna.analysethis.utilities.ManipulatorTest.testReverse(dna.analysethis.utilities.ManipulatorTest)</span></span> mutated return of Object value for dna/analysethis/utilities/Manipulator::reverse to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED</p> 
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>reverse<br/><b>Killed by : </b>dna.analysethis.utilities.ManipulatorTest.testReverseComplement(dna.analysethis.utilities.ManipulatorTest)</span></span> mutated return of Object value for dna/analysethis/utilities/Manipulator::reverse to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED</p> 
 </td>
 </tr>
 <tr>
@@ -2691,33 +2733,23 @@ body{
 </td>
 </tr>
 <tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@113e13f9_97'>97</a></td> 
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@113e13f9_99'>99</a></td> 
 <td></td>
 <td>
 
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@113e13f9_97'/> 
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@113e13f9_99'/> 
 
 <p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>reverseComplement<br/><b>Killed by : </b>dna.analysethis.utilities.ManipulatorTest.testReverseComplement(dna.analysethis.utilities.ManipulatorTest)</span></span> mutated return of Object value for dna/analysethis/utilities/Manipulator::reverseComplement to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED</p> 
 </td>
 </tr>
 <tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@113e13f9_106'>106</a></td> 
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@113e13f9_109'>109</a></td> 
 <td></td>
 <td>
 
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@113e13f9_106'/> 
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@113e13f9_109'/> 
 
 <p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>random<br/><b>Killed by : </b>dna.analysethis.utilities.ManipulatorTest.testRandom1(dna.analysethis.utilities.ManipulatorTest)</span></span> changed conditional boundary &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>random<br/><b>Killed by : </b>dna.analysethis.utilities.ManipulatorTest.testRandom1(dna.analysethis.utilities.ManipulatorTest)</span></span> negated conditional &rarr; KILLED</p> 
-</td>
-</tr>
-<tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@113e13f9_114'>114</a></td> 
-<td></td>
-<td>
-
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@113e13f9_114'/> 
-
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>random<br/><b>Killed by : </b>dna.analysethis.utilities.ManipulatorTest.testRandom1(dna.analysethis.utilities.ManipulatorTest)</span></span> changed conditional boundary &rarr; KILLED</p> <p class='TIMED_OUT'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>random<br/><b>Killed by : </b>none</span></span> Changed increment from 1 to -1 &rarr; TIMED_OUT</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>random<br/><b>Killed by : </b>dna.analysethis.utilities.ManipulatorTest.testRandom1(dna.analysethis.utilities.ManipulatorTest)</span></span> negated conditional &rarr; KILLED</p> 
 </td>
 </tr>
 <tr>
@@ -2727,77 +2759,77 @@ body{
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@113e13f9_117'/> 
 
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>random<br/><b>Killed by : </b>dna.analysethis.utilities.ManipulatorTest.testRandom1(dna.analysethis.utilities.ManipulatorTest)</span></span> negated conditional &rarr; KILLED</p> 
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>random<br/><b>Killed by : </b>dna.analysethis.utilities.ManipulatorTest.testRandom1(dna.analysethis.utilities.ManipulatorTest)</span></span> changed conditional boundary &rarr; KILLED</p> <p class='TIMED_OUT'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>random<br/><b>Killed by : </b>none</span></span> Changed increment from 1 to -1 &rarr; TIMED_OUT</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>random<br/><b>Killed by : </b>dna.analysethis.utilities.ManipulatorTest.testRandom1(dna.analysethis.utilities.ManipulatorTest)</span></span> negated conditional &rarr; KILLED</p> 
 </td>
 </tr>
 <tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@113e13f9_119'>119</a></td> 
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@113e13f9_120'>120</a></td> 
 <td></td>
 <td>
 
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@113e13f9_119'/> 
-
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>random<br/><b>Killed by : </b>dna.analysethis.utilities.ManipulatorTest.testRandom1(dna.analysethis.utilities.ManipulatorTest)</span></span> negated conditional &rarr; KILLED</p> 
-</td>
-</tr>
-<tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@113e13f9_121'>121</a></td> 
-<td></td>
-<td>
-
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@113e13f9_121'/> 
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@113e13f9_120'/> 
 
 <p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>random<br/><b>Killed by : </b>dna.analysethis.utilities.ManipulatorTest.testRandom1(dna.analysethis.utilities.ManipulatorTest)</span></span> negated conditional &rarr; KILLED</p> 
 </td>
 </tr>
 <tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@113e13f9_123'>123</a></td> 
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@113e13f9_122'>122</a></td> 
 <td></td>
 <td>
 
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@113e13f9_123'/> 
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@113e13f9_122'/> 
 
 <p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>random<br/><b>Killed by : </b>dna.analysethis.utilities.ManipulatorTest.testRandom1(dna.analysethis.utilities.ManipulatorTest)</span></span> negated conditional &rarr; KILLED</p> 
 </td>
 </tr>
 <tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@113e13f9_128'>128</a></td> 
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@113e13f9_124'>124</a></td> 
 <td></td>
 <td>
 
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@113e13f9_128'/> 
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@113e13f9_124'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>random<br/><b>Killed by : </b>dna.analysethis.utilities.ManipulatorTest.testRandom1(dna.analysethis.utilities.ManipulatorTest)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@113e13f9_126'>126</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@113e13f9_126'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>random<br/><b>Killed by : </b>dna.analysethis.utilities.ManipulatorTest.testRandom1(dna.analysethis.utilities.ManipulatorTest)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@113e13f9_131'>131</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@113e13f9_131'/> 
 
 <p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>random<br/><b>Killed by : </b>dna.analysethis.utilities.ManipulatorTest.testRandom1(dna.analysethis.utilities.ManipulatorTest)</span></span> mutated return of Object value for dna/analysethis/utilities/Manipulator::random to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED</p> 
 </td>
 </tr>
 <tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@113e13f9_141'>141</a></td> 
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@113e13f9_144'>144</a></td> 
 <td></td>
 <td>
 
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@113e13f9_141'/> 
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@113e13f9_144'/> 
 
 <p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>sequenceToCodons<br/><b>Killed by : </b>dna.analysethis.service.SequenceAnalysatorTest.testNumberOfCodons(dna.analysethis.service.SequenceAnalysatorTest)</span></span> changed conditional boundary &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>sequenceToCodons<br/><b>Killed by : </b>dna.analysethis.utilities.ManipulatorTest.testSequenceToCodons(dna.analysethis.utilities.ManipulatorTest)</span></span> Changed increment from 3 to -3 &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>sequenceToCodons<br/><b>Killed by : </b>dna.analysethis.utilities.ManipulatorTest.testSequenceToCodons(dna.analysethis.utilities.ManipulatorTest)</span></span> Replaced integer subtraction with addition &rarr; KILLED</p> <p class='KILLED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>sequenceToCodons<br/><b>Killed by : </b>dna.analysethis.utilities.ManipulatorTest.testSequenceToCodons(dna.analysethis.utilities.ManipulatorTest)</span></span> negated conditional &rarr; KILLED</p> 
 </td>
 </tr>
 <tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@113e13f9_142'>142</a></td> 
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@113e13f9_145'>145</a></td> 
 <td></td>
 <td>
 
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@113e13f9_142'/> 
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@113e13f9_145'/> 
 
 <p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>sequenceToCodons<br/><b>Killed by : </b>dna.analysethis.utilities.ManipulatorTest.testSequenceToCodons(dna.analysethis.utilities.ManipulatorTest)</span></span> Replaced integer multiplication with division &rarr; KILLED</p> 
-</td>
-</tr>
-<tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@113e13f9_143'>143</a></td> 
-<td></td>
-<td>
-
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@113e13f9_143'/> 
-
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>sequenceToCodons<br/><b>Killed by : </b>dna.analysethis.utilities.ManipulatorTest.testSequenceToCodons(dna.analysethis.utilities.ManipulatorTest)</span></span> Changed increment from 1 to -1 &rarr; KILLED</p> 
 </td>
 </tr>
 <tr>
@@ -2807,17 +2839,17 @@ body{
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@113e13f9_146'/> 
 
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>sequenceToCodons<br/><b>Killed by : </b>dna.analysethis.utilities.ManipulatorTest.testSequenceToCodons(dna.analysethis.utilities.ManipulatorTest)</span></span> mutated return of Object value for dna/analysethis/utilities/Manipulator::sequenceToCodons to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED</p> 
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>sequenceToCodons<br/><b>Killed by : </b>dna.analysethis.utilities.ManipulatorTest.testSequenceToCodons(dna.analysethis.utilities.ManipulatorTest)</span></span> Changed increment from 1 to -1 &rarr; KILLED</p> 
 </td>
 </tr>
 <tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@113e13f9_158'>158</a></td> 
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@113e13f9_149'>149</a></td> 
 <td></td>
 <td>
 
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@113e13f9_158'/> 
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@113e13f9_149'/> 
 
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>compoundSequence<br/><b>Killed by : </b>dna.analysethis.utilities.ManipulatorTest.testCompoundSequence(dna.analysethis.utilities.ManipulatorTest)</span></span> changed conditional boundary &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>compoundSequence<br/><b>Killed by : </b>dna.analysethis.utilities.ManipulatorTest.testCompoundSequence(dna.analysethis.utilities.ManipulatorTest)</span></span> Changed increment from 1 to -1 &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>compoundSequence<br/><b>Killed by : </b>dna.analysethis.utilities.ManipulatorTest.testCompoundSequence(dna.analysethis.utilities.ManipulatorTest)</span></span> negated conditional &rarr; KILLED</p> 
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>sequenceToCodons<br/><b>Killed by : </b>dna.analysethis.utilities.ManipulatorTest.testSequenceToCodons(dna.analysethis.utilities.ManipulatorTest)</span></span> mutated return of Object value for dna/analysethis/utilities/Manipulator::sequenceToCodons to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED</p> 
 </td>
 </tr>
 <tr>
@@ -2827,25 +2859,35 @@ body{
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@113e13f9_161'/> 
 
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>compoundSequence<br/><b>Killed by : </b>dna.analysethis.utilities.ManipulatorTest.testCompoundSequence(dna.analysethis.utilities.ManipulatorTest)</span></span> changed conditional boundary &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>compoundSequence<br/><b>Killed by : </b>dna.analysethis.utilities.ManipulatorTest.testCompoundSequence(dna.analysethis.utilities.ManipulatorTest)</span></span> Changed increment from 1 to -1 &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>compoundSequence<br/><b>Killed by : </b>dna.analysethis.utilities.ManipulatorTest.testCompoundSequence(dna.analysethis.utilities.ManipulatorTest)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@113e13f9_164'>164</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@113e13f9_164'/> 
+
 <p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>compoundSequence<br/><b>Killed by : </b>dna.analysethis.utilities.ManipulatorTest.testCompoundSequence(dna.analysethis.utilities.ManipulatorTest)</span></span> negated conditional &rarr; KILLED</p> 
 </td>
 </tr>
 <tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@113e13f9_168'>168</a></td> 
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@113e13f9_171'>171</a></td> 
 <td></td>
 <td>
 
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@113e13f9_168'/> 
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@113e13f9_171'/> 
 
 <p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>compoundSequence<br/><b>Killed by : </b>dna.analysethis.utilities.ManipulatorTest.testCompoundSequence(dna.analysethis.utilities.ManipulatorTest)</span></span> changed conditional boundary &rarr; KILLED</p> <p class='TIMED_OUT'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>compoundSequence<br/><b>Killed by : </b>none</span></span> Changed increment from 1 to -1 &rarr; TIMED_OUT</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>compoundSequence<br/><b>Killed by : </b>dna.analysethis.utilities.ManipulatorTest.testCompoundSequence(dna.analysethis.utilities.ManipulatorTest)</span></span> Replaced integer subtraction with addition &rarr; KILLED</p> <p class='TIMED_OUT'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>compoundSequence<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; TIMED_OUT</p> 
 </td>
 </tr>
 <tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@113e13f9_172'>172</a></td> 
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@113e13f9_175'>175</a></td> 
 <td></td>
 <td>
 
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@113e13f9_172'/> 
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@113e13f9_175'/> 
 
 <p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>compoundSequence<br/><b>Killed by : </b>dna.analysethis.utilities.ManipulatorTest.testCompoundSequence(dna.analysethis.utilities.ManipulatorTest)</span></span> mutated return of Object value for dna/analysethis/utilities/Manipulator::compoundSequence to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED</p> 
 </td>
@@ -2868,7 +2910,7 @@ body{
 
 <h2>Tests examined</h2>
 <ul>
-<li>dna.analysethis.utilities.ManipulatorTest.testCompoundSequence(dna.analysethis.utilities.ManipulatorTest) (1 ms)</li><li>dna.analysethis.utilities.ManipulatorTest.testStringToList(dna.analysethis.utilities.ManipulatorTest) (0 ms)</li><li>dna.analysethis.service.SequenceAnalysatorTest.testLevenshteinDistance2(dna.analysethis.service.SequenceAnalysatorTest) (1 ms)</li><li>dna.analysethis.service.SequenceAnalysatorTest.testNumberOfUnknownBases(dna.analysethis.service.SequenceAnalysatorTest) (3 ms)</li><li>dna.analysethis.service.SequenceAnalysatorTest.testCheckIfGene(dna.analysethis.service.SequenceAnalysatorTest) (5 ms)</li><li>dna.analysethis.utilities.ManipulatorTest.testComplement(dna.analysethis.utilities.ManipulatorTest) (1 ms)</li><li>dna.analysethis.service.SequenceAnalysatorTest.testRelativeMass(dna.analysethis.service.SequenceAnalysatorTest) (1 ms)</li><li>dna.analysethis.utilities.ManipulatorTest.testSequenceToCodons(dna.analysethis.utilities.ManipulatorTest) (2 ms)</li><li>dna.analysethis.service.SequenceAnalysatorTest.testLevenshteinDistance1(dna.analysethis.service.SequenceAnalysatorTest) (2 ms)</li><li>dna.analysethis.utilities.ManipulatorTest.testReverseComplement(dna.analysethis.utilities.ManipulatorTest) (1 ms)</li><li>dna.analysethis.domain.CodonTest.testIsStopCodon(dna.analysethis.domain.CodonTest) (1 ms)</li><li>dna.analysethis.utilities.ManipulatorTest.testRandom1(dna.analysethis.utilities.ManipulatorTest) (1 ms)</li><li>dna.analysethis.service.SequenceAnalysatorTest.testNumberOfBases(dna.analysethis.service.SequenceAnalysatorTest) (1 ms)</li><li>dna.analysethis.service.SequenceAnalysatorTest.testMass3(dna.analysethis.service.SequenceAnalysatorTest) (2 ms)</li><li>dna.analysethis.domain.SequenceTest.testConstructor(dna.analysethis.domain.SequenceTest) (1 ms)</li><li>dna.analysethis.service.SequenceAnalysatorTest.testFrequency(dna.analysethis.service.SequenceAnalysatorTest) (5 ms)</li><li>dna.analysethis.domain.SequenceTest.testEquals(dna.analysethis.domain.SequenceTest) (0 ms)</li><li>dna.analysethis.utilities.ManipulatorTest.testReverse(dna.analysethis.utilities.ManipulatorTest) (0 ms)</li><li>dna.analysethis.service.SequenceAnalysatorTest.testCheckStartAndStopCodons1(dna.analysethis.service.SequenceAnalysatorTest) (6 ms)</li><li>dna.analysethis.service.SequenceAnalysatorTest.testConstructor(dna.analysethis.service.SequenceAnalysatorTest) (22 ms)</li><li>dna.analysethis.service.SequenceAnalysatorTest.testMass2(dna.analysethis.service.SequenceAnalysatorTest) (2 ms)</li><li>dna.analysethis.service.SequenceAnalysatorTest.testGcContent(dna.analysethis.service.SequenceAnalysatorTest) (2 ms)</li><li>dna.analysethis.domain.SequenceTest.testToString(dna.analysethis.domain.SequenceTest) (87 ms)</li><li>dna.analysethis.utilities.ManipulatorTest.testRandom2(dna.analysethis.utilities.ManipulatorTest) (0 ms)</li><li>dna.analysethis.service.SequenceAnalysatorTest.testRelativeFrequency(dna.analysethis.service.SequenceAnalysatorTest) (2 ms)</li><li>dna.analysethis.service.SequenceAnalysatorTest.testCheckStartAndStopCodons2(dna.analysethis.service.SequenceAnalysatorTest) (3 ms)</li><li>dna.analysethis.utilities.ManipulatorTest.testStringToSequence(dna.analysethis.utilities.ManipulatorTest) (0 ms)</li><li>dna.analysethis.domain.CodonTest.testIsStartCodon(dna.analysethis.domain.CodonTest) (31 ms)</li><li>dna.analysethis.service.SequenceAnalysatorTest.testRelativeGcMass(dna.analysethis.service.SequenceAnalysatorTest) (2 ms)</li><li>dna.analysethis.service.SequenceAnalysatorTest.testNumberOfCodons(dna.analysethis.service.SequenceAnalysatorTest) (1 ms)</li><li>dna.analysethis.service.SequenceAnalysatorTest.testMass1(dna.analysethis.service.SequenceAnalysatorTest) (1 ms)</li>
+<li>dna.analysethis.utilities.ManipulatorTest.testCompoundSequence(dna.analysethis.utilities.ManipulatorTest) (1 ms)</li><li>dna.analysethis.utilities.ManipulatorTest.testStringToList(dna.analysethis.utilities.ManipulatorTest) (1 ms)</li><li>dna.analysethis.service.SequenceAnalysatorTest.testLevenshteinDistance2(dna.analysethis.service.SequenceAnalysatorTest) (1 ms)</li><li>dna.analysethis.service.SequenceAnalysatorTest.testNumberOfUnknownBases(dna.analysethis.service.SequenceAnalysatorTest) (3 ms)</li><li>dna.analysethis.service.SequenceAnalysatorTest.testCheckIfGene(dna.analysethis.service.SequenceAnalysatorTest) (4 ms)</li><li>dna.analysethis.utilities.ManipulatorTest.testComplement(dna.analysethis.utilities.ManipulatorTest) (1 ms)</li><li>dna.analysethis.service.SequenceAnalysatorTest.testRelativeMass(dna.analysethis.service.SequenceAnalysatorTest) (1 ms)</li><li>dna.analysethis.utilities.ManipulatorTest.testSequenceToCodons(dna.analysethis.utilities.ManipulatorTest) (3 ms)</li><li>dna.analysethis.service.SequenceAnalysatorTest.testLevenshteinDistance1(dna.analysethis.service.SequenceAnalysatorTest) (1 ms)</li><li>dna.analysethis.utilities.ManipulatorTest.testReverseComplement(dna.analysethis.utilities.ManipulatorTest) (1 ms)</li><li>dna.analysethis.domain.CodonTest.testIsStopCodon(dna.analysethis.domain.CodonTest) (1 ms)</li><li>dna.analysethis.utilities.ManipulatorTest.testRandom1(dna.analysethis.utilities.ManipulatorTest) (2 ms)</li><li>dna.analysethis.service.SequenceAnalysatorTest.testNumberOfBases(dna.analysethis.service.SequenceAnalysatorTest) (1 ms)</li><li>dna.analysethis.service.SequenceAnalysatorTest.testMass3(dna.analysethis.service.SequenceAnalysatorTest) (1 ms)</li><li>dna.analysethis.domain.SequenceTest.testConstructor(dna.analysethis.domain.SequenceTest) (4 ms)</li><li>dna.analysethis.service.SequenceAnalysatorTest.testFrequency(dna.analysethis.service.SequenceAnalysatorTest) (9 ms)</li><li>dna.analysethis.domain.SequenceTest.testEquals(dna.analysethis.domain.SequenceTest) (1 ms)</li><li>dna.analysethis.utilities.ManipulatorTest.testReverse(dna.analysethis.utilities.ManipulatorTest) (3 ms)</li><li>dna.analysethis.service.SequenceAnalysatorTest.testCheckStartAndStopCodons1(dna.analysethis.service.SequenceAnalysatorTest) (3 ms)</li><li>dna.analysethis.service.SequenceAnalysatorTest.testConstructor(dna.analysethis.service.SequenceAnalysatorTest) (19 ms)</li><li>dna.analysethis.service.SequenceAnalysatorTest.testMass2(dna.analysethis.service.SequenceAnalysatorTest) (1 ms)</li><li>dna.analysethis.service.SequenceAnalysatorTest.testGcContent(dna.analysethis.service.SequenceAnalysatorTest) (4 ms)</li><li>dna.analysethis.domain.SequenceTest.testToString(dna.analysethis.domain.SequenceTest) (74 ms)</li><li>dna.analysethis.utilities.ManipulatorTest.testRandom2(dna.analysethis.utilities.ManipulatorTest) (1 ms)</li><li>dna.analysethis.service.SequenceAnalysatorTest.testRelativeFrequency(dna.analysethis.service.SequenceAnalysatorTest) (1 ms)</li><li>dna.analysethis.service.SequenceAnalysatorTest.testCheckStartAndStopCodons2(dna.analysethis.service.SequenceAnalysatorTest) (8 ms)</li><li>dna.analysethis.utilities.ManipulatorTest.testStringToSequence(dna.analysethis.utilities.ManipulatorTest) (1 ms)</li><li>dna.analysethis.domain.CodonTest.testIsStartCodon(dna.analysethis.domain.CodonTest) (42 ms)</li><li>dna.analysethis.service.SequenceAnalysatorTest.testRelativeGcMass(dna.analysethis.service.SequenceAnalysatorTest) (3 ms)</li><li>dna.analysethis.service.SequenceAnalysatorTest.testNumberOfCodons(dna.analysethis.service.SequenceAnalysatorTest) (1 ms)</li><li>dna.analysethis.service.SequenceAnalysatorTest.testMass1(dna.analysethis.service.SequenceAnalysatorTest) (5 ms)</li>
 </ul>
 
 <br/>

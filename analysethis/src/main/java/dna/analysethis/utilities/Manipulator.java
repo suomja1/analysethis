@@ -92,6 +92,8 @@ public final class Manipulator {
      * Reverses the order of the bases of given sequence and creates its complement using the Base-pairing rule.
      * @param sequence  Sequence to be reversed and complemented
      * @return  Reverse-complement of given sequence
+     * @see dna.analysethis.utilities.Manipulator#reverse(dna.analysethis.domain.Sequence) 
+     * @see dna.analysethis.utilities.Manipulator#complement(dna.analysethis.domain.Sequence) 
      */
     public static Sequence reverseComplement(Sequence sequence) {
         return complement(reverse(sequence));
@@ -101,6 +103,7 @@ public final class Manipulator {
      * Creates a random sequence of given length.
      * @param length    The length of the sequence
      * @return  Random sequence of required length
+     * @throws IllegalArgumentException Required length is out of bounds
      */
     public static Sequence random(int length) {
         if (length < 1) {

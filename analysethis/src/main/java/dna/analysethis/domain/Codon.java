@@ -6,6 +6,7 @@ import java.util.List;
 
 /**
  * Class for the representation of codons that is sequences of three bases.
+ * @see dna.analysethis.domain.Sequence
  */
 public class Codon extends Sequence {
     /**
@@ -18,7 +19,8 @@ public class Codon extends Sequence {
     
     /**
      * Checks whether the codon is a start codon that is ATG.
-     * @return  True if the codon is a start codon.
+     * @return  True if the codon is the start codon.
+     * @see dna.analysethis.service.SequenceAnalysator#checkStartAndStopCodons(dna.analysethis.domain.Sequence) 
      */
     public boolean isStartCodon() {
         return this.equals(new Codon(Manipulator.stringToList("ATG")));
@@ -27,6 +29,7 @@ public class Codon extends Sequence {
     /**
      * Checks whether the codon is a stop codon.
      * @return  True if the codon is a stop codon.
+     * @see dna.analysethis.service.SequenceAnalysator#checkStartAndStopCodons(dna.analysethis.domain.Sequence) 
      */
     public boolean isStopCodon() {
         List<Sequence> stopCodons = new LinkedList<>();

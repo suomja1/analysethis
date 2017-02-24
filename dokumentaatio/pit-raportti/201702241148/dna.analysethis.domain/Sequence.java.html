@@ -143,7 +143,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''> * Class for the representation of DNA sequences.</span></pre></td></tr>
+<td class=''><pre><span  class=''> * Class for the representation of DNA sequences. Sequences consist of a list of bases.</span></pre></td></tr>
 
 
 <tr>
@@ -157,7 +157,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''> */</span></pre></td></tr>
+<td class=''><pre><span  class=''> * @see dna.analysethis.domain.Base</span></pre></td></tr>
 
 
 <tr>
@@ -171,7 +171,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>public class Sequence {</span></pre></td></tr>
+<td class=''><pre><span  class=''> */</span></pre></td></tr>
 
 
 <tr>
@@ -185,7 +185,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    private List&#60;Base&#62; sequence;</span></pre></td></tr>
+<td class=''><pre><span  class=''>public class Sequence {</span></pre></td></tr>
 
 
 <tr>
@@ -199,7 +199,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''></span></pre></td></tr>
+<td class=''><pre><span  class=''>    private List&#60;Base&#62; sequence;</span></pre></td></tr>
 
 
 <tr>
@@ -213,7 +213,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    /**</span></pre></td></tr>
+<td class=''><pre><span  class=''></span></pre></td></tr>
 
 
 <tr>
@@ -227,7 +227,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>     * Constructor.</span></pre></td></tr>
+<td class=''><pre><span  class=''>    /**</span></pre></td></tr>
 
 
 <tr>
@@ -241,7 +241,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>     * @param sequence  List of bases to be interpreted as a sequence</span></pre></td></tr>
+<td class=''><pre><span  class=''>     * Constructor.</span></pre></td></tr>
 
 
 <tr>
@@ -255,11 +255,11 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>     */</span></pre></td></tr>
+<td class=''><pre><span  class=''>     * @param sequence  List of bases to be interpreted as a sequence</span></pre></td></tr>
 
 
 <tr>
-<td class='covered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@38bb9d7a_15'/>
 15
 </td>
@@ -269,24 +269,21 @@ body{
 <span>
 </span>
 </td>
-<td class='covered'><pre><span  class=''>    public Sequence(List&#60;Base&#62; sequence) {</span></pre></td></tr>
+<td class=''><pre><span  class=''>     * @throws IllegalArgumentException Given list of bases is null or empty</span></pre></td></tr>
 
 
 <tr>
-<td class='covered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@38bb9d7a_16'/>
 16
 </td>
-<td class='killed'>
+<td class=''>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@38bb9d7a_16'>2</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@38bb9d7a_16'></a>
 <span>
-1. <init> : negated conditional &rarr; KILLED<br/>
-2. <init> : negated conditional &rarr; KILLED<br/>
-
 </span>
 </td>
-<td class='covered'><pre><span  class='killed'>        if (sequence == null || sequence.isEmpty()) {</span></pre></td></tr>
+<td class=''><pre><span  class=''>     */</span></pre></td></tr>
 
 
 <tr>
@@ -300,21 +297,24 @@ body{
 <span>
 </span>
 </td>
-<td class='covered'><pre><span  class=''>            throw new IllegalArgumentException(&#34;Sekvenssi ei voi olla tyhj&#228;!&#34;);</span></pre></td></tr>
+<td class='covered'><pre><span  class=''>    public Sequence(List&#60;Base&#62; sequence) {</span></pre></td></tr>
 
 
 <tr>
-<td class='na'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@38bb9d7a_18'/>
 18
 </td>
-<td class=''>
+<td class='killed'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@38bb9d7a_18'></a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@38bb9d7a_18'>2</a>
 <span>
+1. <init> : negated conditional &rarr; KILLED<br/>
+2. <init> : negated conditional &rarr; KILLED<br/>
+
 </span>
 </td>
-<td class=''><pre><span  class=''>        }</span></pre></td></tr>
+<td class='covered'><pre><span  class='killed'>        if (sequence == null || sequence.isEmpty()) {</span></pre></td></tr>
 
 
 <tr>
@@ -328,11 +328,11 @@ body{
 <span>
 </span>
 </td>
-<td class='covered'><pre><span  class=''>        this.sequence = sequence;</span></pre></td></tr>
+<td class='covered'><pre><span  class=''>            throw new IllegalArgumentException(&#34;Sekvenssi ei voi olla tyhj&#228;!&#34;);</span></pre></td></tr>
 
 
 <tr>
-<td class='covered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@38bb9d7a_20'/>
 20
 </td>
@@ -342,11 +342,11 @@ body{
 <span>
 </span>
 </td>
-<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+<td class=''><pre><span  class=''>        }</span></pre></td></tr>
 
 
 <tr>
-<td class='na'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@38bb9d7a_21'/>
 21
 </td>
@@ -356,11 +356,11 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''></span></pre></td></tr>
+<td class='covered'><pre><span  class=''>        this.sequence = sequence;</span></pre></td></tr>
 
 
 <tr>
-<td class='na'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@38bb9d7a_22'/>
 22
 </td>
@@ -370,23 +370,21 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    public List&#60;Base&#62; getSequence() {</span></pre></td></tr>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
 
 
 <tr>
-<td class='covered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@38bb9d7a_23'/>
 23
 </td>
-<td class='killed'>
+<td class=''>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@38bb9d7a_23'>1</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@38bb9d7a_23'></a>
 <span>
-1. getSequence : mutated return of Object value for dna/analysethis/domain/Sequence::getSequence to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
-
 </span>
 </td>
-<td class='covered'><pre><span  class='killed'>        return this.sequence;</span></pre></td></tr>
+<td class=''><pre><span  class=''></span></pre></td></tr>
 
 
 <tr>
@@ -400,21 +398,23 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+<td class=''><pre><span  class=''>    public List&#60;Base&#62; getSequence() {</span></pre></td></tr>
 
 
 <tr>
-<td class='na'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@38bb9d7a_25'/>
 25
 </td>
-<td class=''>
+<td class='killed'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@38bb9d7a_25'></a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@38bb9d7a_25'>1</a>
 <span>
+1. getSequence : mutated return of Object value for dna/analysethis/domain/Sequence::getSequence to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
+
 </span>
 </td>
-<td class=''><pre><span  class=''></span></pre></td></tr>
+<td class='covered'><pre><span  class='killed'>        return this.sequence;</span></pre></td></tr>
 
 
 <tr>
@@ -428,11 +428,11 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    public void setSequence(List&#60;Base&#62; sequence) {</span></pre></td></tr>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
 
 
 <tr>
-<td class='covered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@38bb9d7a_27'/>
 27
 </td>
@@ -442,11 +442,11 @@ body{
 <span>
 </span>
 </td>
-<td class='covered'><pre><span  class=''>        this.sequence = sequence;</span></pre></td></tr>
+<td class=''><pre><span  class=''></span></pre></td></tr>
 
 
 <tr>
-<td class='covered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@38bb9d7a_28'/>
 28
 </td>
@@ -456,11 +456,11 @@ body{
 <span>
 </span>
 </td>
-<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+<td class=''><pre><span  class=''>    public void setSequence(List&#60;Base&#62; sequence) {</span></pre></td></tr>
 
 
 <tr>
-<td class='na'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@38bb9d7a_29'/>
 29
 </td>
@@ -470,11 +470,11 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''></span></pre></td></tr>
+<td class='covered'><pre><span  class=''>        this.sequence = sequence;</span></pre></td></tr>
 
 
 <tr>
-<td class='na'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@38bb9d7a_30'/>
 30
 </td>
@@ -484,7 +484,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    @Override</span></pre></td></tr>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
 
 
 <tr>
@@ -498,24 +498,21 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    public String toString() {</span></pre></td></tr>
+<td class=''><pre><span  class=''></span></pre></td></tr>
 
 
 <tr>
-<td class='covered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@38bb9d7a_32'/>
 32
 </td>
-<td class='killed'>
+<td class=''>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@38bb9d7a_32'>2</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@38bb9d7a_32'></a>
 <span>
-1. lambda$toString$0 : mutated return of Object value for dna/analysethis/domain/Sequence::lambda$toString$0 to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
-2. toString : mutated return of Object value for dna/analysethis/domain/Sequence::toString to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
-
 </span>
 </td>
-<td class='covered'><pre><span  class='killed'>        return this.sequence.stream().map(b -&#62; b.toString()).reduce(&#34;&#34;, String::concat);</span></pre></td></tr>
+<td class=''><pre><span  class=''>    @Override</span></pre></td></tr>
 
 
 <tr>
@@ -529,21 +526,24 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+<td class=''><pre><span  class=''>    public String toString() {</span></pre></td></tr>
 
 
 <tr>
-<td class='na'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@38bb9d7a_34'/>
 34
 </td>
-<td class=''>
+<td class='killed'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@38bb9d7a_34'></a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@38bb9d7a_34'>2</a>
 <span>
+1. lambda$toString$0 : mutated return of Object value for dna/analysethis/domain/Sequence::lambda$toString$0 to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
+2. toString : mutated return of Object value for dna/analysethis/domain/Sequence::toString to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
+
 </span>
 </td>
-<td class=''><pre><span  class=''>    </span></pre></td></tr>
+<td class='covered'><pre><span  class='killed'>        return this.sequence.stream().map(b -&#62; b.toString()).reduce(&#34;&#34;, String::concat);</span></pre></td></tr>
 
 
 <tr>
@@ -557,7 +557,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    @Override</span></pre></td></tr>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
 
 
 <tr>
@@ -571,53 +571,51 @@ body{
 <span>
 </span>
 </td>
+<td class=''><pre><span  class=''>    </span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@38bb9d7a_37'/>
+37
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@38bb9d7a_37'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    @Override</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@38bb9d7a_38'/>
+38
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@38bb9d7a_38'></a>
+<span>
+</span>
+</td>
 <td class=''><pre><span  class=''>    public boolean equals(Object obj) {</span></pre></td></tr>
 
 
 <tr>
 <td class='covered'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@38bb9d7a_37'/>
-37
+<a name='org.pitest.mutationtest.report.html.SourceFile@38bb9d7a_39'/>
+39
 </td>
 <td class='killed'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@38bb9d7a_37'>1</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@38bb9d7a_39'>1</a>
 <span>
 1. equals : negated conditional &rarr; KILLED<br/>
 
 </span>
 </td>
 <td class='covered'><pre><span  class='killed'>        if (this == obj) {</span></pre></td></tr>
-
-
-<tr>
-<td class='covered'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@38bb9d7a_38'/>
-38
-</td>
-<td class='killed'>
-<span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@38bb9d7a_38'>1</a>
-<span>
-1. equals : replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED<br/>
-
-</span>
-</td>
-<td class='covered'><pre><span  class='killed'>            return true;</span></pre></td></tr>
-
-
-<tr>
-<td class='na'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@38bb9d7a_39'/>
-39
-</td>
-<td class=''>
-<span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@38bb9d7a_39'></a>
-<span>
-</span>
-</td>
-<td class=''><pre><span  class=''>        }</span></pre></td></tr>
 
 
 <tr>
@@ -629,41 +627,41 @@ body{
 <span class='pop'>
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@38bb9d7a_40'>1</a>
 <span>
+1. equals : replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>            return true;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@38bb9d7a_41'/>
+41
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@38bb9d7a_41'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>        }</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@38bb9d7a_42'/>
+42
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@38bb9d7a_42'>1</a>
+<span>
 1. equals : negated conditional &rarr; KILLED<br/>
 
 </span>
 </td>
 <td class='covered'><pre><span  class='killed'>        if (obj == null) {</span></pre></td></tr>
-
-
-<tr>
-<td class='covered'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@38bb9d7a_41'/>
-41
-</td>
-<td class='killed'>
-<span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@38bb9d7a_41'>1</a>
-<span>
-1. equals : replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED<br/>
-
-</span>
-</td>
-<td class='covered'><pre><span  class='killed'>            return false;</span></pre></td></tr>
-
-
-<tr>
-<td class='na'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@38bb9d7a_42'/>
-42
-</td>
-<td class=''>
-<span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@38bb9d7a_42'></a>
-<span>
-</span>
-</td>
-<td class=''><pre><span  class=''>        }</span></pre></td></tr>
 
 
 <tr>
@@ -675,6 +673,36 @@ body{
 <span class='pop'>
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@38bb9d7a_43'>1</a>
 <span>
+1. equals : replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>            return false;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@38bb9d7a_44'/>
+44
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@38bb9d7a_44'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>        }</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@38bb9d7a_45'/>
+45
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@38bb9d7a_45'>1</a>
+<span>
 1. equals : negated conditional &rarr; KILLED<br/>
 
 </span>
@@ -684,12 +712,12 @@ body{
 
 <tr>
 <td class='covered'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@38bb9d7a_44'/>
-44
+<a name='org.pitest.mutationtest.report.html.SourceFile@38bb9d7a_46'/>
+46
 </td>
 <td class='killed'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@38bb9d7a_44'>1</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@38bb9d7a_46'>1</a>
 <span>
 1. equals : replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED<br/>
 
@@ -700,12 +728,12 @@ body{
 
 <tr>
 <td class='na'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@38bb9d7a_45'/>
-45
+<a name='org.pitest.mutationtest.report.html.SourceFile@38bb9d7a_47'/>
+47
 </td>
 <td class=''>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@38bb9d7a_45'></a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@38bb9d7a_47'></a>
 <span>
 </span>
 </td>
@@ -714,12 +742,12 @@ body{
 
 <tr>
 <td class='covered'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@38bb9d7a_46'/>
-46
+<a name='org.pitest.mutationtest.report.html.SourceFile@38bb9d7a_48'/>
+48
 </td>
 <td class=''>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@38bb9d7a_46'></a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@38bb9d7a_48'></a>
 <span>
 </span>
 </td>
@@ -728,48 +756,18 @@ body{
 
 <tr>
 <td class='covered'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@38bb9d7a_47'/>
-47
+<a name='org.pitest.mutationtest.report.html.SourceFile@38bb9d7a_49'/>
+49
 </td>
 <td class='killed'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@38bb9d7a_47'>1</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@38bb9d7a_49'>1</a>
 <span>
 1. equals : negated conditional &rarr; KILLED<br/>
 
 </span>
 </td>
 <td class='covered'><pre><span  class='killed'>        if (!this.sequence.equals(other.sequence)) {</span></pre></td></tr>
-
-
-<tr>
-<td class='covered'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@38bb9d7a_48'/>
-48
-</td>
-<td class='killed'>
-<span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@38bb9d7a_48'>1</a>
-<span>
-1. equals : replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED<br/>
-
-</span>
-</td>
-<td class='covered'><pre><span  class='killed'>            return false;</span></pre></td></tr>
-
-
-<tr>
-<td class='na'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@38bb9d7a_49'/>
-49
-</td>
-<td class=''>
-<span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@38bb9d7a_49'></a>
-<span>
-</span>
-</td>
-<td class=''><pre><span  class=''>        }</span></pre></td></tr>
 
 
 <tr>
@@ -785,7 +783,7 @@ body{
 
 </span>
 </td>
-<td class='covered'><pre><span  class='killed'>        return true;</span></pre></td></tr>
+<td class='covered'><pre><span  class='killed'>            return false;</span></pre></td></tr>
 
 
 <tr>
@@ -799,17 +797,47 @@ body{
 <span>
 </span>
 </td>
+<td class=''><pre><span  class=''>        }</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@38bb9d7a_52'/>
+52
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@38bb9d7a_52'>1</a>
+<span>
+1. equals : replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        return true;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@38bb9d7a_53'/>
+53
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@38bb9d7a_53'></a>
+<span>
+</span>
+</td>
 <td class=''><pre><span  class=''>    }</span></pre></td></tr>
 
 
 <tr>
 <td class='na'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@38bb9d7a_52'/>
-52
+<a name='org.pitest.mutationtest.report.html.SourceFile@38bb9d7a_54'/>
+54
 </td>
 <td class=''>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@38bb9d7a_52'></a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@38bb9d7a_54'></a>
 <span>
 </span>
 </td>
@@ -820,53 +848,43 @@ body{
 <tr><td></td><td></td><td><h2>Mutations</h2></td></tr>
 
 <tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@38bb9d7a_16'>16</a></td> 
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@38bb9d7a_18'>18</a></td> 
 <td></td>
 <td>
 
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@38bb9d7a_16'/> 
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@38bb9d7a_18'/> 
 
 <p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b><init><br/><b>Killed by : </b>dna.analysethis.domain.SequenceTest.testNullSequence(dna.analysethis.domain.SequenceTest)</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b><init><br/><b>Killed by : </b>dna.analysethis.domain.SequenceTest.testEmptySequence(dna.analysethis.domain.SequenceTest)</span></span> negated conditional &rarr; KILLED</p> 
 </td>
 </tr>
 <tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@38bb9d7a_23'>23</a></td> 
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@38bb9d7a_25'>25</a></td> 
 <td></td>
 <td>
 
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@38bb9d7a_23'/> 
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@38bb9d7a_25'/> 
 
 <p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getSequence<br/><b>Killed by : </b>dna.analysethis.domain.SequenceTest.testConstructor(dna.analysethis.domain.SequenceTest)</span></span> mutated return of Object value for dna/analysethis/domain/Sequence::getSequence to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED</p> 
 </td>
 </tr>
 <tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@38bb9d7a_32'>32</a></td> 
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@38bb9d7a_34'>34</a></td> 
 <td></td>
 <td>
 
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@38bb9d7a_32'/> 
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@38bb9d7a_34'/> 
 
 <p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>lambda$toString$0<br/><b>Killed by : </b>dna.analysethis.domain.SequenceTest.testToString(dna.analysethis.domain.SequenceTest)</span></span> mutated return of Object value for dna/analysethis/domain/Sequence::lambda$toString$0 to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>toString<br/><b>Killed by : </b>dna.analysethis.domain.SequenceTest.testToString(dna.analysethis.domain.SequenceTest)</span></span> mutated return of Object value for dna/analysethis/domain/Sequence::toString to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED</p> 
 </td>
 </tr>
 <tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@38bb9d7a_37'>37</a></td> 
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@38bb9d7a_39'>39</a></td> 
 <td></td>
 <td>
 
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@38bb9d7a_37'/> 
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@38bb9d7a_39'/> 
 
 <p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>equals<br/><b>Killed by : </b>dna.analysethis.domain.SequenceTest.testEquals(dna.analysethis.domain.SequenceTest)</span></span> negated conditional &rarr; KILLED</p> 
-</td>
-</tr>
-<tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@38bb9d7a_38'>38</a></td> 
-<td></td>
-<td>
-
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@38bb9d7a_38'/> 
-
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>equals<br/><b>Killed by : </b>dna.analysethis.domain.SequenceTest.testEquals(dna.analysethis.domain.SequenceTest)</span></span> replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED</p> 
 </td>
 </tr>
 <tr>
@@ -876,17 +894,17 @@ body{
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@38bb9d7a_40'/> 
 
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>equals<br/><b>Killed by : </b>dna.analysethis.domain.SequenceTest.testEquals(dna.analysethis.domain.SequenceTest)</span></span> negated conditional &rarr; KILLED</p> 
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>equals<br/><b>Killed by : </b>dna.analysethis.domain.SequenceTest.testEquals(dna.analysethis.domain.SequenceTest)</span></span> replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED</p> 
 </td>
 </tr>
 <tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@38bb9d7a_41'>41</a></td> 
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@38bb9d7a_42'>42</a></td> 
 <td></td>
 <td>
 
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@38bb9d7a_41'/> 
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@38bb9d7a_42'/> 
 
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>equals<br/><b>Killed by : </b>dna.analysethis.domain.SequenceTest.testEquals(dna.analysethis.domain.SequenceTest)</span></span> replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED</p> 
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>equals<br/><b>Killed by : </b>dna.analysethis.domain.SequenceTest.testEquals(dna.analysethis.domain.SequenceTest)</span></span> negated conditional &rarr; KILLED</p> 
 </td>
 </tr>
 <tr>
@@ -896,37 +914,37 @@ body{
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@38bb9d7a_43'/> 
 
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>equals<br/><b>Killed by : </b>dna.analysethis.domain.SequenceTest.testEquals(dna.analysethis.domain.SequenceTest)</span></span> negated conditional &rarr; KILLED</p> 
-</td>
-</tr>
-<tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@38bb9d7a_44'>44</a></td> 
-<td></td>
-<td>
-
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@38bb9d7a_44'/> 
-
 <p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>equals<br/><b>Killed by : </b>dna.analysethis.domain.SequenceTest.testEquals(dna.analysethis.domain.SequenceTest)</span></span> replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED</p> 
 </td>
 </tr>
 <tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@38bb9d7a_47'>47</a></td> 
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@38bb9d7a_45'>45</a></td> 
 <td></td>
 <td>
 
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@38bb9d7a_47'/> 
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@38bb9d7a_45'/> 
 
 <p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>equals<br/><b>Killed by : </b>dna.analysethis.domain.SequenceTest.testEquals(dna.analysethis.domain.SequenceTest)</span></span> negated conditional &rarr; KILLED</p> 
 </td>
 </tr>
 <tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@38bb9d7a_48'>48</a></td> 
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@38bb9d7a_46'>46</a></td> 
 <td></td>
 <td>
 
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@38bb9d7a_48'/> 
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@38bb9d7a_46'/> 
 
 <p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>equals<br/><b>Killed by : </b>dna.analysethis.domain.SequenceTest.testEquals(dna.analysethis.domain.SequenceTest)</span></span> replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@38bb9d7a_49'>49</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@38bb9d7a_49'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>equals<br/><b>Killed by : </b>dna.analysethis.domain.SequenceTest.testEquals(dna.analysethis.domain.SequenceTest)</span></span> negated conditional &rarr; KILLED</p> 
 </td>
 </tr>
 <tr>
@@ -935,6 +953,16 @@ body{
 <td>
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@38bb9d7a_50'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>equals<br/><b>Killed by : </b>dna.analysethis.domain.SequenceTest.testEquals(dna.analysethis.domain.SequenceTest)</span></span> replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@38bb9d7a_52'>52</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@38bb9d7a_52'/> 
 
 <p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>equals<br/><b>Killed by : </b>dna.analysethis.domain.SequenceTest.testEquals(dna.analysethis.domain.SequenceTest)</span></span> replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED</p> 
 </td>
@@ -957,7 +985,7 @@ body{
 
 <h2>Tests examined</h2>
 <ul>
-<li>dna.analysethis.utilities.ManipulatorTest.testCompoundSequence(dna.analysethis.utilities.ManipulatorTest) (1 ms)</li><li>dna.analysethis.service.SequenceAnalysatorTest.testLevenshteinDistance2(dna.analysethis.service.SequenceAnalysatorTest) (1 ms)</li><li>dna.analysethis.service.SequenceAnalysatorTest.testNumberOfUnknownBases(dna.analysethis.service.SequenceAnalysatorTest) (3 ms)</li><li>dna.analysethis.service.SequenceAnalysatorTest.testCheckIfGene(dna.analysethis.service.SequenceAnalysatorTest) (5 ms)</li><li>dna.analysethis.utilities.ManipulatorTest.testComplement(dna.analysethis.utilities.ManipulatorTest) (1 ms)</li><li>dna.analysethis.service.SequenceAnalysatorTest.testRelativeMass(dna.analysethis.service.SequenceAnalysatorTest) (1 ms)</li><li>dna.analysethis.utilities.ManipulatorTest.testSequenceToCodons(dna.analysethis.utilities.ManipulatorTest) (2 ms)</li><li>dna.analysethis.domain.SequenceTest.testEmptySequence(dna.analysethis.domain.SequenceTest) (1 ms)</li><li>dna.analysethis.service.SequenceAnalysatorTest.testLevenshteinDistance1(dna.analysethis.service.SequenceAnalysatorTest) (2 ms)</li><li>dna.analysethis.domain.SequenceTest.testNullSequence(dna.analysethis.domain.SequenceTest) (1 ms)</li><li>dna.analysethis.utilities.ManipulatorTest.testReverseComplement(dna.analysethis.utilities.ManipulatorTest) (1 ms)</li><li>dna.analysethis.domain.CodonTest.testIsStopCodon(dna.analysethis.domain.CodonTest) (1 ms)</li><li>dna.analysethis.utilities.ManipulatorTest.testRandom1(dna.analysethis.utilities.ManipulatorTest) (1 ms)</li><li>dna.analysethis.service.SequenceAnalysatorTest.testNumberOfBases(dna.analysethis.service.SequenceAnalysatorTest) (1 ms)</li><li>dna.analysethis.service.SequenceAnalysatorTest.testMass3(dna.analysethis.service.SequenceAnalysatorTest) (2 ms)</li><li>dna.analysethis.domain.SequenceTest.testConstructor(dna.analysethis.domain.SequenceTest) (1 ms)</li><li>dna.analysethis.service.SequenceAnalysatorTest.testFrequency(dna.analysethis.service.SequenceAnalysatorTest) (5 ms)</li><li>dna.analysethis.domain.SequenceTest.testEquals(dna.analysethis.domain.SequenceTest) (0 ms)</li><li>dna.analysethis.utilities.ManipulatorTest.testReverse(dna.analysethis.utilities.ManipulatorTest) (0 ms)</li><li>dna.analysethis.service.SequenceAnalysatorTest.testCheckStartAndStopCodons1(dna.analysethis.service.SequenceAnalysatorTest) (6 ms)</li><li>dna.analysethis.service.SequenceAnalysatorTest.testConstructor(dna.analysethis.service.SequenceAnalysatorTest) (22 ms)</li><li>dna.analysethis.service.SequenceAnalysatorTest.testMass2(dna.analysethis.service.SequenceAnalysatorTest) (2 ms)</li><li>dna.analysethis.domain.SequenceTest.testToString(dna.analysethis.domain.SequenceTest) (87 ms)</li><li>dna.analysethis.service.SequenceAnalysatorTest.testGcContent(dna.analysethis.service.SequenceAnalysatorTest) (2 ms)</li><li>dna.analysethis.service.SequenceAnalysatorTest.testRelativeFrequency(dna.analysethis.service.SequenceAnalysatorTest) (2 ms)</li><li>dna.analysethis.utilities.ManipulatorTest.testStringToSequence(dna.analysethis.utilities.ManipulatorTest) (0 ms)</li><li>dna.analysethis.service.SequenceAnalysatorTest.testCheckStartAndStopCodons2(dna.analysethis.service.SequenceAnalysatorTest) (3 ms)</li><li>dna.analysethis.domain.CodonTest.testIsStartCodon(dna.analysethis.domain.CodonTest) (31 ms)</li><li>dna.analysethis.service.SequenceAnalysatorTest.testRelativeGcMass(dna.analysethis.service.SequenceAnalysatorTest) (2 ms)</li><li>dna.analysethis.service.SequenceAnalysatorTest.testMass1(dna.analysethis.service.SequenceAnalysatorTest) (1 ms)</li><li>dna.analysethis.service.SequenceAnalysatorTest.testNumberOfCodons(dna.analysethis.service.SequenceAnalysatorTest) (1 ms)</li>
+<li>dna.analysethis.utilities.ManipulatorTest.testCompoundSequence(dna.analysethis.utilities.ManipulatorTest) (1 ms)</li><li>dna.analysethis.service.SequenceAnalysatorTest.testLevenshteinDistance2(dna.analysethis.service.SequenceAnalysatorTest) (1 ms)</li><li>dna.analysethis.service.SequenceAnalysatorTest.testNumberOfUnknownBases(dna.analysethis.service.SequenceAnalysatorTest) (3 ms)</li><li>dna.analysethis.service.SequenceAnalysatorTest.testCheckIfGene(dna.analysethis.service.SequenceAnalysatorTest) (4 ms)</li><li>dna.analysethis.utilities.ManipulatorTest.testComplement(dna.analysethis.utilities.ManipulatorTest) (1 ms)</li><li>dna.analysethis.service.SequenceAnalysatorTest.testRelativeMass(dna.analysethis.service.SequenceAnalysatorTest) (1 ms)</li><li>dna.analysethis.utilities.ManipulatorTest.testSequenceToCodons(dna.analysethis.utilities.ManipulatorTest) (3 ms)</li><li>dna.analysethis.domain.SequenceTest.testEmptySequence(dna.analysethis.domain.SequenceTest) (1 ms)</li><li>dna.analysethis.service.SequenceAnalysatorTest.testLevenshteinDistance1(dna.analysethis.service.SequenceAnalysatorTest) (1 ms)</li><li>dna.analysethis.domain.SequenceTest.testNullSequence(dna.analysethis.domain.SequenceTest) (1 ms)</li><li>dna.analysethis.utilities.ManipulatorTest.testReverseComplement(dna.analysethis.utilities.ManipulatorTest) (1 ms)</li><li>dna.analysethis.domain.CodonTest.testIsStopCodon(dna.analysethis.domain.CodonTest) (1 ms)</li><li>dna.analysethis.utilities.ManipulatorTest.testRandom1(dna.analysethis.utilities.ManipulatorTest) (2 ms)</li><li>dna.analysethis.service.SequenceAnalysatorTest.testNumberOfBases(dna.analysethis.service.SequenceAnalysatorTest) (1 ms)</li><li>dna.analysethis.service.SequenceAnalysatorTest.testMass3(dna.analysethis.service.SequenceAnalysatorTest) (1 ms)</li><li>dna.analysethis.domain.SequenceTest.testConstructor(dna.analysethis.domain.SequenceTest) (4 ms)</li><li>dna.analysethis.service.SequenceAnalysatorTest.testFrequency(dna.analysethis.service.SequenceAnalysatorTest) (9 ms)</li><li>dna.analysethis.domain.SequenceTest.testEquals(dna.analysethis.domain.SequenceTest) (1 ms)</li><li>dna.analysethis.utilities.ManipulatorTest.testReverse(dna.analysethis.utilities.ManipulatorTest) (3 ms)</li><li>dna.analysethis.service.SequenceAnalysatorTest.testCheckStartAndStopCodons1(dna.analysethis.service.SequenceAnalysatorTest) (3 ms)</li><li>dna.analysethis.service.SequenceAnalysatorTest.testConstructor(dna.analysethis.service.SequenceAnalysatorTest) (19 ms)</li><li>dna.analysethis.service.SequenceAnalysatorTest.testMass2(dna.analysethis.service.SequenceAnalysatorTest) (1 ms)</li><li>dna.analysethis.domain.SequenceTest.testToString(dna.analysethis.domain.SequenceTest) (74 ms)</li><li>dna.analysethis.service.SequenceAnalysatorTest.testGcContent(dna.analysethis.service.SequenceAnalysatorTest) (4 ms)</li><li>dna.analysethis.service.SequenceAnalysatorTest.testRelativeFrequency(dna.analysethis.service.SequenceAnalysatorTest) (1 ms)</li><li>dna.analysethis.utilities.ManipulatorTest.testStringToSequence(dna.analysethis.utilities.ManipulatorTest) (1 ms)</li><li>dna.analysethis.service.SequenceAnalysatorTest.testCheckStartAndStopCodons2(dna.analysethis.service.SequenceAnalysatorTest) (8 ms)</li><li>dna.analysethis.domain.CodonTest.testIsStartCodon(dna.analysethis.domain.CodonTest) (42 ms)</li><li>dna.analysethis.service.SequenceAnalysatorTest.testRelativeGcMass(dna.analysethis.service.SequenceAnalysatorTest) (3 ms)</li><li>dna.analysethis.service.SequenceAnalysatorTest.testNumberOfCodons(dna.analysethis.service.SequenceAnalysatorTest) (1 ms)</li><li>dna.analysethis.service.SequenceAnalysatorTest.testMass1(dna.analysethis.service.SequenceAnalysatorTest) (5 ms)</li>
 </ul>
 
 <br/>
