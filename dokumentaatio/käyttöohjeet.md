@@ -1,8 +1,8 @@
 ### DNA-sekvenssin syöttäminen
 
-*analysethis*-ohjelma tukee kolmea eri tapaa syöttää DNA-sekvenssi.
-
 ![aloitusnäkymä](aloitusnakyma.png)
+
+*analysethis*-ohjelma tukee kolmea eri tapaa syöttää DNA-sekvenssi.
 
 1. Yksinkertaisimmillaan analysoitavan sekvenssin pystyy kirjoittamaan aloitusnäkymän tarjoamaan tekstikenttään.
 2. Sekvenssin lukeminen tekstitiedostosta tapahtuu kirjoittamalla kyseisen tiedoston tiedostonimi tekstikenttään. Tiedoston tulee sijaita ohjelman juuressa ja tiedoston nimi on syötettävä muodossa *tiedostonimi.txt*.
