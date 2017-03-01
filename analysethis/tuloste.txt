@@ -1,1 +1,10 @@
-9f239377-2828-4f3e-af97-2aed54eeee71
+ACTCTGCTGAGCCTAGGCTAG
+
+Sytosiini: 6 (28.57 %)
+Guaniini: 6 (28.57 %)
+Adeniini: 4 (19.05 %)
+Tymiini: 5 (23.81 %)
+Tuntematon emäs: 0 (0.0 %)
+Emästen lukumäärä: 21
+GC%: 57.14 %
+Onko geeni? false
