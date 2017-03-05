@@ -1,6 +1,7 @@
 package dna.analysethis.domain;
 
 import dna.analysethis.utilities.Manipulator;
+
 import java.util.ArrayList;
 import java.util.List;
 

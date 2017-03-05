@@ -5,6 +5,7 @@ import dna.analysethis.domain.Codon;
 import dna.analysethis.domain.Sequence;
 import dna.analysethis.utilities.FileHandler;
 import dna.analysethis.utilities.Manipulator;
+
 import java.io.IOException;
 import java.util.Collections;
 import java.util.LinkedList;
@@ -25,7 +26,7 @@ public class SequenceAnalysator {
     }
 
     /**
-     * Alternative constructor, which creates the sequence to be analysed from a string.
+     * Alternative constructor, which creates the sequence to be analysed from a string. String can represent the sequence itself of a file name of a file containing the sequence.
      * @param string    String-representation of the sequence to be analysed
      * @throws java.io.IOException  File can't be found
      */
@@ -97,7 +98,7 @@ public class SequenceAnalysator {
     }
     
     /**
-     * Counts the total mass of given sequence (known bases).
+     * Counts the total mass of given sequence (only known bases).
      * @return  Mass
      */
     public double mass() {
@@ -140,7 +141,7 @@ public class SequenceAnalysator {
     }
     
     /**
-     * Checks the start and stop codons of the sequence taking into account the multiple reading frames.
+     * Checks the start and stop codons of the sequence – taking multiple reading frames into account.
      * @return True if both start and stop codon occur in a reading frame
      */
     public boolean checkStartAndStopCodons() {
@@ -155,11 +156,11 @@ public class SequenceAnalysator {
      * @return True if the sequence represents a gene
      */
     public boolean checkIfGene() {
-        return this.numberOfCodons() >= 5 && this.relativeGcMass() >= .3 && this.checkStartAndStopCodons(); // Values used here are pulled out of a hat and have little scientific justification
+        return this.numberOfCodons() >= 5 && this.relativeGcMass() >= .3 && this.checkStartAndStopCodons(); // Values used here "are pulled out of a hat" and have little scientific justification
     }
     
     /**
-     * Counts the Levenshtein distance between given sequence and the sequence. For this the method uses a well-known algorithm for two strings.
+     * Counts the Levenshtein distance between given sequence and the sequence. For this the method uses a well-known algorithm for two strings (Wikipedia).
      * @param another   Sequence to be compared
      * @return  The minimum number of single-base edits required to change given sequence into the other
      */
@@ -187,7 +188,7 @@ public class SequenceAnalysator {
                         cost = 0;
                     }
 
-                    vector1[j + 1] = Math.min(vector1[j] + 1, Math.min(vector0[j + 1] + 1, vector0[j] + cost));
+                    vector1[j + 1] = Math.min(vector1[j] + 1, Math.min(vector0[j + 1] + 1, vector0[j] + cost)); // deletion, insertion and substitution
                 }
 
                 System.arraycopy(vector1, 0, vector0, 0, vector0.length);

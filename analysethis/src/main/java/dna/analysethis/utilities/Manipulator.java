@@ -3,6 +3,7 @@ package dna.analysethis.utilities;
 import dna.analysethis.domain.Base;
 import dna.analysethis.domain.Codon;
 import dna.analysethis.domain.Sequence;
+
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.LinkedList;

@@ -14,7 +14,7 @@
 
 ![tulosnäkymä](tulosnakyma.png)
 
-Ohjelman analysointitoiminnallisuus aktivoidaan aloitusnäkymän painikkeella *Analysoi!*. Huomaa, että sekvenssi tulee olla syötettynä jollakin edellä mainituista tavoista ennen analysoinnin aloittamista. Onnistunut analyysi avaa ohjelmassa uuden tulosnäkymän. Tulosnäkymässä esitetään analyysin tulos. Tuloksen pystyy tulostamaan tiedostoon näkymän *Tulosta.*-painikkeella. Tiedosto luodaan ohjelman juureen. *Aloita alusta.* -painikkeella pääsee takaisin aloitusnäkymään DNA-sekvenssin syöttämiseen.
+Ohjelman analysointitoiminnallisuus aktivoidaan aloitusnäkymän painikkeella *Analysoi!*. Huomaa, että sekvenssi tulee olla syötettynä jollakin edellä mainituista tavoista ennen analysoinnin aloittamista. Onnistunut analyysi avaa ohjelmassa uuden tulosnäkymän. Tulosnäkymässä esitetään analyysin tulos. Tuloksen pystyy tulostamaan tiedostoon näkymän *Tulosta.*-painikkeella. Tiedosto luodaan ohjelman juureen. Jo olemassa oleva samanniminen tiedosto ylikirjoitetaan. *Aloita alusta.* -painikkeella pääsee takaisin aloitusnäkymään DNA-sekvenssin syöttämiseen.
 
 *Kahden sekvenssin vertailu*
 

@@ -13,9 +13,9 @@
  - emästen lukumäärä, tuntemattomat emäkset
  - frekvenssit ja suhteelliset frekvenssit
  - guaniinin ja  sytosiinin suhteellinen osuus ([GC-pitoisuus](https://en.wikipedia.org/wiki/GC-content))
+ - edustaako sekvenssi ominaisuuksiltaan proteiinia koodaavaa sekvenssiä?
 - kahden sekvenssin vertailu 
  - [Levenšteinin etäisyys](https://en.wikipedia.org/wiki/Levenshtein_distance)
-- edustaako sekvenssi ominaisuuksiltaan proteiinia koodaavaa sekvenssiä?
 - sekvenssin käänteistoiston muodostaminen / muokkaaminen
 - analyysin tuloksen
  - lukeminen
@@ -27,10 +27,11 @@
 - kahden sekvenssin vertailu 
  - [Damerau–Levenšteinin etäisyys](https://en.wikipedia.org/wiki/Damerau%E2%80%93Levenshtein_distance)
 - aloitus- ja lopetuskodonien tunnistaminen sekvenssin sisältä
+- analyysin tehokkuuden parantaminen tai ainakin virheilmoitus ylivuodosta
 
 ### Rakenne
 
-*Määrittelyvaiheen luokkakaavio*: Luokkakaavioon on merkitty järjestelmän tärkeimmät luokat.
+*Luokkakaavio*: Luokkakaavioon on merkitty järjestelmän tärkeimmät luokat.
 
 ![luokkakaavio](luokkakaavio.png)
 

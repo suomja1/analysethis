@@ -4,6 +4,7 @@ import dna.analysethis.domain.Base;
 import dna.analysethis.service.SequenceAnalysator;
 import dna.analysethis.utilities.FileHandler;
 import dna.analysethis.utilities.Manipulator;
+
 import java.awt.CardLayout;
 import java.awt.Container;
 import java.awt.Dimension;
